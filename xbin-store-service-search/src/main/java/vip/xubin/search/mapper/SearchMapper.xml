@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="vip.xubin.search.mapper.SearchMapper">
+
+    <select id="getSolrItemList" resultType="vip.xubin.pojo.SolrItem">
+       SELECT
+            a.id,
+            a.image,
+            a.price,
+            a.sell_point,
+            a.title,
+            b.name category_name,
+            c.item_desc item_desc
+        FROM
+            tb_item a
+        LEFT JOIN tb_item_cat b ON a.cid = b.id
+        LEFT JOIN tb_item_desc c ON a.id = c.item_id
+        WHERE a.status = 1
+    </select>
+    <select id="getSolrItemByItemId" resultType="vip.xubin.pojo.SolrItem" parameterType="long">
+        SELECT
+            a.id,
+            a.image,
+            a.price,
+            a.sell_point,
+            a.title,
+            b.name category_name,
+            c.item_desc item_desc
+        FROM
+            tb_item a
+        LEFT JOIN tb_item_cat b ON a.cid = b.id
+        LEFT JOIN tb_item_desc c ON a.id = c.item_id
+        WHERE a.id = #{itemId} and a.status = 1
+    </select>
+</mapper>

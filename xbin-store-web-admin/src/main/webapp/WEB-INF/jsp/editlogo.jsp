@@ -1,0 +1,103 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page trimDirectiveWhitespaces="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script type="text/javascript">
+    $(function () {
+        $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'YYYY/MM/DD h:mm A'});
+        initFileInput("logo1${random}", "/pic/upload.action", 1);
+        initFileInput("logo2${random}", "/pic/upload.action", 1);
+
+//        $("#input-1").on("fileuploaded", function (event, data, previewId, index) {
+//            if (data && data.url) {
+//                $("#fileurl").value = data.url;
+//            } else {
+//                $('#myModal').modal('show');
+//            }
+//        });
+    });
+
+</script>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Logo
+        <small>修改Logo功能</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> 首页内容</a></li>
+        <li><a href="#">Logo</a></li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header">
+                    <h3 class="box-title">Logo
+                        <small>在这里编辑Logo</small>
+                    </h3>
+                    <!-- tools box -->
+                    <div class="pull-right box-tools">
+                        <button type="button" class="btn btn-info btn-sm" data-widget="save" data-toggle="tooltip"
+                                title="Save">
+                            <i class="fa fa-check"></i></button>
+                        <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
+                                title="Collapse">
+                            <i class="fa fa-minus"></i></button>
+                        <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
+                                title="Remove">
+                            <i class="fa fa-times"></i></button>
+                    </div>
+                    <!-- /. tools -->
+                </div>
+
+                <div class="box-body pad">
+                    <label>开始-结束时间:</label>
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" id="reservationtime" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="box-body pad">
+                    <label>网址:</label>
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-laptop"></i>
+                        </div>
+                        <input type="text" class="form-control" value="http://">
+                    </div>
+                </div>
+                <div class="box-body pad">
+                    <label>大图片:</label>
+
+                    <div class="input-group" style="width: 100%;">
+                        <input id="logo1${random}" name="uploadFile" type="file" multiple class="file-loading"
+                               accept="image/*">
+                        <input type="hidden" name="fileurl" id="fileurl1" value="">
+                    </div>
+                </div>
+                <div class="box-body pad">
+                    <label>小图片:</label>
+
+                    <div class="input-group" style="width: 100%;">
+                        <input id="logo2${random}" name="uploadFile" type="file" multiple class="file-loading"
+                               accept="image/*">
+                        <input type="hidden" name="fileurl" id="fileurl2" value="">
+                    </div>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col-->
+    </div>
+    </div>
+    <!-- ./row -->
+</section>
+
+

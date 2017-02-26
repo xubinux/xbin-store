@@ -1,0 +1,936 @@
+/*
+ myjd-2014 Compressed by cssmin 
+ Author:hanyuxinting 
+ Date: 2014-12-04 
+ */
+.comment-box {
+	background: #fcfffa;
+	border: 1px solid #d0e4c2;
+	padding: 10px 0 0 30px;
+	margin: 0 -6px 5px;
+	text-align: left;
+	display: none;
+	position: relative;
+	zoom: 1
+}
+
+.comment-box .msg-text {
+	float: right
+}
+
+.comment-box .item {
+	margin-bottom: 10px
+}
+
+.comment-box .item .label em {
+	padding-right: 3px;
+	padding-top: 5px;
+	vertical-align: middle;
+	font-size: 16px
+}
+
+.comment-box .box-t {
+	position: absolute;
+	right: 84px;
+	*right: 101px;
+	top: -11px;
+	width: 21px;
+	height: 12px;
+	background: url(/images/cicon.png) 0 0 no-repeat
+}
+
+.comment-box .btn:hover {
+	color: #333
+}
+
+.comment-box .commstar {
+	background-color: red;
+	width: 105px;
+	height: 20px;
+	background: url(/images/commstar.jpg) 0 -21px repeat-x;
+	position: relative;
+	margin-top: 5px;
+	display: inline-block;
+	overflow: hidden;
+	zoom: 1
+}
+
+.comment-box .commstar a {
+	width: 20%;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	height: 20px
+}
+
+.comment-box .commstar a:hover, .comment-box .commstar .active {
+	background: url(/images/commstar.jpg) left top repeat-x
+}
+
+.comment-box .commstar .star1 {
+	width: 20%;
+	z-index: 9
+}
+
+.comment-box .commstar .star2 {
+	width: 40%;
+	z-index: 8
+}
+
+.comment-box .commstar .star3 {
+	width: 60%;
+	z-index: 7
+}
+
+.comment-box .commstar .star4 {
+	width: 80%;
+	z-index: 6
+}
+
+.comment-box .commstar .star5 {
+	width: 100%;
+	z-index: 5
+}
+
+.comment-box .tips-list {
+	display: inline-block;
+	display: block;
+	width: 580px
+}
+
+.comment-box .tips-list:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+* html .comment-box .tips-list {
+	height: 1%
+}
+
+*+html .comment-box .tips-list {
+	min-height: 1%
+}
+
+.comment-box .tips-list li {
+	margin-right: 5px;
+	float: left;
+	cursor: pointer;
+	line-height: 18px;
+	padding: 6px 9px;
+	background: #fff;
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+	white-space: nowrap
+}
+
+.comment-box .tips-list li s.f-check {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	width: 13px;
+	height: 13px;
+	overflow: hidden;
+	background: url(/images/cicon.png) -38px 0;
+	margin-right: 5px
+}
+
+.comment-box .tips-list li s.f-input {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	width: 12px;
+	height: 14px;
+	overflow: hidden;
+	background: url(/images/cicon.png) -53px 0;
+	margin-right: 5px
+}
+
+.comment-box .tips-list li.select {
+	padding: 5px 8px;
+	border: 2px solid #c00
+}
+
+.comment-box .tips-list li.select s.f-check {
+	background-position: -23px 0
+}
+
+.comment-box .tips-list li .fore1 {
+	float: left
+}
+
+.comment-box .tips-list li .fore2 {
+	position: relative;
+	width: 90px
+}
+
+.comment-box .tips-list li.list-last {
+	position: relative
+}
+
+.comment-box .tips-list li.list-last span {
+	position: absolute;
+	left: 95px;
+	top: 5px;
+	cursor: default
+}
+
+.comment-box .tips-list li.list-last .itxt {
+	padding: 5px;
+	width: 86px
+}
+
+.comment-box .tips-list li.list-last-input {
+	padding: 0;
+	border: 2px solid #c00
+}
+
+.comment-box .tips-list li.list-last-input .itxt {
+	border: 0;
+	width: 80px
+}
+
+.comment-box .commented-tips-list li {
+	background: #eee;
+	border-color: #eee
+}
+
+.comment-box .commented-tips-list li em {
+	color: #999;
+	margin-left: 5px
+}
+
+.comment-box dl.club-share {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	line-height: 30px
+}
+
+.comment-box dl.club-share dt, .comment-box dl.club-share dd {
+	float: left
+}
+
+.comment-box dl.club-share .icon {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+	overflow: hidden;
+	background: url(/images/share.png) no-repeat;
+	margin: -3px 5px 0 0
+}
+
+.comment-box dl.club-share .icon-weibo {
+	background-position: 0 -17px
+}
+
+.comment-box dl.club-share .icon-weibo-on {
+	background-position: 0 0
+}
+
+.comment-box dl.club-share .icon-qzone {
+	background-position: -17px -17px
+}
+
+.comment-box dl.club-share .icon-qzone-on {
+	background-position: -17px 0
+}
+
+.comment-box dl.club-share .icon-qqweibo {
+	background-position: -34px -17px
+}
+
+.comment-box dl.club-share .icon-qqweibo-on {
+	background-position: -34px 0
+}
+
+.comment-box dl.club-share .icon-renren {
+	background-position: -51px -17px
+}
+
+.comment-box dl.club-share .icon-renren-on {
+	background-position: -51px 0
+}
+
+.comment-box dl.club-share .icon-kaixin {
+	background-position: -68px -17px
+}
+
+.comment-box dl.club-share .icon-kaixin-on {
+	background-position: -68px 0
+}
+
+.comment-box dl.club-share .icon-douban {
+	background-position: -85px -17px
+}
+
+.comment-box dl.club-share .icon-douban-on {
+	background-position: -85px 0
+}
+
+.comment-box .tit {
+	float: left;
+	width: 370px
+}
+
+.comment-box .cont {
+	float: left;
+	width: 602px;
+	word-break: break-all;
+	word-wrap: break-word
+}
+
+.comment-box .area {
+	width: 590px;
+	height: 88px
+}
+
+.comment-box .area01 {
+	color: #ccc
+}
+
+.comment-box .itxt2 {
+	width: 58px
+}
+
+.comment-box .itxt3 {
+	width: 78px
+}
+
+.comment-box .itxt-time {
+	width: 92px
+}
+
+.comment-box label {
+	cursor: pointer
+}
+
+.comment-box .sign-icon {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	vertical-align: middle;
+	cursor: pointer;
+	margin: -3px 3px 0 0;
+	background:
+		url(http://misc.360buyimg.com/purchase/skin/df/i/icon-quer.png)
+		no-repeat
+}
+
+.comment-box .hide {
+	display: none
+}
+
+.comment-box .msg-error-01 {
+	border: 1px solid #FFBDBE;
+	background: #FFEBEB;
+	color: #E4393C;
+	float: left;
+	line-height: 24px;
+	padding: 2px 6px
+}
+
+.service-box .mc {
+	border: 1px solid #e9eaec
+}
+
+.service-box .service-lcol {
+	float: left;
+	position: relative;
+	width: 195px;
+	padding: 30px 0 0 140px;
+	height: 164px;
+	background: #f5f5f5;
+	overflow: visible
+}
+
+.service-box .service-rcol {
+	float: left;
+	position: relative;
+	padding-left: 30px;
+	padding-top: 15px;
+	width: 440px;
+	height: 164px
+}
+
+.service-box .s-star {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	width: 75px;
+	height: 15px;
+	margin-top: -3px;
+	background: url(i/star-s.png) 0 0
+}
+
+.service-box .s-star.sa5 {
+	background-position: 0 0
+}
+
+.service-box .s-star.sa4 {
+	background-position: -15px 0
+}
+
+.service-box .s-star.sa3 {
+	background-position: -30px 0
+}
+
+.service-box .s-star.sa2 {
+	background-position: -45px 0
+}
+
+.service-box .s-star.sa1 {
+	background-position: -60px 0
+}
+
+.service-box .shopper-img {
+	position: absolute;
+	top: 30px;
+	left: 20px
+}
+
+.service-box .shopper-name {
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 20px
+}
+
+.service-box .service-arr {
+	display: block;
+	position: absolute;
+	right: -32px;
+	top: 50%;
+	margin-top: -16px;
+	width: 0;
+	height: 0;
+	border-style: dashed dashed dashed solid;
+	border-color: transparent transparent transparent #f5f5f5;
+	border-width: 16px;
+	overflow: hidden;
+	font-size: 0
+}
+
+.service-box dl {
+	display: inline-block;
+	display: block;
+	margin-bottom: 16px
+}
+
+.service-box dl:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+* html .service-box dl {
+	height: 1%
+}
+
+*+html .service-box dl {
+	min-height: 1%
+}
+
+.service-box dl .degree-text { @inline-block;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	color: #999;
+	padding: 1px 3px;
+	height: 18px;
+	line-height: 18px;
+	margin-left: 10px
+}
+
+.service-box dl .degree-text.d3, .service-box dl .degree-text.d4 {
+	border-color: #f8b600;
+	color: #f8b600
+}
+
+.service-box dl .degree-text.d5 {
+	border-color: #f60;
+	color: #f60
+}
+
+.service-box dl .commstar {
+	background-color: red;
+	width: 105px;
+	height: 20px;
+	background: url(/images/commstar.jpg) 0 -21px repeat-x;
+	position: relative;
+	display: inline-block;
+	float: left
+}
+
+.service-box dl .commstar a {
+	width: 20%;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	height: 20px
+}
+
+.service-box dl .commstar a:hover, .service-box dl .commstar .active {
+	background: url(/images/commstar.jpg) left top repeat-x
+}
+
+.service-box dl .commstar .star1 {
+	width: 20%;
+	z-index: 9
+}
+
+.service-box dl .commstar .star2 {
+	width: 40%;
+	z-index: 8
+}
+
+.service-box dl .commstar .star3 {
+	width: 60%;
+	z-index: 7
+}
+
+.service-box dl .commstar .star4 {
+	width: 80%;
+	z-index: 6
+}
+
+.service-box dl .commstar .star5 {
+	width: 100%;
+	z-index: 5
+}
+
+.service-box dt, .service-box dd {
+	float: left
+}
+
+.service-box dt {
+	width: 120px
+}
+
+.service-box .score {
+	width: 300px;
+	float: left
+}
+
+.service-box .service-txt {
+	float: left;
+	width: 170px
+}
+
+.service-box .service-txt .more {
+	display: block;
+	padding-top: 40px
+}
+
+.service-box .service-txt .hide {
+	display: none
+}
+
+.service-box .service-txt .area {
+	border: 1px solid #71b247;
+	height: 80px;
+	padding: 5px;
+	width: 140px
+}
+
+.service-box .score-succ {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	margin-top: -24px
+}
+
+.service-box .score-succ h3 {
+	font-size: 18px;
+	font-family: "microsoft yahei"
+}
+
+.service-box .score-succ .icon-02 {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	width: 48px;
+	height: 48px;
+	margin-right: 10px;
+	background: url(i/icon48.png) 0 0 no-repeat
+}
+
+.mod-main .service-score {
+	margin: 20px 0 0 100px;
+	overflow: hidden
+}
+
+.satisfaction-box {
+	margin-top: -11px;
+	padding-bottom: 20px
+}
+
+.satisfaction-box .box-t {
+	right: 70px
+}
+
+.satisfaction-box dt {
+	padding-top: 7px;
+	text-align: right
+}
+
+.satisfaction-box dt em {
+	color: #e4393c
+}
+
+.satisfaction-box .op-btn {
+	margin-left: 120px
+}
+
+.satisfaction-box .service-score {
+	margin-left: 130px
+}
+
+.satisfaction-box .txt {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	padding-top: 5px;
+	line-height: 20px;
+	margin-left: 10px
+}
+
+.pro-info {
+	display: inline-block;
+	display: block
+}
+
+.pro-info:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+* html .pro-info {
+	height: 1%
+}
+
+*+html .pro-info {
+	min-height: 1%
+}
+
+.pro-info li {
+	float: left;
+	width: 130px;
+	*padding: 0 5px;
+	vertical-align: middle;
+	margin-top: 10px
+}
+
+.pro-info li.fore1 {
+	width: 484px;
+	margin: 0
+}
+
+.pro-info li.fore3 {
+	width: 176px;
+	*width: 139px;
+	width: 139\0;
+	margin-left: 7px
+}
+
+.p-info {
+	width: 450px;
+	overflow: hidden
+}
+
+.p-info .p-name {
+	width: 330px;
+	overflow: hidden;
+	margin-left: 10px;
+	height: 3em;
+	line-height: 1.5em;
+	margin-top: 10px;
+	text-align: left
+}
+
+.p-info .p-img {
+	padding: 5px 0 5px 10px
+}
+
+.tb-line td {
+	border: 0;
+	border-bottom: 1px solid #f2f2f2
+}
+
+.tb-line a:hover {
+	color: #e4393c
+}
+
+.tb-line a.btn-5:hover, .tb-line a.btn-9:hover {
+	color: #333
+}
+
+.extra-main .mt {
+	padding-left: 0
+}
+
+.extra-main .mt .extra-l li {
+	padding: 0;
+	padding-right: 20px
+}
+
+.selt {
+	border: 1px solid #ccc;
+	padding: 2px;
+	float: right
+}
+
+.mc .list-h {
+	overflow: hidden;
+	zoom: 1
+}
+
+.mc .list-h li {
+	float: left;
+	border: 1px solid #E1E1E1;
+	margin-right: 10px;
+	width: 50px;
+	height: 50px
+}
+
+.mc .list-h li.last-more {
+	text-align: center;
+	line-height: 25px
+}
+
+.mc .list-h li.last-more .icon-elli {
+	display: block;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+	margin: 4px auto 0;
+	width: 34px;
+	height: 8px;
+	background-image: url(i/more.png)
+}
+
+.upload-img-box .img-list {
+	float: left;
+	max-width: 630px;
+	overflow: hidden
+}
+
+.upload-img-box .img-list li {
+	float: left;
+	position: relative;
+	width: 80px;
+	height: 80px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	margin: 5px 5px 0 0;
+	_display: inline
+}
+
+.upload-img-box .img-list li .del {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 80px;
+	background-color: #000;
+	opacity: .5;
+	filter: alpha(opacity = 50)
+}
+
+.upload-img-box .img-list li .del em {
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 18px;
+	color: #fff;
+	font-family: verdana;
+	cursor: pointer
+}
+
+.upload-img-box .img-list li .del span {
+	position: absolute;
+	width: 80px;
+	text-align: center;
+	line-height: 80px;
+	color: #FFF
+}
+
+.upload-img-box .img-list li.upload-btn {
+	width: 82px;
+	text-align: right;
+	border: medium none;
+	height: auto;
+	margin: 0
+}
+
+.upload-img-box .img-list li.upload-btn a {
+	display: block;
+	width: 80px;
+	margin-top: 5px;
+	height: 80px;
+	line-height: 80px;
+	border: 1px solid #ccc;
+	color: #999;
+	text-align: center
+}
+
+.comment-mt-list {
+	margin-right: -1px
+}
+
+.comment-mt-list a {
+	padding: 0 10px;
+	border-right: 1px solid #ccc
+}
+
+.Jcalendar {
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	box-shadow: 0 0 5px #ddd;
+	background: #fff
+}
+
+.Jcal {
+	width: 240px;
+	background: #fff;
+	border-collapse: collapse;
+	font: 12px verdana
+}
+
+.Jcal tbody td {
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+	color: #005ea7;
+	font-weight: 700;
+	cursor: pointer
+}
+
+.Jcal thead th {
+	text-align: center;
+	height: 24px;
+	line-height: 24px;
+	padding-bottom: 5px
+}
+
+.Jcal .selectMonth {
+	padding: 0 5px 0 20px
+}
+
+.Jcal thead th a.ctrl-prev, .Jcal thead th a.ctrl-next {
+	background-image: url(i/J-cal.png);
+	background-repeat: no-repeat;
+	overflow: hidden
+}
+
+.Jcal .prevYear {
+	background-position: 0 -50px
+}
+
+.Jcal .prevMonth {
+	background-position: 0 -100px
+}
+
+.Jcal .nextYear {
+	background-position: 0 -75px
+}
+
+.Jcal .nextMonth {
+	background-position: 0 -125px
+}
+
+.Jcal thead th a.ctrl-prev:hover, .Jcal thead th a.ctrl-next:hover {
+	background-color: #eee;
+	text-decoration: none
+}
+
+.Jcal .selectMonth, .Jcal .slecteYear {
+	float: left
+}
+
+.Jcal .ctrl-prev {
+	float: left
+}
+
+.Jcal .ctrl-next {
+	float: right
+}
+
+.Jcal .ctrl-prev, .Jcal .ctrl-next {
+	height: 25px;
+	width: 25px;
+	line-height: 10000px;
+	text-align: center
+}
+
+.Jcal thead .days {
+	background: #e5e5e5
+}
+
+.Jcal thead .days th {
+	border: 1px solid #e5e5e5
+}
+
+.Jcal td {
+	border: 1px solid #e5e5e5;
+	padding: 2px 0
+}
+
+.Jcal td.chosen {
+	background: #e4393c;
+	color: #fff
+}
+
+.Jcal .over {
+	background: #eee
+}
+
+.Jcal .today {
+	text-align: center;
+	display: block;
+	padding: 4px 0;
+	color: #005ea7;
+	font-weight: 700
+}
+
+.Jcal .J-sun, .Jcal .J-sat {
+	color: #e4393c
+}
+
+.Jcalendar .close {
+	display: none
+}
+
+.J-inp-cal {
+	border: 1px solid #ccc;
+	height: 21px;
+	line-height: 21px;
+	padding: 1px 26px 1px 2px;
+	background: url(i/J-cal.png) right -1px no-repeat
+}

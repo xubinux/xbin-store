@@ -1,0 +1,404 @@
+/*
+ myjd-2014 Compressed by cssmin 
+ Author:Fengwp 
+ Date: 2014-07-11 
+ */
+@charset "UTF-8"; 
+
+.user-set {
+	background-color: #fff;
+	padding: 20px 5px 0 15px
+}
+
+.user-set .interest-list {
+	width: 400px
+}
+
+.user-set .interest-list ul {
+	display: inline-block;
+	display: block
+}
+
+.user-set .interest-list ul:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+* html .user-set .interest-list ul {
+	height: 1%
+}
+
+*+html .user-set .interest-list ul {
+	min-height: 1%
+}
+
+.user-set .interest-list li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	position: relative;
+	height: 18px;
+	line-height: 18px;
+	border: 1px solid #cfcfcf;
+	padding: 8px 9px;
+	margin: 10px 10px 0 0;
+	cursor: pointer
+}
+
+.user-set .interest-list li.selected {
+	border-color: #e4393c;
+	border-width: 2px;
+	padding: 7px 8px
+}
+
+.user-set .interest-list li.selected s {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 16px;
+	height: 16px;
+	background: url(i/selt.png) no-repeat
+}
+
+.user-set .birthday-info {
+	width: 397px;
+	overflow: hidden
+}
+
+.userset-lcol {
+	float: left;
+	width: 500px
+}
+
+#user-info {
+	overflow: hidden;
+	width: 280px;
+	float: left;
+	padding: 10px;
+	margin-bottom: 10px;
+	height: 102px;
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+	color: #666;
+	line-height: 20px
+}
+
+#user-info a {
+	color: #005ea7
+}
+
+#user-info a:hover {
+	color: #e4393c
+}
+
+#user-info .u-pic {
+	position: relative;
+	z-index: 0;
+	float: left;
+	width: 104px;
+	height: 104px;
+	overflow: hidden;
+	text-align: center;
+	margin-right: 6px
+}
+
+#user-info .u-pic .face-link {
+	display: none;
+	position: absolute;
+	width: 100px;
+	text-align: center;
+	left: 0;
+	bottom: 4px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	color: #fff;
+	z-index: 3
+}
+
+#user-info .u-pic .face-link-box {
+	display: none;
+	background: #000;
+	z-index: 1;
+	position: absolute;
+	width: 100px;
+	text-align: center;
+	left: 0;
+	bottom: 4px;
+	height: 30px;
+	opacity: .5;
+	filter: alpha(opacity = 50)
+}
+
+#user-info .u-pic .mask {
+	background: url(/images/myjd-bg2.png) 0 0;
+	width: 104px;
+	height: 104px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2
+}
+
+#user-info .u-pic img {
+	width: 100px;
+	height: 100px
+}
+
+#user-info .info-m {
+	float: left;
+	width: 170px
+}
+
+#user-info .info-m .u-name {
+	font-size: 18px;
+	font-family: "microsoft yahei";
+	color: #000;
+	line-height: 28px;
+	height: 28px;
+	overflow: hidden;
+	margin-bottom: 5px
+}
+
+#user-info .info-m .u-name a {
+	color: #000
+}
+
+#user-info .info-m .u-name a:hover {
+	color: #e4393c
+}
+
+#user-info .info-m .u-level {
+	margin-bottom: 5px;
+	height: 18px
+}
+
+#user-info .info-m .u-level .rank {
+	margin-right: 10px
+}
+
+#user-info .info-m .u-level .rank s {
+	background: url(/images/rank2014.gif) no-repeat 0 0;
+	display: inline-block;
+	height: 17px;
+	margin-right: 5px;
+	text-decoration: none;
+	width: 17px;
+	vertical-align: middle;
+	overflow: hidden
+}
+
+#user-info .info-m .u-level .rank a {
+	display: inline-block;
+	vertical-align: middle
+}
+
+#user-info .info-m .u-level .rank.r2 s {
+	background-position: 0 -17px
+}
+
+#user-info .info-m .u-level .rank.r3 s {
+	background-position: 0 -34px
+}
+
+#user-info .info-m .u-level .rank.r4 s {
+	background-position: 0 -51px
+}
+
+#user-info .info-m .u-level .rank.r5 s {
+	background-position: 0 -68px
+}
+
+#user-info .info-m .u-level .rank.r6 s {
+	background-position: 0 -85px
+}
+
+#user-info .info-m .rank-sh {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	height: 15px;
+	background: url(/images/rank-sh.png) no-repeat
+}
+
+#user-info .info-m .rank-sh01 {
+	width: 75px
+}
+
+#user-info .info-m .rank-sh02 {
+	width: 55px
+}
+
+#user-info .info-m .rank-sh03 {
+	width: 35px
+}
+
+#user-info .info-m .rank-sh04 {
+	width: 17px
+}
+
+#user-info .info-m .rank-sh05 {
+	background-position: -80px 0;
+	width: 15px
+}
+
+.update-face-cont {
+	padding: 20px 0
+}
+
+.update-face-cont .img-cont {
+	background: #f9f9f9;
+	border: 1px solid #e9eaec
+}
+
+.update-face-cont .img-b-cont {
+	position: relative;
+	width: 470px;
+	height: 236px;
+	margin-bottom: 20px;
+	display: table;
+	text-align: center
+}
+
+.update-face-cont .img-b-cont .tip {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 100px;
+	text-align: center;
+	margin: -9px 0 0 -50px
+}
+
+.update-face-cont .img-b-cont .img-b {
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+	z-index: 5;
+	*position: absolute;
+	*top: 50%;
+	*left: 50%
+}
+
+.update-face-cont .img-b-cont .img-b img {
+	*position: relative;
+	*top: -50%;
+	*left: -50%
+}
+
+.update-face-cont .img-m-cont {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin-top: 20px;
+	display: table;
+	text-align: center
+}
+
+.update-face-cont .img-m-cont .img-s {
+	display: table-cell;
+	vertical-align: middle;
+	*position: absolute;
+	*top: 50%;
+	*left: 50%
+}
+
+.update-face-cont .img-m-cont .img-s img {
+	*position: relative;
+	*top: -50%;
+	*left: -50%
+}
+
+.update-face-cont .img-s-cont {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin-top: 20px;
+	display: table;
+	text-align: center
+}
+
+.update-face-cont .img-s-cont .img-s {
+	display: table-cell;
+	vertical-align: middle;
+	*position: absolute;
+	*top: 50%;
+	*left: 50%
+}
+
+.update-face-cont .img-s-cont .img-s img {
+	*position: relative;
+	*top: -50%;
+	*left: -50%
+}
+
+.update-face-cont .face-list ul {
+	display: inline-block;
+	display: block;
+	width: 480px
+}
+
+.update-face-cont .face-list ul:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+* html .update-face-cont .face-list ul {
+	height: 1%
+}
+
+*+html .update-face-cont .face-list ul {
+	min-height: 1%
+}
+
+.update-face-cont .face-list li {
+	float: left;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	margin: 10px 10px 0 0;
+	cursor: pointer;
+	position: relative
+}
+
+.update-face-cont .face-list li a {
+	display: block
+}
+
+.update-face-cont .face-list li.selected b {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background: url(i/face-selt.png) no-repeat
+}
+
+.update-lcol {
+	float: left;
+	border-right: 1px solid #e9eaec;
+	width: 470px;
+	padding: 0 30px
+}
+
+.update-rcol {
+	float: left;
+	width: 240px;
+	margin-left: 30px
+}
+
+.update-rcol .smc {
+	color: #999;
+	line-height: 20px
+}
+
+#product-track .m {
+	background: #fff
+}

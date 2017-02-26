@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+
+	<!--&lt;!&ndash; JMS服务提供厂商targetConnectionFactory &ndash;&gt;-->
+	<!--<bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">-->
+		<!--<constructor-arg name="brokerURL" value="${mq.brokerURL}"/>-->
+	<!--</bean>-->
+
+	<!--&lt;!&ndash; spring对厂商targetConnectionFactory的封装 &ndash;&gt;-->
+	<!--<bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">-->
+		<!--<property name="targetConnectionFactory" ref="targetConnectionFactory"/>-->
+	<!--</bean>-->
+
+	<!--&lt;!&ndash; 配置jmsTemplate &ndash;&gt;-->
+	<!--<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">-->
+		<!--<property name="connectionFactory" ref="connectionFactory"/>-->
+	<!--</bean>-->
+
+	<!--<bean id="addItemTopic" class="org.apache.activemq.command.ActiveMQTopic">-->
+		<!--<constructor-arg name="name" value="${manager.topic.itemadd}"/>-->
+	<!--</bean>-->
+
+</beans>

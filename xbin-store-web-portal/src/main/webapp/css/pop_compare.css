@@ -1,0 +1,419 @@
+#pop-compare {
+	display: none;
+	position: fixed;
+	bottom: -200px;
+	right: 50%;
+	margin-right: -495px;
+	z-index: 100;
+	width: 990px;
+	height: 139px;
+	background: #fff;
+	-moz-box-shadow: 0 0 15px rgba(221, 221, 221, .8);
+	-webkit-box-shadow: 0 0 15px rgba(221, 221, 221, .8);
+	box-shadow: 0 0 15px rgba(221, 221, 221, .8)
+}
+
+.root61 #pop-compare {
+	margin-right: -606px
+}
+
+#pop-compare .tab-con {
+	border: 2px solid #7abd54;
+	border-top: 0
+}
+
+#pop-compare.pop-compare-narrow {
+	width: 970px;
+	margin-right: -475px
+}
+
+#pop-compare.pop-compare-narrow #scroll-con-inner dl {
+	width: 204px
+}
+
+#pop-compare.pop-compare-narrow .scroll-con {
+	width: 880px
+}
+
+#pop-compare.pop-compare-narrow .scroll-con dd {
+	width: 150px
+}
+
+#pop-compare .pop-wrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 990px
+}
+
+#pop-compare.pop-compare-narrow .pop-wrap {
+	width: 970px
+}
+
+#pop-compare.pop-compare-narrow .diff-operate {
+	right: 14px
+}
+
+#goto-contrast:hover {
+	text-decoration: none
+}
+
+#goto-contrast {
+	display: block;
+	width: 59px;
+	height: 30px;
+	font: 700 14px/30px verdana;
+	margin-left: 13px;
+	margin-bottom: 11px;
+	border-radius: 3px;
+	background: #fff;
+	border: 1px solid #ddd;
+	color: #ccc;
+	cursor: default
+}
+
+#goto-contrast.compare-active {
+	border: 0;
+	color: #fff;
+	background-color: #E74649;
+	background-image: -ms-linear-gradient(top, #E74649 0, #DF3033 100%);
+	background-image: -moz-linear-gradient(top, #E74649 0, #DF3033 100%);
+	background-image: -o-linear-gradient(top, #E74649 0, #DF3033 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E74649),
+		color-stop(1, #DF3033));
+	background-image: -webkit-linear-gradient(top, #E74649 0, #DF3033 100%);
+	background-image: linear-gradient(to bottom, #E74649 0, #DF3033 100%);
+	cursor: pointer
+}
+
+.del-items:hover, .btn-compare:hover, .del-comp-item:hover {
+	cursor: pointer
+}
+
+.del-comp-item {
+	padding-left: 10px
+}
+
+#pop-compare .pop-inner {
+	height: 133px
+}
+
+#pop-compare .diff-hd .tab-btns {
+	height: 32px;
+	border: 1px solid #ddd;
+	border-bottom: 2px solid #7abd54;
+	_overflow: hidden
+}
+
+#pop-compare .tab-btns a {
+	color: #666
+}
+
+#pop-compare .diff-hd {
+	position: relative
+}
+
+#pop-compare .tab-btns .current {
+	position: relative;
+	left: -1px;
+	margin-top: -4px;
+	height: 36px;
+	background: #fff;
+	border: 2px solid #7abd54;
+	border-bottom: 0
+}
+
+#pop-compare .tab-btns .current a {
+	color: #7abd54
+}
+
+#pop-compare .tab-btns .current a:hover {
+	text-decoration: none
+}
+
+#pop-compare .diff-hd .operate {
+	width: 190px;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding-right: 22px;
+	height: 30px;
+	line-height: 30px;
+	clear: both
+}
+
+#pop-compare .diff-hd li {
+	float: left;
+	position: relative;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	*zoom: 1;
+	font: 14px/30px 'microsoft yahei'
+}
+
+#pop-compare .operate .btn-compare {
+	margin-top: 2px
+}
+
+#pop-compare div.diff-items {
+	padding: 6px;
+	color: #ccc;
+	height: 90px;
+	overflow: hidden
+}
+
+#pop-compare #scroll-con-inner div.dt {
+	border: 0
+}
+
+#pop-compare .diff-items dl, #pop-compare .scroll-con dl {
+	float: left;
+	overflow: hidden;
+	margin-right: 10px;
+	padding: 17px 10px 12px 0;
+	border-right: 1px dotted #7abd54
+}
+
+#pop-compare #scroll-con-inner li {
+	float: left;
+	height: 84px;
+	overflow: hidden
+}
+
+#pop-compare #scroll-con-inner .rec_item_wrap {
+	margin-right: 10px;
+	padding: 10px 10px 0 0;
+	border-right: 1px dotted #7abd54;
+	overflow: hidden;
+	width: 205px
+}
+
+#pop-compare .diff-items dt, #pop-compare .scroll-con dt,
+	#scroll-con-inner .dt {
+	float: left;
+	margin-right: 5px;
+	width: 48px;
+	height: 48px;
+	text-align: center;
+	color: #ccc;
+	border: 1px solid #fff;
+	font: 36px/48px arial;
+	overflow: hidden
+}
+
+#pop-compare .diff-items dd, #pop-compare .scroll-con dd,
+	#scroll-con-inner .dd {
+	float: left;
+	width: 140px
+}
+
+#pop-compare .item-empty dt {
+	background: #f6f6f6
+}
+
+#scroll-con-inner .hasItem .dt {
+	background: 0
+}
+
+#pop-compare a.diff-item-name {
+	height: 3em;
+	line-height: 1.5em;
+	overflow: hidden;
+	display: block;
+	color: #333
+}
+
+#pop-compare .rec_item_wrap .btns {
+	padding-top: 15px
+}
+
+#pop-compare .rec_item_wrap .btns .p-price {
+	_float: right
+}
+
+#pop-compare .rec_item_wrap .btns img {
+	margin-top: 3px;
+	*float: left
+}
+
+#pop-compare .del-comp-item {
+	visibility: hidden;
+	color: #005aa0
+}
+
+#pop-compare .show-del-comp-item .del-comp-item {
+	visibility: visible
+}
+
+#pop-compare .hasItem dt {
+	border: 0
+}
+
+#pop-compare .diff-bd {
+	position: relative
+}
+
+#pop-compare .diff-operate {
+	position: absolute;
+	right: 22px;
+	top: 22px;
+	width: 85px;
+	text-align: center
+}
+
+a.compare-active {
+	background-position: 0 -92px;
+	color: #333;
+	cursor: pointer
+}
+
+.pop-compare-tips {
+	display: none;
+	height: 27px;
+	margin-top: -29px;
+	line-height: 27px;
+	border: 1px solid #db9a9a;
+	color: #c00;
+	text-align: center;
+	background: #ffe8e8;
+	_margin-top: 0
+}
+
+#pop-compare .hide-me, .diff-operate a {
+	color: #005aa0
+}
+
+#pop-compare .btn-compare {
+	display: block;
+	border: 0
+}
+
+#pop-compare .btn-compare-s {
+	float: left;
+	width: 58px;
+	height: 21px;
+	background:
+		url(../images/cmp-btns.png) 0 0
+		no-repeat;
+	overflow: hidden;
+	line-height: 100px;
+	margin-right: 10px
+}
+
+#pop-compare a.btn-compare-s-active {
+	background-position: 0 -24px
+}
+
+#pop-compare .scroll-item {
+	padding: 6px 10px;
+	_padding: 10px
+}
+
+#pop-compare div.scroll-con {
+	width: 905px;
+	height: 90px;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden
+}
+
+#pop-compare #scroll-con-inner {
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 0
+}
+
+#scroll-con-inner dl img, #scroll-con-inner dt {
+	border: 0
+}
+
+#pop-compare .scroll-item {
+	position: relative;
+	height: 90px
+}
+
+#pop-compare .scroll-loading {
+	width: 900px;
+	height: 90px;
+	line-height: 90px
+}
+
+#pop-compare .scroll-con dd {
+	width: 155px
+}
+
+#pop-compare .scroll-btn {
+	position: relative;
+	top: 30px;
+	z-index: 10;
+	width: 14px;
+	height: 50px;
+	text-indent: -9999px;
+	overflow: hidden;
+	cursor: pointer;
+	background-image:
+		url(../images/footprint-arr.png);
+	background-repeat: no-repeat
+}
+
+#pop-compare .sb-prev {
+	float: left;
+	background-position: 0 0
+}
+
+#pop-compare .sb-next {
+	float: right;
+	background-position: -16px 0
+}
+
+#pop-compare span.no-prev, #pop-compare #sc-prev.disabled {
+	background-position: 0 -100px;
+	cursor: default
+}
+
+#pop-compare span.no-next, #pop-compare #sc-next.disabled {
+	background-position: -16px -100px;
+	cursor: default
+}
+
+#sidepanel .compareHolder {
+	display: block;
+	background-position: 0 -606px;
+	cursor: pointer
+}
+
+#sidepanel .compareHolder b {
+	width: 14px;
+	height: 13px;
+	background:
+		url(../images/cmp-btns.png) -95px
+		-94px no-repeat
+}
+
+#sidepanel .compareHolder:hover b {
+	background-position: -95px -108px
+}
+
+#sidepanel .compareHolder-show {
+	visibility: visible
+}
+
+* html #pop-compare {
+	bottom: auto;
+	top: expression(eval(document.documentElement.scrollTop +
+		document.documentElement.clientHeight-this.offsetHeight- ( parseInt(this.currentStyle.marginTop
+		, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)))
+}
+
+* html #pop-compare {
+	bottom: auto;
+	position: absolute
+}
+
+* html #pop-compare .pop-wrap {
+	position: static
+}

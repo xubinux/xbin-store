@@ -1,0 +1,671 @@
+/*
+ myjd-2014 Compressed by cssmin 
+ Author:CaiFeng 
+ Date: 2014-12-25 
+ */
+@charset "UTF-8"; 
+
+.u-name {
+	width: 80px;
+	overflow: hidden;
+	word-break: break-all;
+	word-wrap: break-word
+}
+
+.img-list {
+	width: 280px;
+	overflow: hidden
+}
+
+.img-list .img-box {
+	border: 1px solid #e1e1e1;
+	float: left;
+	margin-right: 4px;
+	margin-bottom: 4px
+}
+
+.img-list .img-box:hover {
+	border-color: #EDD28B
+}
+
+#order01 {
+	line-height: 20px
+}
+
+#order01 .mc {
+	line-height: 25px
+}
+
+#order01 .mc a {
+	color: #005ea7
+}
+
+#order01 dl, .filter-item .item-con {
+	overflow: hidden;
+	*zoom: 1
+}
+
+#order01 dt, #order01 dd {
+	float: left
+}
+
+#order01 dt {
+	width: 60px;
+	text-align: right
+}
+
+#order01 dd {
+	margin-right: 25px;
+	color: #999
+}
+
+#order01 dd .icon-new {
+	background:
+		url(/images/icon-2013-new.png)
+		no-repeat right 3px;
+	padding-right: 26px
+}
+
+#order01 dd .bg-01 {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	height: 16px;
+	line-height: 16px;
+	margin-left: 2px;
+	padding: 0 2px;
+	vertical-align: middle;
+	background: #e4393c;
+	color: #fff
+}
+
+#order02 .mt .extra-r {
+	width: 455px
+}
+
+#order02 .mt .i-extra {
+	float: left
+}
+
+#order02 .mt .btn {
+	margin-left: 4px
+}
+
+.search-01 {
+	float: right
+}
+
+.search-01 .s-itxt {
+	line-height: 18px;
+	border: 1px solid #ccc;
+	padding: 3px 5px 4px;
+	float: none;
+	width: 195px
+}
+
+.search-01 .btn-13 {
+	color: #333;
+	text-decoration: nonee
+}
+
+#order02 .mt {
+	overflow: visible
+}
+
+.taborder li {
+	position: relative;
+	float: left;
+	z-index: 2
+}
+
+.taborder .tyies-t {
+	line-height: 29px;
+	height: 29px;
+	padding-left: 20px;
+	padding-right: 35px;
+	position: relative;
+	z-index: 3;
+	*float: left;
+	border: 2px solid #fff;
+	border-bottom: 0
+}
+
+html* .taborder .tyies-t {
+	top: 1px
+}
+
+.taborder li b {
+	width: 9px;
+	height: 5px;
+	background: url(/images/order-icon-20140811.png) 0 -54px;
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	margin-top: -3px
+}
+
+.taborder .hover .tyies-t {
+	position: relative;
+	border: 2px solid #e6e6e6;
+	border-bottom: 0;
+	background: #fff
+}
+
+.tyies-c {
+	display: none;
+	border: 2px solid #e6e6e6;
+	-moz-border-radius: 0 1px 1px;
+	-webkit-border-radius: 0 1px 1px;
+	border-radius: 0 1px 1px;
+	background: #fff;
+	text-align: left;
+	padding: 0 8px;
+	-webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, .08);
+	-moz-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, .08);
+	box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, .08);
+	z-index: 2
+}
+
+.tyies-c .close {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	position: absolute;
+	width: 17px;
+	height: 17px;
+	background: url(i/jdleft.png) no-repeat -46px 0;
+	right: 5px;
+	top: 5px;
+	cursor: pointer
+}
+
+.tyies-c .label {
+	color: #999
+}
+
+.hover .tyies-c {
+	position: absolute;
+	display: block;
+	width: 300px;
+	left: 0;
+	top: 29px
+}
+
+.filter-item {
+	line-height: 22px;
+	color: #CCC;
+	border-bottom: 1px dotted #ccc;
+	zoom: 1;
+	word-wrap: break-word;
+	padding-top: 4px;
+	padding-bottom: 4px
+}
+
+.filter-item:last-child {
+	background-image: none
+}
+
+.filter-item a {
+	color: #005ea7;
+	padding: 0 8px;
+	margin-left: -1px;
+	white-space: nowrap;
+	background: url(http://misc.360buyimg.com/jd2008/skin/df/i/solid.gif)
+		left center no-repeat;
+	zoom: 1;
+	float: left
+}
+
+.filter-item .label {
+	float: left
+}
+
+.tr-th td, .tr-split td {
+	padding-top: 4px;
+	padding-bottom: 4px
+}
+
+.tr-th td {
+	text-align: left
+}
+
+.tr-th span {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin-right: 10px;
+	overflow: hidden;
+	vertical-align: middle;
+	height: 24px;
+	line-height: 23px;
+	float: left
+}
+
+#order02 .tb-void th {
+	background: #e7e7e7
+}
+
+.tr-th {
+	background: #f5f5f5
+}
+
+.tcol1 {
+	width: 225px;
+	color: #666
+}
+
+.tcol2 {
+	color: #666;
+	margin: 0
+}
+
+.tooltip i.icon-limit {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font-size: 0;
+	overflow: hidden;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	background: url(/images/order-icon-20140811.png) 0 -64px;
+	margin: -2px 2px 0 0
+}
+
+.tcol1 {
+	width: 225px;
+	color: #666
+}
+
+.tcol2 {
+	color: #666;
+	margin: 0
+}
+
+.tr-th span.tcol4 {
+	float: right;
+	color: #666;
+	width: 170px
+}
+
+.tr-td td {
+	vertical-align: top;
+	padding-top: 10px
+}
+
+.tr-split td {
+	background-color: #FFFDEE;
+	color: #666
+}
+
+td.td-02 {
+	background: #fffdee;
+	color: #666;
+	padding-top: 5px
+}
+
+.btn-im, .btn-imoff {
+	float: left;
+	display: inline-block;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	background: url(/images/order-icon-20140811.png);
+	width: 16px;
+	height: 16px;
+	line-height: 100px;
+	overflow: hidden;
+	margin: 4px 0 0
+}
+
+.btn-imoff {
+	background-position: 0 -18px;
+	color: #ccc;
+	cursor: default
+}
+
+a.btn-im:link, a.btn-im:visited, a.btn-im:hover {
+	color: #333
+}
+
+a.btn-imoff:link, a.btn-imoff:visited, a.btn-imoff:hover {
+	color: #ccc
+}
+
+a.btn-im:hover, a.btn-imoff:hover {
+	text-decoration: none
+}
+
+.icon-tel {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin: -1px 3px 0 0;
+	background: url(/images/order-icon-20140811.png) 0 -36px no-repeat;
+	height: 16px;
+	width: 16px;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: middle
+}
+
+.o-btn, .o-pay, .o-comm, .o-repair, .o-pera {
+	margin-bottom: 5px
+}
+
+.ftx-line {
+	color: #999;
+	margin-left: 2px;
+	margin-right: 2px
+}
+
+.m-txt {
+	margin: 0 5px;
+	font-weight: 400
+}
+
+.o-info {
+	text-align: left;
+	margin-left: 54px
+}
+
+.o-info .lprice {
+	display: block;
+	width: 135px;
+	float: left
+}
+
+.tooltip {
+	position: relative;
+	display: block;
+	width: 100%;
+	z-index: 11;
+	color: #005EA7
+}
+
+.tooltip s {
+	vertical-align: middle
+}
+
+.tooltip s.s1 {
+	background-position: 0 -48px;
+	vertical-align: middle
+}
+
+a.btn-again {
+	background: url(/images/btn-again.png);
+	display: block;
+	height: 21px;
+	line-height: 100px;
+	margin: 3px auto 0;
+	overflow: hidden;
+	width: 73px
+}
+
+a.btn-again:hover {
+	background-position: 0 -24px
+}
+
+.paind {
+	text-indent: -36px;
+	padding-left: 36px
+}
+
+.cellphone-icon {
+	display: block;
+	width: 58px;
+	height: 16px;
+	margin: 5px auto 0;
+	line-height: 100px;
+	overflow: hidden;
+	background:
+		url(/images/cellphone.png)
+		no-repeat
+}
+
+.img-list .tuan-img-box {
+	width: 50px;
+	height: 50px
+}
+
+.tuan-img-box img {
+	margin-top: 8px
+}
+
+.stage-cont {
+	background: #fafcff;
+	margin: 5px 0;
+	line-height: 20px
+}
+
+.curr-stage {
+	background: #eff4ff
+}
+
+.stage li {
+	float: left;
+	padding: 10px 5px
+}
+
+.stage li.fore1 {
+	width: 276px
+}
+
+.stage li.fore2 {
+	width: 81px
+}
+
+.stage li.fore3 {
+	width: 92px
+}
+
+.stage li.fore4 {
+	width: 94px
+}
+
+.stage li.fore5 {
+	width: 88px
+}
+
+.stage li.fore6 {
+	width: 104px
+}
+
+.stage-tip {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin: 0 5px 0 0;
+	background:
+		url(/images/remind_16.png)
+		no-repeat;
+	vertical-align: middle
+}
+
+#guessing-liked {
+	overflow: hidden
+}
+
+#guessing-liked .controls a {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	overflow: hidden;
+	margin-left: 5px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	border: 1px solid #ddd;
+	color: #333
+}
+
+#guessing-liked .controls a:hover, #guessing-liked .controls a.curr {
+	background: #e4393c;
+	border-color: #e4393c;
+	color: #fff;
+	font-weight: 700
+}
+
+#guessing-liked .mc {
+	height: 251px;
+	overflow: hidden
+}
+
+#guessing-liked .mc ul {
+	display: inline-block;
+	display: block;
+	height: 251px
+}
+
+#guessing-liked .mc ul:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+
+* html #guessing-liked .mc ul {
+	height: 1%
+}
+
+*+html #guessing-liked .mc ul {
+	min-height: 1%
+}
+
+#guessing-liked .mc li {
+	float: left;
+	width: 160px;
+	padding: 0 20px;
+	height: 251px
+}
+
+#guessing-liked .mc .p-img {
+	padding: 5px 0
+}
+
+#guessing-liked .mc .p-name {
+	height: 3em;
+	line-height: 1.5em;
+	overflow: hidden;
+	margin-bottom: 5px
+}
+
+#guessing-liked .mc .p-name a {
+	color: #666
+}
+
+#guessing-liked .mc .p-price {
+	color: #e4393c;
+	font-size: 14px;
+	font-family: verdana
+}
+
+.promisejdint {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 60px;
+	height: 20px;
+	vertical-align: middle;
+	overflow: hidden;
+	background:
+		url(/images/jdInt-icon.jpg)
+		no-repeat;
+	margin-left: 5px
+}
+
+.promisejdint:hover {
+	text-decoration: none
+}
+
+#order01 .mt {
+	position: relative;
+	overflow: visible
+}
+
+.layer-credit {
+	position: absolute;
+	left: 100px;
+	top: -47px;
+	background-image:
+		url(/images/layer-credit.png);
+	width: 215px;
+	height: 105px;
+	z-index: 2;
+	_background-image:
+		url(/images/layer-credit-01.png)
+}
+
+.layer-credit .cont {
+	margin: 24px 0 0 85px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #f60;
+	font-weight: 700
+}
+
+.layer-credit .close {
+	position: absolute
+}
+
+.layer-credit .close {
+	width: 21px;
+	height: 21px;
+	right: 20px;
+	top: 4px;
+	line-height: 100px;
+	overflow: hidden;
+	background-image: none;
+	border: 0
+}
+
+.layer-credit .go {
+	display: block;
+	font-weight: 400;
+	font-size: 12px
+}
+
+.layer-credit .go:link, .layer-credit .go:visited {
+	color: #005EA7
+}
+
+.im2013, .im2013off {
+	background: url(i/im2013-02.png) no-repeat 0 0;
+	width: 87px
+}
+
+.im2013off {
+	background-position: 0 -24px;
+	cursor: default;
+	color: #ccc
+}
+
+.im2013:hover, .im2013off:hover {
+	text-decoration: none
+}
+
+.btn-5 {
+	*width: 60px
+}
+
+.incart {
+	*width: 105px
+}
+
+.pagin {
+	position: relative
+}
+
+.thickwrap .selt {
+	width: 120px
+}
+
+#miaozhen10772 img {
+	width: 830px
+}
