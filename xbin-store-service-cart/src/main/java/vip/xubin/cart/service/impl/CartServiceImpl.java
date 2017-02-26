@@ -162,4 +162,39 @@ public class CartServiceImpl implements CartService {
 
         return null;
     }
+
+    /**
+     *
+     * 根据商品id和数量对购物车增加商品或减少商品
+     *
+     * @param pid       商品id
+     * @param pcount    增加数量
+     * @param type      1 增加 2 减少
+     * @param index     商品位置   ps:用于直接定位商品 不用遍历整个购物车
+     * @return
+     */
+    @Override
+    public XbinResult decreOrIncre(Long pid, Integer pcount, Integer type, Integer index, String cookieUUID) {
+
+        String key = CART_INFO_PROFIX + cookieUUID;
+
+        List<CartInfo> cartInfoList = getCartInfoListByCookiesId(cookieUUID);
+        if (cartInfoList == null || cartInfoList.size() == 0) {
+            return XbinResult.build(400, "购物车没有商品 请不要非法操作!");
+        }
+
+        CartInfo cartInfo = cartInfoList.get(index);
+
+        if (type == 1) {
+            cartInfo.setNum(cartInfo.getNum() + pcount);
+        } else {
+            cartInfo.setNum(cartInfo.getNum() - pcount);
+        }
+        //cartInfoList.remove(index);
+        //cartInfoList.add(index, cartInfo);
+        jedisClient.set(key, FastJsonConvert.convertObjectToJSON(cartInfoList));
+        jedisClient.expire(key,REDIS_CART_EXPIRE_TIME);
+
+        return XbinResult.ok();
+    }
 }

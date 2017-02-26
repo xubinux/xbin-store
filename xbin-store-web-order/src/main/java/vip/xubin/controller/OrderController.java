@@ -1,11 +1,11 @@
 package vip.xubin.controller;
 
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import vip.xubin.cart.service.CartService;
@@ -36,23 +36,46 @@ public class OrderController {
     private CartService cartService;
 
     @RequestMapping("/order/getOrderInfo")
-    public String showOrder(Model model, HttpServletResponse response, HttpServletRequest request) {
-
+    public String showOrder(String ids,String indexs,String nums, Model model, HttpServletResponse response, HttpServletRequest request) {
 
         String cookieValue = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
 
-        List<CartInfo> cartInfoList = null;
+        List<CartInfo> cartInfoList = new ArrayList<>();
+        List<CartInfo> cartInfos = null;
+        int totalPrices = 0;
+        if (StringUtils.isNotBlank(cookieValue)&&StringUtils.isNotBlank(ids)) {
 
-        if (StringUtils.isNotBlank(cookieValue)) {
+            String[] idArray = ids.split(",");
+            String[] indexArray = indexs.split(",");
+            String[] numArray = nums.split(",");
 
-            cartInfoList = cartService.getCartInfoListByCookiesId(cookieValue);
+            cartInfos = cartService.getCartInfoListByCookiesId(cookieValue);
+
+            for (int i = 0; i < idArray.length; i++) {
+                int index = Integer.parseInt(indexArray[i]);
+                CartInfo cartInfo = cartInfos.get(index);
+
+                cartInfoList.add(cartInfo);
+
+                totalPrices += cartInfo.getSum();
+                //cartInfos.remove(index);
+
+            }
+        } else {
+            return "error";
         }
 
 
-        model.addAttribute("totalPrices", new ArrayList<CartInfo>());
+        model.addAttribute("totalPrices", totalPrices);
         model.addAttribute("cartInfos", cartInfoList);
 
         return "order";
+    }
+    @RequestMapping("/success")
+    public String showSuccess() {
+
+
+        return "success";
     }
 
 }

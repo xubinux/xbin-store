@@ -117,20 +117,18 @@ public class CartController {
      * @return
      */
     @RequestMapping("/decrement")
-    public String decreOrIncre(Long pid, Integer pcount,Integer type,Integer index, HttpServletRequest request, HttpServletResponse response, Model model) {
+    @ResponseBody
+    public XbinResult decreOrIncre(Long pid, Integer pcount,Integer type,Integer index, HttpServletRequest request, HttpServletResponse response, Model model) {
         String cookieUUID = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
         if (StringUtils.isBlank(cookieUUID)) {
 
             model.addAttribute("msg","没有此Cookie!");
 
-            return "error";
+            return XbinResult.build(400,"请先去购物!");
 
         } else {
-            XbinResult result = cartService.addCart(pid, pcount, cookieUUID);
+            return cartService.decreOrIncre(pid, pcount,type,index, cookieUUID);
 
-            model.addAttribute("cartInfo", (CartInfo)result.getData());
-
-            return "success";
         }
 
 

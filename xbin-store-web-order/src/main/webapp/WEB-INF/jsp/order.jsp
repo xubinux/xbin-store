@@ -349,17 +349,36 @@
                 <div class="extra-r">
                     <a href="#none" class="ftx-05" onclick="use_NewConsignee()"
                        clstag="pageclick|keycount|trade_201602181|3">新增收货地址</a>
-                    <input id="del_consignee_type" value="0" type="hidden">
+                    <input id="del_consignee_type" value="1" type="hidden">
                 </div>
             </div>
-
             <div class="step-cont">
                 <div id="consignee-addr" class="consignee-content">
                     <div class="consignee-scrollbar">
                         <div class="ui-scrollbar-main">
                             <div class="consignee-scroll">
-                                <div class="consignee-cont" id="consignee1" style="height: 42px;">
+                                <div class="consignee-cont consignee-off" id="consignee1" style="height: 42px;">
                                     <ul id="consignee-list">
+                                        <!---->
+                                        <!--
+<li class="ui-switchable-panel" id="consignee_index_138065578" selected="selected" style="cursor: pointer;">
+<div class="consignee-item item-selected" consigneeId="138065578" id="consignee_index_div_138065578">
+<b></b>
+<div class="user-name">
+    <div class="fl"><strong limit="4">许彬</strong>&nbsp;&nbsp;收</div>
+    <div class="fr">156****0077</div>
+    <div class="clr"></div>
+</div>
+<div class="mt10" limit="15">江苏 南京市 江宁区 秣陵镇</div>
+<div class="adr-m" limit="30">弘景大道3601号</div>
+<div class="op-btns ar">
+                                <a href="#none" class="ftx-05 mr10 setdefault-consignee hide" fid="138065578">设为默认地址</a>
+                <a href="#none" class="ftx-05 mr10 edit-consignee" fid="138065578">编辑</a>
+    <a href="#none" class="ftx-05 del-consignee hide" fid="138065578">删除</a>
+</div>
+</div>
+</li>
+-->
 
                                         <li class="ui-switchable-panel ui-switchable-panel-selected"
                                             style="display: list-item;" id="consignee_index_138065578"
@@ -436,6 +455,52 @@
                 <div class="addr-switch switch-off hide" id="consigneeItemHideClick" onclick="hide_ConsigneeAll()">
                     <span>收起地址</span><b></b>
                 </div>
+
+                <!--yanwenqi 自提地址项目 -->
+
+                <div id="selfPickArea" class="consignee-scroll mt10">
+                    <div class="consignee-cont">
+                        <div class="hr" id="selfPickLine"></div>
+                        <div class="picksite-lead hide" id="firstAccessTip">
+                            <i class="pl-joy"></i>
+                            <span class="pl-info">自提地址挪位置啦~根据您的配送习惯，<br>我们为您新增了京东自提点</span>
+                            <span class="pl-btn" onclick="doHandleFirstAccess()">我知道了</span>
+                            <i class="pl-cls" onclick="doHandleFirstAccess()"></i>
+                            <i class="pl-arrow"></i>
+                        </div>
+                        <ul id="selfPickInfo">
+                            <li id="defaultSelfPick" defaultselfpick="1" style="" class="">
+                                <div id="selfPickSiteName" class="consignee-item"
+                                     clstag="pageclick|keycount|trade_201602181|40"
+                                     onclick="doSelectSelfPickSite(&quot;404536&quot;,&quot;南京晓庄学院京东派自提车&quot;)">
+                                    <span id="pickName" pickid="404536" limit="8">京东自提点</span>
+                                    <b></b>
+                                </div>
+                                <div class="addr-detail">
+											<span class="addr-name" limit="6" title="许彬">
+											许彬
+											</span>
+                                    <span class="addr-info" limit="45" title="南京晓庄学院京东派自提车 南京市江宁区弘景大道3601号校内近东门">
+												 南京晓庄学院京东派自提车 南京市江宁区弘景大道3601号校内近东门											</span>
+                                    <span class="addr-tel">
+												156****0077
+											</span>
+                                </div>
+                                <div class="addr-ops">
+                                    <a id="selfPickEdit" href="#none" onclick="openEditSelfPickConsigneeDialog()"
+                                       clstag="pageclick|keycount|trade_201602181|41"
+                                       class="ftx-05 mr10 edit-selfconsignee" fid="404536">更换自提地址</a>
+                                    <i class="pick-err-icon noPickChoose hide"></i><span
+                                        class="ftx-01 mr10 noPickChoose hide">部分商品不支持</span>
+                                    <a class="ftx-05 selfpick-edit selfPickChoose hide" href="#none"
+                                       onclick="openEditSelfPickConsigneeDialog()">重新选择</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end-->
+
                 <input id="consigneeList_giftSenderConsigneeMobile" value="" type="hidden">
                 <input id="consigneeList_giftSenderConsigneeName" value="" type="hidden">
             </div>
@@ -443,7 +508,6 @@
             <div class="hr"></div>
             <!--/ /widget/shopping-list/shopping-list.tpl -->
             <div id="shipAndSkuInfo">
-
                 <div id="payShipAndSkuInfo">
                     <div class="step-tit">
                         <h3>支付方式</h3>
@@ -452,38 +516,36 @@
                         <div class="payment-list" id="">
                             <div class="list-cont">
                                 <ul id="payment-list">
-                                    <input id="instalmentPlan" value="" type="hidden">
-
+                                    <input id="instalmentPlan" value="false" type="hidden">
 
                                     <li style="cursor: pointer;" onclick="save_Pay(1,0,1);"
                                         clstag="pageclick|keycount|trade_201602181|8">
+
                                         <div class=" payment-item item-selected online-payment " for="pay-method-1"
                                              payname="货到付款" payid="1" onlinepaytype="0"><b></b>
                                             货到付款<span class="qmark-icon qmark-tip"
                                                       data-tips="送货上门后再收款，支持现金、POS机刷卡、支票支付 &lt;a href='//help.jd.com/user/issue/103-983.html' target='_blank' class='ftx-05'&gt;查看服务及配送范围&lt;/a&gt;"></span>
                                         </div>
                                     </li>
+                                    <li style="cursor: pointer;" onclick="
+				save_Pay(4,1,1);" clstag="pageclick|keycount|PaymentLead__2016030411|1">
 
-                                    <li style="cursor: pointer;" onclick="save_Pay(4,1,1);"
-                                        clstag="pageclick|keycount|PaymentLead__2016030411|1">
-                                        <div class="payment-item  online-payment" for="pay-method-4" payname="白条支付"
+                                        <div class=" payment-item  online-payment " for="pay-method-4" payname="白条支付"
                                              payid="4" onlinepaytype="1"><b></b>
-                                            白条支付 <span id="cod_bt" class="qmark-icon qmark-tip" limit="7724.75"
-                                                       data-tips="&lt;b class='ftx-04'&gt;可用额度：￥7724.75&lt;/b&gt;&lt;br/&gt;打白条，最高可享30天免息，还可分期支付"></span>
+                                            白条支付 <span id="cod_bt" class="qmark-icon qmark-tip" limit="7754.71"
+                                                       data-tips="&lt;b class='ftx-04'&gt;可用额度：￥7754.71&lt;/b&gt;&lt;br/&gt;打白条，最高可享30天免息，还可分期支付"></span>
                                         </div>
                                     </li>
+                                    <li style="cursor: pointer;" onclick="
+				save_Pay(4,2,1);" clstag="pageclick|keycount|PaymentLead__2016030411|3">
 
-
-                                    <li style="cursor: pointer;" onclick="save_Pay(4,2,1);"
-                                        clstag="pageclick|keycount|PaymentLead__2016030411|3">
-                                        <div class="payment-item  online-payment" for="pay-method-4" payname="微信支付"
+                                        <div class=" payment-item  online-payment " for="pay-method-4" payname="微信支付"
                                              payid="4" onlinepaytype="2"><b></b>
                                             微信支付 <span class="qmark-icon qmark-tip"
                                                        data-tips="提交订单之后，使用微信扫描二维码完成支付"></span></div>
                                     </li>
-
-                                    <li style="cursor: pointer;" onclick="save_Pay(4,3,1);"
-                                        clstag="pageclick|keycount|PaymentLead__2016030411|2">
+                                    <li style="cursor: pointer;" onclick="
+				save_Pay(4,3,1);" clstag="pageclick|keycount|PaymentLead__2016030411|2">
 
                                         <div class="payment-item  online-payment" for="pay-method-4" payname="京东支付"
                                              payid="4" onlinepaytype="3"><b></b>
@@ -493,13 +555,49 @@
                                     </li>
 
 
-                                    <li style="cursor: pointer;" onclick="save_Pay(4,0,1);"
-                                        clstag="pageclick|keycount|trade_201602181|7">
+                                    <li style="cursor: pointer;" onclick="
+				save_Pay(4,0,1);" clstag="pageclick|keycount|trade_201602181|7">
 
                                         <div class=" payment-item  online-payment " for="pay-method-4" payname="在线支付"
                                              payid="4" onlinepaytype="0"><b></b>
                                             在线支付 <span id="cod" class="qmark-icon qmark-tip"
                                                        data-tips="即时到账，支持绝大数银行借记卡及部分银行信用卡 &lt;a href='//help.jd.com/user/issue/223-562.html' target='_blank' class='ftx-05'&gt; 查看银行及限额&lt;/a&gt;"></span>
+                                        </div>
+                                    </li>
+
+
+                                    <li style="cursor: pointer;" onclick="
+				save_Pay(5,0,1);" clstag="pageclick|keycount|trade_201602181|9">
+
+                                        <div class="hide payment-item  online-payment " for="pay-method-5"
+                                             payname="公司转账" payid="5" onlinepaytype="0"><b></b>
+                                            公司转账 <span class="qmark-icon qmark-tip"
+                                                       data-tips="通过快钱平台转账 转账后1-3个工作日内到账 &lt;a href='//help.jd.com/user/issue/list-175.html' target='_blank' class='ftx-05'&gt;查看账户信息&lt;/a&gt;"></span>
+                                        </div>
+                                    </li>
+
+
+                                    <li style="cursor: pointer;" onclick="
+				save_Pay(2,0,1);" clstag="pageclick|keycount|trade_201602181|10">
+
+                                        <div class="hide payment-item  online-payment " for="pay-method-2"
+                                             payname="邮局汇款" payid="2" onlinepaytype="0"><b></b>
+                                            邮局汇款 <span class="qmark-icon qmark-tip"
+                                                       data-tips="通过快钱平台收款 汇款后1-3个工作日到账 &lt;a href='//help.jd.com/user/issue/list-174.html' target='_blank' class='ftx-05'&gt;查看帮助&lt;/a&gt;"></span>
+                                        </div>
+                                    </li>
+
+
+                                    <li id="payment-less" class="hide">
+                                        <div class="payment-item-on"
+                                             clstag="pageclick|keycount|PaymentLead__2016030411|10">
+                                            <span>收起</span><b></b>
+                                        </div>
+                                    </li>
+                                    <li id="payment-more">
+                                        <div class="payment-item-off"
+                                             clstag="pageclick|keycount|PaymentLead__2016030411|9">
+                                            <span>更多</span><b></b>
                                         </div>
                                     </li>
                                 </ul>
@@ -515,64 +613,62 @@
                                data-tips="因可能存在系统缓存、页面更新导致价格变动异常等不确定性情况出现，商品售价以本结算页商品价格为准；如有疑问，请您立即联系销售商咨询。">
                                 <i></i>&nbsp;价格说明
                             </a>
-                            <a href="http://localhost:8107/" id="cartRetureUrl" class="return-edit ftx-05"
+                            <a href="http://localhost:8107" id="cartRetureUrl" class="return-edit ftx-05"
                                clstag="pageclick|keycount|trade_201602181|15">返回修改购物车</a>
                         </div>
                     </div>
                     <div class="step-cont" id="skuPayAndShipment-cont">
                         <!--添加商品清单  zhuqingjie -->
                         <div class="shopping-lists" id="shopping-lists">
-                            <!--定义大商品清单LIST-->
                             <div class="shopping-list ABTest">
                                 <div class="goods-list">
-                                    <!--购物车单品商品-->
+
                                     <div class="goods-tit">
                                         <h4 class="vendor_name_h" id="0">商家：自营</h4>
                                     </div>
-
-                                    <!--单品开始-->
                                     <div class="goods-items"></div>
+
                                     <div class="goods-items">
                                         <div class="goods-suit goods-last">
-                                            <%--<div class="goods-suit-tit">--%>
-                                            <%--<span class="sales-icon">换购</span>--%>
-                                            <%--<strong>--%>
-                                            <%--已购满45.00元，再加45.00元，可返回购物车领取赠品--%>
-                                            <%--</strong>--%>
-                                            <%--</div>--%>
-
-                                            <c:forEach items="${cartInfos}" var="cinfo" varStatus="status">
-                                                <div class="goods-item goods-item-extra" goods-id="${cinfo.id}"
-                                                     sx-type="0">
-
+                                            <div class="goods-suit-tit">
+                                                <span class="sales-icon">换购</span>
+                                                <strong>
+                                                    已购满300.00元
+                                                    ，再加45.00元，可返回购物车领取赠品
+                                                </strong>
+                                            </div>
+                                            <c:forEach items="${cartInfos}" var="c">
+                                                <div class="goods-item goods-item-extra" goods-id="${c.id}" sx-type="0">
                                                     <div class="p-img">
-                                                        <a target="_blank"
-                                                           href="http://localhost:8103/${cinfo.id}.html?dist="><img
-                                                                src="${cinfo.imageUrl}"
+                                                        <a target="_blank" href="http://localhost:8103/item/3133815.html"><img
+                                                                src="${c.imageUrl}"
                                                                 alt=""></a>
                                                     </div>
                                                     <div class="goods-msg">
                                                         <div class="goods-msg-gel">
                                                             <div class="p-name">
-                                                                <a href="http://localhost:8103/${cinfo.id}.html?dist="
-                                                                   target="_blank">
-                                                                        ${cinfo.name}
-                                                                </a>
+                                                                <a href="http://localhost:8103/item/3133815.html"
+                                                                   target="_blank">${c.name}</a>
                                                             </div>
                                                             <div class="p-price">
-                                                                <strong class="jd-price">
-                                                                    ￥ <fmt:formatNumber groupingUsed="false"
-                                                                                        maxFractionDigits="2"
-                                                                                        minFractionDigits="2"
-                                                                                        value="${cinfo.price / 100 }"/>
+                                                                <strong class="jd-price">￥<fmt:formatNumber
+                                                                        groupingUsed="false"
+                                                                        maxFractionDigits="2"
+                                                                        minFractionDigits="2"
+                                                                        value="${c.price / 100 }"/>
                                                                 </strong>
-                                                                <span class="p-num">x${cinfo.num}</span>
+                                                                <!--增加预售金额显示 end-->
+                                                                <span class="p-num">x${c.num}</span>
                                                                 <span id="pre-state" class="p-state"
-                                                                      skuid="3133829">有货</span>
-                                                                <span class="p-weight"><fmt:formatNumber
-                                                                        groupingUsed="false" maxFractionDigits="3"
-                                                                        minFractionDigits="3"
-                                                                        value="${cinfo.weight / 1000 * cinfo.num}"/>kg</span>
+                                                                      skuid="${c.id}">有货</span>
+                                                                <span class="p-weight">
+                                                                    <%--<fmt:formatNumber--%>
+                                                                        <%--groupingUsed="false"--%>
+                                                                        <%--maxFractionDigits="2"--%>
+                                                                        <%--minFractionDigits="2"--%>
+                                                                        <%--value="${c.weight / 1000 }"/>--%>
+                                                                    kg</span>
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -587,9 +683,19 @@
 
                                         </div>
                                     </div>
-                                </div>
+                                    <!--满赠套装结束-->
+                                    <!-- 买家版运费险 -->
+                                    <div class="hide service-items ml20 mr20" style="display: block;">
+                                        <div class="hide service-item" id="vender_freight_insurance_0"
+                                             style="display: block;">
+                                            <div class="hr"></div>
+                                            <span class="service-desc">退换无忧</span>
+                                            <strong class="service-price">￥0.00</strong>
+                                        </div>
+                                    </div>
+                                </div><!--goods-list 结束-->
                                 <div class="dis-modes">
-                                    <!-- 实物商品搭售虚拟商品 -->
+
                                     <div class="mode-item mode-tab">
                                         <div class="mode-item-tit">
                                             <h4>配送方式</h4>
@@ -615,6 +721,59 @@
                                             </ul>
                                         </div>
                                         <div class="mode-tab-con  ui-switchable-panel-selected" id="jd_shipment">
+                                            <ul class="mode-list">
+                                                <li>
+                                                    <div class="fore1" id="payment_name_div"><span
+                                                            class="ftx-03">付款方式：</span>现金
+                                                    </div>
+                                                    <div class="fore2" onclick="doEditPayway('0')"
+                                                         clstag="pageclick|keycount|trade_201602181|13"><a href="#none"
+                                                                                                           class="ftx-05 payment-edit">修改</a>
+                                                    </div>
+                                                </li>
+
+                                                <li class="delivery-info-li-none-border">
+                                                    <div class="fore1" id="jd_shipment_calendar_date"><span
+                                                            class="mode-label ftx-03">标&nbsp;&nbsp;准&nbsp;&nbsp;达：</span>
+                                                        <div class="mode-infor">预计&nbsp;2月27日[周一]&nbsp;09:00-15:00&nbsp;送达</div>
+                                                    </div>
+                                                    <div class="fore2" id="jdshipdate_eidt_id" onclick="doEdit311Time()"
+                                                         clstag="pageclick|keycount|trade_201602181|14"><a href="#none"
+                                                                                                           class="ftx-05">修改</a>
+                                                    </div>
+                                                </li>
+                                                <li class="delivery-info-li" id="delivery-info-li-zxj">
+							                  <span class="delivery-tips fr">
+							                      <i class="d-ico fl mr5"></i><i class="d-arr"></i>
+							                      <a id="zxj_show_id" href="#none" class="mr5"
+                                                     onclick="doEdit311Time(3)">京准达</a>
+							                      <a id="311_show_id" href="#none" class="mr5"
+                                                     onclick="doEdit311Time(1)">标准达</a>
+							                      <a id="411_show_id" href="#none" class="mr5 hide"
+                                                     onclick="doEdit311Time(2)">极速达</a>配送服务全面升级
+							                  </span>
+                                                </li>
+                                                <li class="buyer_insurance hide" id="0" style="display: block;">
+                                                    <div class="foreAll">
+                                                        <span class="mode-label ftx-03">退换无忧：</span>
+                                                        <div class="mode-infor J-mode-infor-tips">
+                                                            <label>
+                                                                <input id="vender_0" class="fl buyer_freight_insurance"
+                                                                       onclick="selectBuyerFreightInsurance(this, 0)"
+                                                                       type="checkbox">
+                                                                <span id="0" class="fl mode-infor-con buyer_insurance">15天内退换，可享1次上门取件<i
+                                                                        class="arrow-down"></i></span>
+                                                                <em class="fr">￥0.50</em>
+                                                                <span class="mode-infor-tips mode-infor-tips-sec"
+                                                                      style="display: none;"><i id="0"
+                                                                                                class="d-arr d-arr-jd"></i>自签收后15天内退换货，可享1次上门取件服务，此服务不再单独收费。不在京东取件范围内可享受相应运费补偿。<a
+                                                                        target="_blank"
+                                                                        href="//help.jd.com/user/issue/480-1693.html">查看详情</a></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                             <div class="tips-618 hide tips-618-for-normal" style="z-index:9">
                                                 <div class="tips-con">
                                                     <i>&nbsp;</i>
@@ -623,49 +782,55 @@
                                                     </p>
                                                 </div>
                                             </div>
+                                        </div>
+
+                                        <div class="mode-tab-con hide" id="selfpick_shipment">
                                             <ul class="mode-list">
                                                 <li>
-                                                    <div class="fore1" id="payment_name_div"><span
-                                                            class="ftx-03">付款方式：</span>现金
+                                                    <div class="fore1 hide" id="selfpick_name"><span class="ftx-03">自提地点：</span>南京麒麟门站
+                                                    </div>
+                                                    <div class="fore2 hide" onclick="doEditPicksite()"><a href="#none"
+                                                                                                          class="ftx-05 picksite-edit">修改</a>
                                                     </div>
                                                 </li>
-
-                                                <script type="text/javascript">
-                                                    (function () {
-
-                                                        var myDate = new Date();
-                                                        var day = "周" + "日一二三四五六".charAt(myDate.getDay());
-
-                                                        $("#day").text("[" + day + "]");
-                                                        $("#month").text("预计&nbsp;" + myDate.getMonth() + "月" + myDate.getDate() + "日");
-                                                    });
-
-                                                </script>
-
-
-                                                <li class="delivery-info-li-none-border">
-                                                    <div class="fore1" id="jd_shipment_calendar_date"><span
-                                                            class="mode-label ftx-03">标&nbsp;&nbsp;准&nbsp;&nbsp;达：</span>
-                                                        <div class="mode-infor" id="month">预计&nbsp;2月25日<span
-                                                                class="ftx-04" id="day">[周六]</span>&nbsp;09:00-15:00&nbsp;送达
+                                                <li>
+                                                    <div class="fore1" id="selfpick_date"><span
+                                                            class="ftx-03">自提时间：</span>2月27日[周一]
+                                                    </div>
+                                                    <div class="fore2" onclick="doEditPickSiteDate('0')"><a href="#none"
+                                                                                                            class="ftx-05">修改</a>
+                                                    </div>
+                                                </li>
+                                                <li class="buyer_insurance hide" id="0" style="display: block;">
+                                                    <div class="foreAll">
+                                                        <span class="mode-label ftx-03">退换无忧：</span>
+                                                        <div class="mode-infor J-mode-infor-tips">
+                                                            <label>
+                                                                <input id="vender_0" class="fl buyer_freight_insurance"
+                                                                       onclick="selectBuyerFreightInsurance(this, 0)"
+                                                                       type="checkbox">
+                                                                <span id="0" class="fl mode-infor-con buyer_insurance">15天内退换，可享1次上门取件<i
+                                                                        class="arrow-down"></i></span>
+                                                                <em class="fr">￥0.50</em>
+                                                                <span class="mode-infor-tips mode-infor-tips-sec"
+                                                                      style="display: none;"><i id="0"
+                                                                                                class="d-arr d-arr-jd"></i>自签收后15天内退换货，可享1次上门取件服务，此服务不再单独收费。不在京东取件范围内可享受相应运费补偿。<a
+                                                                        target="_blank"
+                                                                        href="//help.jd.com/user/issue/480-1693.html">查看详情</a></span>
+                                                            </label>
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
                                         </div>
+
                                     </div>
 
-                                </div>
+                                </div><!--dis-modes 结束-->
                                 <div class="clr"></div>
                                 <div class="weight-cont total-freight-weight hide" style="display: block;">总重量：<em
-                                        class="ftx-03 total-freight-weight-val">0.390kg</em></div>
-                            </div>
-
-                            <!--shopping-list 结束-->
-
-                            <br><br>
-                            <div class="clr"></div>
-                        </div>
+                                        class="ftx-03 total-freight-weight-val">0.400kg</em></div>
+                            </div><!--shopping-list 结束--></div>
                         <!--shopping-lists 结束-->
                     </div>
                 </div>
@@ -675,20 +840,21 @@
             <div class="order-remarks hide" id="orderRemarkItem">
             </div>
             <!--  /widget/invoice-step/invoice-step.tpl -->
-            <div class="hr"></div>
-            <!-- 发票信息 -->
-            <div class="step-content">
-                <div id="part-inv" class="invoice-cont">
-                    <span class="mr10"> 普通发票（电子） &nbsp; </span>
-                    <span class="mr10"> 个人&nbsp; </span>
-                    <span class="mr10"> 明细&nbsp; </span>
+            <%--<div class="hr"></div>--%>
 
-                    <a href="#none" id="invoiceEdit" class="ftx-05 invoice-edit" onclick="edit_Invoice()"
-                       clstag="pageclick|keycount|trade_201602181|16">修改</a>
-                </div>
+            <div class="clr"></div>
+            <!--/ /widget/invoice-step/invoice-step.tpl -->
+            <%--<div class="hr"></div>--%>
+            <!--  /widget/order-coupon/order-coupon.tpl -->
+            <div class="step-tit step-toggle-off" id="virtualdiv" onclick="vertualHidOrShow()"
+                 clstag="pageclick|keycount|xunizichan__2016031015|1">
+                <h3>使用优惠/京东卡/抵用</h3>
+                <i></i>
             </div>
 
-        </div>        <!-- </div> -->
+            <!--/  /widget/order-coupon/order-coupon.tpl -->
+        </div>
+        <!-- </div> -->
         <!-- </div> -->
         <!--  /widget/order-summary/order-summary.tpl -->
         <div class="order-summary">
@@ -696,10 +862,11 @@
             <div class="statistic fr">
                 <div class="list">
                     <span><em class="ftx-01">${cartInfos.size()}</em> 件商品，总商品金额：</span>
-                    <em class="price" id="warePriceId" v="5199">￥<fmt:formatNumber groupingUsed="false"
-                                                                                   maxFractionDigits="2"
-                                                                                   minFractionDigits="2"
-                                                                                   value="${totalPrices / 100 }"/></em>
+                    <em class="price" id="warePriceId" v="${totalPrices}">￥<fmt:formatNumber
+                            groupingUsed="false"
+                            maxFractionDigits="2"
+                            minFractionDigits="2"
+                            value="${totalPrices / 100 }"/></em>
                 </div>
                 <div class="list">
                     <span>返现：</span>
@@ -719,26 +886,26 @@
                     <em class="price" id="buyerFreightInsuranceId"><font color="#000000"> ￥0.00</font></em>
                 </div>
                 <div class="list" id="showCouponPrice" style="display:none;">
-                    <input id="couponPriceNum" type="hidden" value="0">
-                    <input id="couponPricehidden" type="hidden" value="0">
+                    <input id="couponPriceNum" value="0" type="hidden">
+                    <input id="couponPricehidden" value="0" type="hidden">
                     <span>商品优惠：</span><em class="price" id="couponPriceId" style="display: none;">-￥0.00</em>
                 </div>
                 <div class="list" id="showFreeFreight" style="display:none;">
-                    <input id="freeFreightPriceNum" type="hidden" value="0">
-                    <input id="freeFreightPricehidden" type="hidden" value="0">
+                    <input id="freeFreightPriceNum" value="0" type="hidden">
+                    <input id="freeFreightPricehidden" value="0" type="hidden">
                     <span>运费优惠：</span><em class="price" id="freeFreightPriceId">-￥0.00</em>
                 </div>
                 <div class="list" id="showGiftCardPrice" style="display:none;">
-                    <input id="giftCardPricehidden" type="hidden" value="0">
-                    <input id="giftCardPriceNum" type="hidden" value="0">
+                    <input id="giftCardPricehidden" value="0" type="hidden">
+                    <input id="giftCardPriceNum" value="0" type="hidden">
                     <span> 礼品卡： </span><em class="price" id="giftCardPriceId">-￥0.00</em>
                 </div>
                 <div class="list" id="showUsedJdBean" style="display:none;">
-                    <input type="hidden" id="jdBeanexChange" value="0.00">
+                    <input id="jdBeanexChange" value="0.00" type="hidden">
                     <span>京豆：</span><em class="price" id="usedJdBeanId">-￥0.00</em>
                 </div>
                 <div class="list" id="showUsedOrderBalance" style="display:none;">
-                    <input type="hidden" id="useBalanceShowDiscount" value="0.00">
+                    <input id="useBalanceShowDiscount" value="0.00" type="hidden">
                     <span>余额：</span><em class="price" id="usedBalanceId">-￥0.00</em>
                 </div>
                 <div class="list" id="showPeriodFee" style="display:none;">
@@ -749,18 +916,24 @@
         </div>
         <!--/ /widget/order-summary/order-summary.tpl -->
 
+        <!--  /widget/checkout-floatbar/checkout-floatbar.tpl -->
         <div class="trade-foot">
             <div class="trade-foot-detail-com">
                 <div class="fc-price-info">
                     <span class="price-tit">应付总额：</span>
-                    <span class="price-num" id="sumPayPriceId">￥5199.00</span>
+                    <span class="price-num" id="sumPayPriceId">￥<fmt:formatNumber
+                            groupingUsed="false"
+                            maxFractionDigits="2"
+                            minFractionDigits="2"
+                            value="${totalPrices / 100 }"/></span>
                 </div>
-                <div class="fc-baitiao-info" style="display: none;"><span>白条支付：<em>30天免息</em>（不使用优惠）<i
-                        class="bt-edit-icon" onclick="javascript:btDetail();"
-                        clstag="pageclick|keycount|PaymentLead__2016030411|5"></i></span></div>
+                <div class="fc-baitiao-info" style="display: none;">
+                    <span>白条支付：<em>30天免息</em>（不使用优惠）<i class="bt-edit-icon" onclick="javascript:btDetail();"
+                                                       clstag="pageclick|keycount|PaymentLead__2016030411|5"></i></span>
+                </div>
                 <div class="giftbuy-info">
                     <label class="noShowMoney hide" id="giftBuyHidePriceDiv">
-                        <input type="checkbox" id="giftBuyHidePrice" checked="">包装内不显示礼品价格
+                        <input id="giftBuyHidePrice" checked="" type="checkbox">包装内不显示礼品价格
                     </label>
                 </div>
                 <div class="fc-consignee-info">
@@ -768,7 +941,6 @@
                     <span id="sendMobile">收货人：许彬 156****0077</span>
                 </div>
             </div>
-
 
             <div id="checkout-floatbar" class="group">
                 <div class="ui-ceilinglamp checkout-buttons">
@@ -798,24 +970,7 @@
             </div>
 
         </div>
-        <!--/ /widget/checkout-floatbar/checkout-floatbar.tpl -->
-
-        <!--  /widget/backpanel/backpanel.tpl -->
-        <div id="backpanel">
-            <div id="backpanel-inner" class="hide switchOn" style="right: -156px;">
-                <div class="bp-item bp-item-survey">
-                    <a href="http://surveys.jd.com/index.php?r=survey/index/sid/416587/lang/zh-Hans" class="survey"
-                       target="_blank">我要反馈</a>
-                </div>
-                <div class="bp-item bp-item-backtop" data-top="0">
-                    <a href="#none" class="backtop" target="_self">返回顶部</a>
-                </div>
-            </div>
-        </div>
-        <!--/ /widget/backpanel/backpanel.tpl -->
-
     </div>
-
 </div>
 
 
