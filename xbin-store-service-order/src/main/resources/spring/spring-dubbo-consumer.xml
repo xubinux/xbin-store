@@ -8,6 +8,7 @@
 
 	<!-- 用户服务 -->
 	<dubbo:reference interface="vip.xubin.redis.service.JedisClient" id="jedisClient" check="false" />
+	<dubbo:reference interface="vip.xubin.sso.service.UserService" id="userService" check="false" />
 
 
 </beans>  

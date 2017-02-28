@@ -22,10 +22,10 @@ public class SerializationOptimizerImpl implements SerializationOptimizer {
         classes.add(TbItemParam.class);
         classes.add(TbOrder.class);
         classes.add(TbOrderItem.class);
-        classes.add(TbOrderShipping.class);
         classes.add(TbUser.class);
         classes.add(TbCategory.class);
         classes.add(TbCategorySecondary.class);
+        classes.add(TbUserAddr.class);
         classes.add(EuiResult.class);
         classes.add(EuiTreeNode.class);
         classes.add(XbinResult.class);

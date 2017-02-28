@@ -46,9 +46,11 @@ public class CartController {
         List<CartInfo> cartInfos = cartService.getCartInfoListByCookiesId(cookieUUID);
 
         int totalPrice = 0;
-
-        for (CartInfo cartInfo : cartInfos) {
-            totalPrice += cartInfo.getSum();
+        if (cartInfos != null && cartInfos.size() > 0) {
+            for (int i = 0; i < cartInfos.size(); i++) {
+                CartInfo cartInfo = cartInfos.get(i);
+                totalPrice += cartInfo.getSum();
+            }
         }
 
         model.addAttribute("cartInfos", cartInfos);
@@ -116,7 +118,7 @@ public class CartController {
      * @param model
      * @return
      */
-    @RequestMapping("/decrement")
+    @RequestMapping("/decreOrIncre")
     @ResponseBody
     public XbinResult decreOrIncre(Long pid, Integer pcount,Integer type,Integer index, HttpServletRequest request, HttpServletResponse response, Model model) {
         String cookieUUID = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);

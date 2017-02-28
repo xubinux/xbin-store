@@ -633,6 +633,76 @@ public class TbOrderItemExample {
             addCriterion("pic_path not between", value1, value2, "picPath");
             return (Criteria) this;
         }
+
+        public Criteria andWeightsIsNull() {
+            addCriterion("weights is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsIsNotNull() {
+            addCriterion("weights is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsEqualTo(String value) {
+            addCriterion("weights =", value, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsNotEqualTo(String value) {
+            addCriterion("weights <>", value, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsGreaterThan(String value) {
+            addCriterion("weights >", value, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsGreaterThanOrEqualTo(String value) {
+            addCriterion("weights >=", value, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsLessThan(String value) {
+            addCriterion("weights <", value, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsLessThanOrEqualTo(String value) {
+            addCriterion("weights <=", value, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsLike(String value) {
+            addCriterion("weights like", value, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsNotLike(String value) {
+            addCriterion("weights not like", value, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsIn(List<String> values) {
+            addCriterion("weights in", values, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsNotIn(List<String> values) {
+            addCriterion("weights not in", values, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsBetween(String value1, String value2) {
+            addCriterion("weights between", value1, value2, "weights");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightsNotBetween(String value1, String value2) {
+            addCriterion("weights not between", value1, value2, "weights");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

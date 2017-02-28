@@ -50,6 +50,11 @@
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
         </dependency>
+        <dependency>
+            <groupId>vip.xubin</groupId>
+            <artifactId>xbin-store-service-sso-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <!-- 打包 -->

@@ -29,4 +29,6 @@ public interface CartService {
      * @return
      */
     XbinResult decreOrIncre(Long pid, Integer pcount, Integer type, Integer index, String cookieUUID);
+
+
 }

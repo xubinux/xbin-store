@@ -1,10 +1,11 @@
 package vip.xubin.pojo;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class TbOrderShipping implements Serializable {
-    private String orderId;
+public class TbUserAddr {
+    private String addrId;
+
+    private String userId;
 
     private String receiverName;
 
@@ -26,12 +27,20 @@ public class TbOrderShipping implements Serializable {
 
     private Date updated;
 
-    public String getOrderId() {
-        return orderId;
+    public String getAddrId() {
+        return addrId;
     }
 
-    public void setOrderId(String orderId) {
-        this.orderId = orderId == null ? null : orderId.trim();
+    public void setAddrId(String addrId) {
+        this.addrId = addrId == null ? null : addrId.trim();
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
     }
 
     public String getReceiverName() {

@@ -1,10 +1,13 @@
 package vip.xubin.pojo;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class TbOrder implements Serializable {
+public class TbOrder {
     private String orderId;
+
+    private Long userId;
+
+    private Long addrId;
 
     private String payment;
 
@@ -14,29 +17,31 @@ public class TbOrder implements Serializable {
 
     private Integer status;
 
-    private Date createTime;
+    private String shippingName;
 
-    private Date updateTime;
+    private String shippingCode;
+
+    private String noAnnoyance;
+
+    private String servicePrice;
+
+    private String returnPrice;
+
+    private String totalWeight;
+
+    private Integer buyerRate;
+
+    private Date closeTime;
+
+    private Date endTime;
 
     private Date paymentTime;
 
     private Date consignTime;
 
-    private Date endTime;
+    private Date createTime;
 
-    private Date closeTime;
-
-    private String shippingName;
-
-    private String shippingCode;
-
-    private Long userId;
-
-    private String buyerMessage;
-
-    private String buyerNick;
-
-    private Integer buyerRate;
+    private Date updateTime;
 
     public String getOrderId() {
         return orderId;
@@ -44,6 +49,22 @@ public class TbOrder implements Serializable {
 
     public void setOrderId(String orderId) {
         this.orderId = orderId == null ? null : orderId.trim();
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Long getAddrId() {
+        return addrId;
+    }
+
+    public void setAddrId(Long addrId) {
+        this.addrId = addrId;
     }
 
     public String getPayment() {
@@ -78,20 +99,76 @@ public class TbOrder implements Serializable {
         this.status = status;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public String getShippingName() {
+        return shippingName;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setShippingName(String shippingName) {
+        this.shippingName = shippingName == null ? null : shippingName.trim();
     }
 
-    public Date getUpdateTime() {
-        return updateTime;
+    public String getShippingCode() {
+        return shippingCode;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setShippingCode(String shippingCode) {
+        this.shippingCode = shippingCode == null ? null : shippingCode.trim();
+    }
+
+    public String getNoAnnoyance() {
+        return noAnnoyance;
+    }
+
+    public void setNoAnnoyance(String noAnnoyance) {
+        this.noAnnoyance = noAnnoyance == null ? null : noAnnoyance.trim();
+    }
+
+    public String getServicePrice() {
+        return servicePrice;
+    }
+
+    public void setServicePrice(String servicePrice) {
+        this.servicePrice = servicePrice == null ? null : servicePrice.trim();
+    }
+
+    public String getReturnPrice() {
+        return returnPrice;
+    }
+
+    public void setReturnPrice(String returnPrice) {
+        this.returnPrice = returnPrice == null ? null : returnPrice.trim();
+    }
+
+    public String getTotalWeight() {
+        return totalWeight;
+    }
+
+    public void setTotalWeight(String totalWeight) {
+        this.totalWeight = totalWeight == null ? null : totalWeight.trim();
+    }
+
+    public Integer getBuyerRate() {
+        return buyerRate;
+    }
+
+    public void setBuyerRate(Integer buyerRate) {
+        this.buyerRate = buyerRate;
+    }
+
+    public Date getCloseTime() {
+        return closeTime;
+    }
+
+    public void setCloseTime(Date closeTime) {
+        this.closeTime = closeTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
     }
 
     public Date getPaymentTime() {
@@ -110,67 +187,19 @@ public class TbOrder implements Serializable {
         this.consignTime = consignTime;
     }
 
-    public Date getEndTime() {
-        return endTime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Date getCloseTime() {
-        return closeTime;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setCloseTime(Date closeTime) {
-        this.closeTime = closeTime;
-    }
-
-    public String getShippingName() {
-        return shippingName;
-    }
-
-    public void setShippingName(String shippingName) {
-        this.shippingName = shippingName == null ? null : shippingName.trim();
-    }
-
-    public String getShippingCode() {
-        return shippingCode;
-    }
-
-    public void setShippingCode(String shippingCode) {
-        this.shippingCode = shippingCode == null ? null : shippingCode.trim();
-    }
-
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getBuyerMessage() {
-        return buyerMessage;
-    }
-
-    public void setBuyerMessage(String buyerMessage) {
-        this.buyerMessage = buyerMessage == null ? null : buyerMessage.trim();
-    }
-
-    public String getBuyerNick() {
-        return buyerNick;
-    }
-
-    public void setBuyerNick(String buyerNick) {
-        this.buyerNick = buyerNick == null ? null : buyerNick.trim();
-    }
-
-    public Integer getBuyerRate() {
-        return buyerRate;
-    }
-
-    public void setBuyerRate(Integer buyerRate) {
-        this.buyerRate = buyerRate;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }

@@ -68,6 +68,12 @@
                 nums += num + ",";
 
             });
+            if(ids.length == 0) {
+                ids = "";
+                indexs = "";
+                nums = "";
+                return;
+            }
             var inputIds = $("<input type='hidden' name='ids'>");
             var inputIndexs = $("<input type='hidden' name='indexs'>");
             var inputNums = $("<input type='hidden' name='nums'>");
@@ -80,6 +86,7 @@
 //            alert(ids);
 //            alert(indexs);
 //            alert(nums);
+
             form.submit();
         }
         function check(id) {

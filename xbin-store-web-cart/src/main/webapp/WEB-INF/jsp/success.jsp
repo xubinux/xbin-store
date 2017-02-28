@@ -257,7 +257,7 @@
                             <div class="success-btns success-btns-new">
                                 <div class="success-ad"><a href="#none"></a></div>
                                 <div class="clr"></div>
-                                <div><a class="btn-tobback" href="http://localhost:8103/${cartInfo.id}.html"
+                                <div><a class="btn-tobback" href="http://localhost:8103/item/${cartInfo.id}.html"
                                         target="_blank" clstag="pageclick|keycount|201601152|3">查看商品详情</a><a
                                         class="btn-addtocart" href="http://localhost:8107/cart.html"
                                         id="GotoShoppingCart" clstag="pageclick|keycount|201601152|4"><b></b>去购物车结算</a>

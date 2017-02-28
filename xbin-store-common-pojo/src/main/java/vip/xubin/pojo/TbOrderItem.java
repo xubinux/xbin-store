@@ -1,8 +1,6 @@
 package vip.xubin.pojo;
 
-import java.io.Serializable;
-
-public class TbOrderItem implements Serializable {
+public class TbOrderItem {
     private String id;
 
     private String itemId;
@@ -18,6 +16,8 @@ public class TbOrderItem implements Serializable {
     private Long totalFee;
 
     private String picPath;
+
+    private String weights;
 
     public String getId() {
         return id;
@@ -81,5 +81,13 @@ public class TbOrderItem implements Serializable {
 
     public void setPicPath(String picPath) {
         this.picPath = picPath == null ? null : picPath.trim();
+    }
+
+    public String getWeights() {
+        return weights;
+    }
+
+    public void setWeights(String weights) {
+        this.weights = weights == null ? null : weights.trim();
     }
 }

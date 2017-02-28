@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="vip.xubin.mapper.TbOrderShippingMapper" >
-  <resultMap id="BaseResultMap" type="vip.xubin.pojo.TbOrderShipping" >
-    <id column="order_id" property="orderId" jdbcType="VARCHAR" />
+<mapper namespace="vip.xubin.mapper.TbUserAddrMapper" >
+  <resultMap id="BaseResultMap" type="vip.xubin.pojo.TbUserAddr" >
+    <id column="addr_id" property="addrId" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
     <result column="receiver_name" property="receiverName" jdbcType="VARCHAR" />
     <result column="receiver_phone" property="receiverPhone" jdbcType="VARCHAR" />
     <result column="receiver_mobile" property="receiverMobile" jdbcType="VARCHAR" />
@@ -73,16 +74,16 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    order_id, receiver_name, receiver_phone, receiver_mobile, receiver_state, receiver_city, 
-    receiver_district, receiver_address, receiver_zip, created, updated
+    addr_id, user_id, receiver_name, receiver_phone, receiver_mobile, receiver_state, 
+    receiver_city, receiver_district, receiver_address, receiver_zip, created, updated
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="vip.xubin.pojo.TbOrderShippingExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="vip.xubin.pojo.TbUserAddrExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from tb_order_shipping
+    from tb_user_addr
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -93,34 +94,39 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
-    from tb_order_shipping
-    where order_id = #{orderId,jdbcType=VARCHAR}
+    from tb_user_addr
+    where addr_id = #{addrId,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
-    delete from tb_order_shipping
-    where order_id = #{orderId,jdbcType=VARCHAR}
+    delete from tb_user_addr
+    where addr_id = #{addrId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="vip.xubin.pojo.TbOrderShippingExample" >
-    delete from tb_order_shipping
+  <delete id="deleteByExample" parameterType="vip.xubin.pojo.TbUserAddrExample" >
+    delete from tb_user_addr
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="vip.xubin.pojo.TbOrderShipping" >
-    insert into tb_order_shipping (order_id, receiver_name, receiver_phone, 
-      receiver_mobile, receiver_state, receiver_city, 
-      receiver_district, receiver_address, receiver_zip, 
-      created, updated)
-    values (#{orderId,jdbcType=VARCHAR}, #{receiverName,jdbcType=VARCHAR}, #{receiverPhone,jdbcType=VARCHAR}, 
-      #{receiverMobile,jdbcType=VARCHAR}, #{receiverState,jdbcType=VARCHAR}, #{receiverCity,jdbcType=VARCHAR}, 
-      #{receiverDistrict,jdbcType=VARCHAR}, #{receiverAddress,jdbcType=VARCHAR}, #{receiverZip,jdbcType=VARCHAR}, 
-      #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
+  <insert id="insert" parameterType="vip.xubin.pojo.TbUserAddr" >
+    insert into tb_user_addr (addr_id, user_id, receiver_name, 
+      receiver_phone, receiver_mobile, receiver_state, 
+      receiver_city, receiver_district, receiver_address, 
+      receiver_zip, created, updated
+      )
+    values (#{addrId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, #{receiverName,jdbcType=VARCHAR}, 
+      #{receiverPhone,jdbcType=VARCHAR}, #{receiverMobile,jdbcType=VARCHAR}, #{receiverState,jdbcType=VARCHAR}, 
+      #{receiverCity,jdbcType=VARCHAR}, #{receiverDistrict,jdbcType=VARCHAR}, #{receiverAddress,jdbcType=VARCHAR}, 
+      #{receiverZip,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP}
+      )
   </insert>
-  <insert id="insertSelective" parameterType="vip.xubin.pojo.TbOrderShipping" >
-    insert into tb_order_shipping
+  <insert id="insertSelective" parameterType="vip.xubin.pojo.TbUserAddr" >
+    insert into tb_user_addr
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="orderId != null" >
-        order_id,
+      <if test="addrId != null" >
+        addr_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
       </if>
       <if test="receiverName != null" >
         receiver_name,
@@ -154,8 +160,11 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="orderId != null" >
-        #{orderId,jdbcType=VARCHAR},
+      <if test="addrId != null" >
+        #{addrId,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=VARCHAR},
       </if>
       <if test="receiverName != null" >
         #{receiverName,jdbcType=VARCHAR},
@@ -189,17 +198,20 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="vip.xubin.pojo.TbOrderShippingExample" resultType="java.lang.Integer" >
-    select count(*) from tb_order_shipping
+  <select id="countByExample" parameterType="vip.xubin.pojo.TbUserAddrExample" resultType="java.lang.Integer" >
+    select count(*) from tb_user_addr
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update tb_order_shipping
+    update tb_user_addr
     <set >
-      <if test="record.orderId != null" >
-        order_id = #{record.orderId,jdbcType=VARCHAR},
+      <if test="record.addrId != null" >
+        addr_id = #{record.addrId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=VARCHAR},
       </if>
       <if test="record.receiverName != null" >
         receiver_name = #{record.receiverName,jdbcType=VARCHAR},
@@ -237,8 +249,9 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update tb_order_shipping
-    set order_id = #{record.orderId,jdbcType=VARCHAR},
+    update tb_user_addr
+    set addr_id = #{record.addrId,jdbcType=VARCHAR},
+      user_id = #{record.userId,jdbcType=VARCHAR},
       receiver_name = #{record.receiverName,jdbcType=VARCHAR},
       receiver_phone = #{record.receiverPhone,jdbcType=VARCHAR},
       receiver_mobile = #{record.receiverMobile,jdbcType=VARCHAR},
@@ -253,9 +266,12 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="vip.xubin.pojo.TbOrderShipping" >
-    update tb_order_shipping
+  <update id="updateByPrimaryKeySelective" parameterType="vip.xubin.pojo.TbUserAddr" >
+    update tb_user_addr
     <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
       <if test="receiverName != null" >
         receiver_name = #{receiverName,jdbcType=VARCHAR},
       </if>
@@ -287,11 +303,12 @@
         updated = #{updated,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where order_id = #{orderId,jdbcType=VARCHAR}
+    where addr_id = #{addrId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="vip.xubin.pojo.TbOrderShipping" >
-    update tb_order_shipping
-    set receiver_name = #{receiverName,jdbcType=VARCHAR},
+  <update id="updateByPrimaryKey" parameterType="vip.xubin.pojo.TbUserAddr" >
+    update tb_user_addr
+    set user_id = #{userId,jdbcType=VARCHAR},
+      receiver_name = #{receiverName,jdbcType=VARCHAR},
       receiver_phone = #{receiverPhone,jdbcType=VARCHAR},
       receiver_mobile = #{receiverMobile,jdbcType=VARCHAR},
       receiver_state = #{receiverState,jdbcType=VARCHAR},
@@ -301,6 +318,6 @@
       receiver_zip = #{receiverZip,jdbcType=VARCHAR},
       created = #{created,jdbcType=TIMESTAMP},
       updated = #{updated,jdbcType=TIMESTAMP}
-    where order_id = #{orderId,jdbcType=VARCHAR}
+    where addr_id = #{addrId,jdbcType=VARCHAR}
   </update>
 </mapper>

@@ -180,7 +180,7 @@ public class CartServiceImpl implements CartService {
 
         List<CartInfo> cartInfoList = getCartInfoListByCookiesId(cookieUUID);
         if (cartInfoList == null || cartInfoList.size() == 0) {
-            return XbinResult.build(400, "购物车没有商品 请不要非法操作!");
+            return XbinResult.build(400, "购物车没有此商品 请不要非法操作!");
         }
 
         CartInfo cartInfo = cartInfoList.get(index);
@@ -197,4 +197,6 @@ public class CartServiceImpl implements CartService {
 
         return XbinResult.ok();
     }
+
+
 }

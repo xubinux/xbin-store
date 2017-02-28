@@ -209,6 +209,7 @@ public class UserServiceImpl implements UserService {
         TbUser result = new TbUser();
 
         result.setUsername(tbUser.getUsername());
+        result.setId(tbUser.getId());
 
         String token = UUID.randomUUID().toString().replaceAll("-","");
 
@@ -229,7 +230,7 @@ public class UserServiceImpl implements UserService {
      * @return {
      *          status: 200 //200 成功 400 没有此token 500 系统异常
      *          msg: "OK" //错误 没有此token.
-     *          data: {"username":"xbin"} //返回用户名
+     *          data: {"username":"xbin","id":"id"} //返回用户名
      *         }
      */
     @Override
@@ -240,11 +241,11 @@ public class UserServiceImpl implements UserService {
         }
 
         try {
-            String username = jedisClient.get(USER_SESSION + token);
+            String user = jedisClient.get(USER_SESSION + token);
 
-            if (StringUtils.isNotBlank(username)) {
+            if (StringUtils.isNotBlank(user)) {
 
-                return XbinResult.ok(username);
+                return XbinResult.ok(user);
             }
 
         } catch (Exception e) {

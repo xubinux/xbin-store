@@ -19,7 +19,7 @@
     <!-- End: injected by Adguard -->
     <link rel="stylesheet" type="text/css"
           href="//misc.360buyimg.com/jdf/1.0.0/unit/??ui-base/1.0.0/ui-base.css,shortcut/2.0.0/shortcut.css,global-header/1.0.0/global-header.css,myjd/2.0.0/myjd.css,nav/2.0.0/nav.css,shoppingcart/2.0.0/shoppingcart.css,global-footer/1.0.0/global-footer.css,service/1.0.0/service.css"/>
-    <title>商品已成功加入购物车</title>
+    <title>错误页面</title>
     <script type="text/javascript">
         window.pageConfig = {compatible: true};
     </script>

@@ -25,6 +25,8 @@ public class LoginInterceptor implements HandlerInterceptor {
     private String TOKEN_LOGIN;
     @Value("${SSO_LOGIN_PAGE}")
     private String SSO_LOGIN_PAGE;
+    @Value("${CART_ORDER_INFO_PROFIX}")
+    private String CART_ORDER_INFO_PROFIX;
 
     @Autowired
     private UserService userService;

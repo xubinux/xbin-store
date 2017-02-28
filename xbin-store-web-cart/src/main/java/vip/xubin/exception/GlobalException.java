@@ -35,8 +35,8 @@ public class GlobalException implements HandlerExceptionResolver {
         // 跳转错误页面
         ModelAndView modelAndView = new ModelAndView();
 
-        modelAndView.addObject("message", "服务器开小差，请稍后重试！");
-        modelAndView.setViewName("error/exception");
+        modelAndView.addObject("msg", "服务器开小差，请稍后重试！");
+        modelAndView.setViewName("error");
 
         return modelAndView;
     }

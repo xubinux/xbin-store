@@ -38,9 +38,32 @@ public class IDUtils {
 		long id = new Long(str);
 		return id;
 	}
-	
+
+	/**
+	 * 订单id生成
+	 */
+	public static String genOrderId() {
+		//取当前时间的长整形值包含毫秒
+		String millis = System.currentTimeMillis() + "";
+
+		millis = millis.substring(5, millis.length());
+		//加上四位随机数
+		Random random = new Random();
+		int end4 = random.nextInt(9999);
+		//如果不足两位前面补0
+		String str = String.format("%04d", end4);
+
+		return millis + str;
+	}
+
 	public static void main(String[] args) {
-		for(int i=0;i< 100;i++)
-		System.out.println(genItemId());
+		//for(int i=0;i< 100;i++)
+		//System.out.println(genOrderId());
+
+		String s = "1";
+		s = "0000" + s;
+		s = s.substring(s.length() - 4, s.length());
+		System.out.println(s);
+
 	}
 }

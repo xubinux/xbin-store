@@ -9,8 +9,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import vip.xubin.cart.service.CartService;
+import vip.xubin.order.service.OrderService;
 import vip.xubin.pojo.CartInfo;
+import vip.xubin.pojo.XbinResult;
+import vip.xubin.redis.service.JedisClient;
 import vip.xubin.utils.CookieUtils;
+import vip.xubin.utils.FastJsonConvert;
+import vip.xubin.utils.IDUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -31,19 +36,35 @@ public class OrderController {
 
     @Value("${COOKIE_CART_KEY}")
     private String COOKIE_CART_KEY;
+    @Value("${CART_ORDER_INFO_PROFIX}")
+    private String CART_ORDER_INFO_PROFIX;
+    @Value("${TOKEN_LOGIN}")
+    private String TOKEN_LOGIN;
+    @Value("${REDIS_ORDER_EXPIRE_TIME}")
+    private Integer REDIS_ORDER_EXPIRE_TIME;
+    @Value("${CART_ORDER_INDEX_PROFIX}")
+    private String CART_ORDER_INDEX_PROFIX;
 
     @Autowired
     private CartService cartService;
+
+    @Autowired
+    private JedisClient jedisClient;
+
+    @Autowired
+    private OrderService orderService;
+
 
     @RequestMapping("/order/getOrderInfo")
     public String showOrder(String ids,String indexs,String nums, Model model, HttpServletResponse response, HttpServletRequest request) {
 
         String cookieValue = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
+        String userCookieValue = CookieUtils.getCookieValue(request, TOKEN_LOGIN);
 
         List<CartInfo> cartInfoList = new ArrayList<>();
         List<CartInfo> cartInfos = null;
         int totalPrices = 0;
-        if (StringUtils.isNotBlank(cookieValue)&&StringUtils.isNotBlank(ids)) {
+        if (StringUtils.isNotBlank(cookieValue) && StringUtils.isNotBlank(ids)) {
 
             String[] idArray = ids.split(",");
             String[] indexArray = indexs.split(",");
@@ -62,11 +83,16 @@ public class OrderController {
 
             }
         } else {
+            model.addAttribute("msg", "请先去购物！");
             return "error";
         }
 
+        String key = CART_ORDER_INFO_PROFIX + userCookieValue;
+        jedisClient.set(key, FastJsonConvert.convertObjectToJSON(cartInfoList));
+        jedisClient.expire(key, REDIS_ORDER_EXPIRE_TIME);
 
         model.addAttribute("totalPrices", totalPrices);
+        model.addAttribute("OrderId", IDUtils.genOrderId());
         model.addAttribute("cartInfos", cartInfoList);
 
         return "order";
@@ -78,4 +104,28 @@ public class OrderController {
         return "success";
     }
 
+    /**
+     * 提交订单
+     *
+     * @param addrId        用户地址id
+     * @param noAnnoyance   运费险
+     * @param paymentType   支付方式 1、货到付款，2、在线支付，3、微信支付，4、支付宝支付
+     * @param shippingName  快递名称 固定顺丰速运
+     * @param response
+     * @param request
+     * @return
+     *        成功 跳转 支付页面
+     *        错误 跳转 错误页面
+     */
+    @RequestMapping("/order/getPay")
+    public String getPay(Integer addrId, Integer noAnnoyance, Integer paymentType,Integer OrderId, String shippingName, HttpServletResponse response, HttpServletRequest request) {
+
+        String cartCookieValue = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
+        String userCookieValue = CookieUtils.getCookieValue(request, TOKEN_LOGIN);
+
+        XbinResult result = orderService.generateOrder(userCookieValue,cartCookieValue,addrId, noAnnoyance, paymentType,OrderId, shippingName);
+
+
+        return "success";
+    }
 }

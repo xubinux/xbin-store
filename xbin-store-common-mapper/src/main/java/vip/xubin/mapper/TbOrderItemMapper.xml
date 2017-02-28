@@ -10,6 +10,7 @@
     <result column="price" property="price" jdbcType="BIGINT" />
     <result column="total_fee" property="totalFee" jdbcType="BIGINT" />
     <result column="pic_path" property="picPath" jdbcType="VARCHAR" />
+    <result column="weights" property="weights" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -70,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, item_id, order_id, num, title, price, total_fee, pic_path
+    id, item_id, order_id, num, title, price, total_fee, pic_path, weights
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="vip.xubin.pojo.TbOrderItemExample" >
     select
@@ -105,10 +106,10 @@
   <insert id="insert" parameterType="vip.xubin.pojo.TbOrderItem" >
     insert into tb_order_item (id, item_id, order_id, 
       num, title, price, total_fee, 
-      pic_path)
+      pic_path, weights)
     values (#{id,jdbcType=VARCHAR}, #{itemId,jdbcType=VARCHAR}, #{orderId,jdbcType=VARCHAR}, 
       #{num,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{price,jdbcType=BIGINT}, #{totalFee,jdbcType=BIGINT}, 
-      #{picPath,jdbcType=VARCHAR})
+      #{picPath,jdbcType=VARCHAR}, #{weights,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="vip.xubin.pojo.TbOrderItem" >
     insert into tb_order_item
@@ -137,6 +138,9 @@
       <if test="picPath != null" >
         pic_path,
       </if>
+      <if test="weights != null" >
+        weights,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -162,6 +166,9 @@
       </if>
       <if test="picPath != null" >
         #{picPath,jdbcType=VARCHAR},
+      </if>
+      <if test="weights != null" >
+        #{weights,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -198,6 +205,9 @@
       <if test="record.picPath != null" >
         pic_path = #{record.picPath,jdbcType=VARCHAR},
       </if>
+      <if test="record.weights != null" >
+        weights = #{record.weights,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -212,7 +222,8 @@
       title = #{record.title,jdbcType=VARCHAR},
       price = #{record.price,jdbcType=BIGINT},
       total_fee = #{record.totalFee,jdbcType=BIGINT},
-      pic_path = #{record.picPath,jdbcType=VARCHAR}
+      pic_path = #{record.picPath,jdbcType=VARCHAR},
+      weights = #{record.weights,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -241,6 +252,9 @@
       <if test="picPath != null" >
         pic_path = #{picPath,jdbcType=VARCHAR},
       </if>
+      <if test="weights != null" >
+        weights = #{weights,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
@@ -252,7 +266,8 @@
       title = #{title,jdbcType=VARCHAR},
       price = #{price,jdbcType=BIGINT},
       total_fee = #{totalFee,jdbcType=BIGINT},
-      pic_path = #{picPath,jdbcType=VARCHAR}
+      pic_path = #{picPath,jdbcType=VARCHAR},
+      weights = #{weights,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>
