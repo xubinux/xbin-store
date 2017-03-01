@@ -60,7 +60,29 @@
     * xx-web-yy
     * ......
 
-# 机器ip情况(本机)
+# Tomcat地址(本机)
+* Manager 192.168.125.1:8100(弃用)
+* Portal  192.168.125.1:8101
+* Search  192.168.125.1:8102
+* Item    192.168.125.1:8103
+* SSO     192.168.125.1:8104
+* Admin   192.168.125.1:8105
+* Cart    192.168.125.1:8106
+* Order   192.168.125.1:8107
+
+# Dubbox服务地址(本机)
+* Manager-Service     192.168.125.1(弃用)
+* Admin-Service       192.168.125.1:20880 rest:8510
+* Redis-Service       192.168.125.1:20881 rest:8511
+* Search-Service      192.168.125.1:20882 rest:8512
+* Portal-Service      192.168.125.1:20883 rest:8513
+* Item-Service        192.168.125.1:20884 rest:8514
+* SSO-Service         192.168.125.1:20885 rest:8515
+* Notify-Service      192.168.125.1:20886 rest:8516
+* Cart-Service        192.168.125.1:20887 rest:8517
+* Order-Service       192.168.125.1:20888 rest:8518
+
+# 机器ip地址(本机)
 ### 需要联网
 ### 不需要联网
 * Zookeeper1 192.168.125.128
