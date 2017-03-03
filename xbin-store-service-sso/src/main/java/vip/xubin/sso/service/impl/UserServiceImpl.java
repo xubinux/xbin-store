@@ -208,8 +208,8 @@ public class UserServiceImpl implements UserService {
 
         TbUser result = new TbUser();
 
-        result.setUsername(tbUser.getUsername());
-        result.setId(tbUser.getId());
+        result.setUsername(check.getUsername());
+        result.setId(check.getId());
 
         String token = UUID.randomUUID().toString().replaceAll("-","");
 

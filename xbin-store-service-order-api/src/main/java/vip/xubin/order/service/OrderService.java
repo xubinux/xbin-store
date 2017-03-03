@@ -19,5 +19,5 @@ public interface OrderService {
      * @param shippingName      快递名称 固定顺丰速运
      * @return
      */
-    XbinResult generateOrder(String userCookieValue, String cartCookieValue, Integer addrId, Integer noAnnoyance, Integer paymentType, Integer OrderId, String shippingName);
+    XbinResult generateOrder(String userCookieValue, String cartCookieValue, Integer addrId, Integer noAnnoyance, Integer paymentType, String orderId, String shippingName);
 }

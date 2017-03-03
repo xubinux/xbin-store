@@ -1,5 +1,7 @@
 package vip.xubin.utils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -55,15 +57,36 @@ public class IDUtils {
 
 		return millis + str;
 	}
+	/**
+	 * 订单项id生成
+	 */
+	public static String genOrderItemId() {
+		//取当前时间的长整形值包含毫秒
+		String millis = System.currentTimeMillis() + "";
+
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+		String data = format.format(new Date());
+
+		millis = millis.substring(7, millis.length());
+		//加上四位随机数
+		Random random = new Random();
+		int end4 = random.nextInt(9999);
+		//如果不足两位前面补0
+		String str = String.format("%04d", end4);
+
+		return data + millis + str;
+	}
+
 
 	public static void main(String[] args) {
 		//for(int i=0;i< 100;i++)
 		//System.out.println(genOrderId());
 
-		String s = "1";
-		s = "0000" + s;
-		s = s.substring(s.length() - 4, s.length());
-		System.out.println(s);
+		//String s = "1";
+		//s = "0000" + s;
+		//s = s.substring(s.length() - 4, s.length());
+		//System.out.println(s);
 
+		System.out.println(genOrderItemId());
 	}
 }

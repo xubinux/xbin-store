@@ -14,7 +14,7 @@
     <result column="no_annoyance" property="noAnnoyance" jdbcType="VARCHAR" />
     <result column="service_price" property="servicePrice" jdbcType="VARCHAR" />
     <result column="return_price" property="returnPrice" jdbcType="VARCHAR" />
-    <result column="total_ weight" property="totalWeight" jdbcType="VARCHAR" />
+    <result column="total_weight" property="totalWeight" jdbcType="VARCHAR" />
     <result column="buyer_rate" property="buyerRate" jdbcType="INTEGER" />
     <result column="close_time" property="closeTime" jdbcType="TIMESTAMP" />
     <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
@@ -83,7 +83,7 @@
   </sql>
   <sql id="Base_Column_List" >
     order_id, user_id, addr_id, payment, payment_type, post_fee, status, shipping_name, 
-    shipping_code, no_annoyance, service_price, return_price, "total_ weight", buyer_rate, 
+    shipping_code, no_annoyance, service_price, return_price, total_weight, buyer_rate, 
     close_time, end_time, payment_time, consign_time, create_time, update_time
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="vip.xubin.pojo.TbOrderExample" >
@@ -121,7 +121,7 @@
       payment, payment_type, post_fee, 
       status, shipping_name, shipping_code, 
       no_annoyance, service_price, return_price, 
-      "total_ weight", buyer_rate, close_time, 
+      total_weight, buyer_rate, close_time, 
       end_time, payment_time, consign_time, 
       create_time, update_time)
     values (#{orderId,jdbcType=VARCHAR}, #{userId,jdbcType=BIGINT}, #{addrId,jdbcType=BIGINT}, 
@@ -172,7 +172,7 @@
         return_price,
       </if>
       <if test="totalWeight != null" >
-        "total_ weight",
+        total_weight,
       </if>
       <if test="buyerRate != null" >
         buyer_rate,
@@ -305,7 +305,7 @@
         return_price = #{record.returnPrice,jdbcType=VARCHAR},
       </if>
       <if test="record.totalWeight != null" >
-        "total_ weight" = #{record.totalWeight,jdbcType=VARCHAR},
+        total_weight = #{record.totalWeight,jdbcType=VARCHAR},
       </if>
       <if test="record.buyerRate != null" >
         buyer_rate = #{record.buyerRate,jdbcType=INTEGER},
@@ -347,7 +347,7 @@
       no_annoyance = #{record.noAnnoyance,jdbcType=VARCHAR},
       service_price = #{record.servicePrice,jdbcType=VARCHAR},
       return_price = #{record.returnPrice,jdbcType=VARCHAR},
-      "total_ weight" = #{record.totalWeight,jdbcType=VARCHAR},
+      total_weight = #{record.totalWeight,jdbcType=VARCHAR},
       buyer_rate = #{record.buyerRate,jdbcType=INTEGER},
       close_time = #{record.closeTime,jdbcType=TIMESTAMP},
       end_time = #{record.endTime,jdbcType=TIMESTAMP},
@@ -396,7 +396,7 @@
         return_price = #{returnPrice,jdbcType=VARCHAR},
       </if>
       <if test="totalWeight != null" >
-        "total_ weight" = #{totalWeight,jdbcType=VARCHAR},
+        total_weight = #{totalWeight,jdbcType=VARCHAR},
       </if>
       <if test="buyerRate != null" >
         buyer_rate = #{buyerRate,jdbcType=INTEGER},
@@ -435,7 +435,7 @@
       no_annoyance = #{noAnnoyance,jdbcType=VARCHAR},
       service_price = #{servicePrice,jdbcType=VARCHAR},
       return_price = #{returnPrice,jdbcType=VARCHAR},
-      "total_ weight" = #{totalWeight,jdbcType=VARCHAR},
+      total_weight = #{totalWeight,jdbcType=VARCHAR},
       buyer_rate = #{buyerRate,jdbcType=INTEGER},
       close_time = #{closeTime,jdbcType=TIMESTAMP},
       end_time = #{endTime,jdbcType=TIMESTAMP},

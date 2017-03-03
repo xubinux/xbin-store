@@ -340,7 +340,7 @@
         <!--<div class="mc">-->
         <form id="gotoPay" method='post' action='http://localhost:8108/order/getPay.action'>
             <input id="no_annoyanceValue" type="hidden" name="noAnnoyance" value="0">
-            <input id="no_annoyanceValue" type="hidden" name="OrderId" value="${OrderId}">
+            <input type="hidden" name="orderId" value="${orderId}">
             <input id="addr_id" type="hidden" name="addrId" value="1">
             <input id="payment_type" type="hidden" name="paymentType" value="1">
             <input id="shipping_name" type="hidden" name="shippingName" value="顺丰速运">

@@ -72,7 +72,7 @@ public class OrderController {
 
             cartInfos = cartService.getCartInfoListByCookiesId(cookieValue);
 
-            for (int i = 0; i < idArray.length; i++) {
+            for (int i = 0; i < indexArray.length; i++) {
                 int index = Integer.parseInt(indexArray[i]);
                 CartInfo cartInfo = cartInfos.get(index);
 
@@ -87,12 +87,18 @@ public class OrderController {
             return "error";
         }
 
-        String key = CART_ORDER_INFO_PROFIX + userCookieValue;
+        String orderId = IDUtils.genOrderId();
+        String key = CART_ORDER_INFO_PROFIX + orderId;
+        String key2 = CART_ORDER_INDEX_PROFIX + orderId;
+        // 保存商品订单项
         jedisClient.set(key, FastJsonConvert.convertObjectToJSON(cartInfoList));
+        // 保存商品Index --用于购物完成后删除购物车商品
+        jedisClient.set(key2, indexs);
         jedisClient.expire(key, REDIS_ORDER_EXPIRE_TIME);
+        jedisClient.expire(key2, REDIS_ORDER_EXPIRE_TIME);
 
         model.addAttribute("totalPrices", totalPrices);
-        model.addAttribute("OrderId", IDUtils.genOrderId());
+        model.addAttribute("orderId", orderId);
         model.addAttribute("cartInfos", cartInfoList);
 
         return "order";
@@ -118,12 +124,12 @@ public class OrderController {
      *        错误 跳转 错误页面
      */
     @RequestMapping("/order/getPay")
-    public String getPay(Integer addrId, Integer noAnnoyance, Integer paymentType,Integer OrderId, String shippingName, HttpServletResponse response, HttpServletRequest request) {
+    public String getPay(Integer addrId, Integer noAnnoyance, Integer paymentType,String orderId, String shippingName, HttpServletResponse response, HttpServletRequest request) {
 
         String cartCookieValue = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
         String userCookieValue = CookieUtils.getCookieValue(request, TOKEN_LOGIN);
 
-        XbinResult result = orderService.generateOrder(userCookieValue,cartCookieValue,addrId, noAnnoyance, paymentType,OrderId, shippingName);
+        XbinResult result = orderService.generateOrder(userCookieValue,cartCookieValue,addrId, noAnnoyance, paymentType,orderId, shippingName);
 
 
         return "success";

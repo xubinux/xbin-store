@@ -85,7 +85,7 @@ public class CartController {
         String cookieUUID = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
         if (StringUtils.isBlank(cookieUUID)) {
 
-            String uuid = UUID.randomUUID().toString().replaceAll("-", "").substring(0, 10);
+            String uuid = UUID.randomUUID().toString().replaceAll("-", "");
 
             CookieUtils.setCookie(request, response, COOKIE_CART_KEY, uuid);
 

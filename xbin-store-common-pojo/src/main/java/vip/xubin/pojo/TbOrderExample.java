@@ -906,72 +906,72 @@ public class TbOrderExample {
         }
 
         public Criteria andTotalWeightIsNull() {
-            addCriterion("\"total_ weight\" is null");
+            addCriterion("total_weight is null");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightIsNotNull() {
-            addCriterion("\"total_ weight\" is not null");
+            addCriterion("total_weight is not null");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightEqualTo(String value) {
-            addCriterion("\"total_ weight\" =", value, "totalWeight");
+            addCriterion("total_weight =", value, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightNotEqualTo(String value) {
-            addCriterion("\"total_ weight\" <>", value, "totalWeight");
+            addCriterion("total_weight <>", value, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightGreaterThan(String value) {
-            addCriterion("\"total_ weight\" >", value, "totalWeight");
+            addCriterion("total_weight >", value, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightGreaterThanOrEqualTo(String value) {
-            addCriterion("\"total_ weight\" >=", value, "totalWeight");
+            addCriterion("total_weight >=", value, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightLessThan(String value) {
-            addCriterion("\"total_ weight\" <", value, "totalWeight");
+            addCriterion("total_weight <", value, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightLessThanOrEqualTo(String value) {
-            addCriterion("\"total_ weight\" <=", value, "totalWeight");
+            addCriterion("total_weight <=", value, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightLike(String value) {
-            addCriterion("\"total_ weight\" like", value, "totalWeight");
+            addCriterion("total_weight like", value, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightNotLike(String value) {
-            addCriterion("\"total_ weight\" not like", value, "totalWeight");
+            addCriterion("total_weight not like", value, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightIn(List<String> values) {
-            addCriterion("\"total_ weight\" in", values, "totalWeight");
+            addCriterion("total_weight in", values, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightNotIn(List<String> values) {
-            addCriterion("\"total_ weight\" not in", values, "totalWeight");
+            addCriterion("total_weight not in", values, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightBetween(String value1, String value2) {
-            addCriterion("\"total_ weight\" between", value1, value2, "totalWeight");
+            addCriterion("total_weight between", value1, value2, "totalWeight");
             return (Criteria) this;
         }
 
         public Criteria andTotalWeightNotBetween(String value1, String value2) {
-            addCriterion("\"total_ weight\" not between", value1, value2, "totalWeight");
+            addCriterion("total_weight not between", value1, value2, "totalWeight");
             return (Criteria) this;
         }
 
