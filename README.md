@@ -1,7 +1,11 @@
 ## xbin-store
+模仿国内知名B2C网站,实现的一个分布式B2C商城,使用Maven构建项目,Jenkins作为持续集成,架构上采用`Dubbox`作为RPC框架采用`kryo`序列化,整体使用`Spring`+`Spring MVC`+`MyBatis`SSM框架,数据库连接池使用`druid`,数据库则使用`MySQL`和`Redis`,网页采用`freemarker`生成静态化页面,存储采用`FastDFS`存储图片等文件,采用`Solr`实现搜索服务,消息中间件暂时采用`ActiveMQ`准备替换为`RocketMQ`,在分布式事务上则采用了[TCC](https://github.com/changmingxie/tcc-transaction)解决订单支付方面时效性要求性高的分布式事务,可靠的消息服务则来解决如会计记录等时效性要求低的分布式事务.
 
-分布式商城项目
+## 实现目标
 
+本项目最终实现的目标 [点我查看最后完成效果](https://www.jd.com)
+
+## 运行截图
 ### 首页
 ![20170320148998263242121.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/首页.png)
 
@@ -35,21 +39,64 @@
 ### 启动虚拟机
 ![20170320148998297295027.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/虚拟机.png)
 
-* Zookeeper1 提供服务:Zookeeper
-* Storm1 提供服务:FastDFS Tracker
-* Storm2 提供服务:FastDFS Storage
-* Redis  提供服务:Redis
-* Solr   提供服务:Solr
+* Zookeeper1    提供服务:Zookeeper
+* Storm1        提供服务:FastDFS Tracker
+* Storm2        提供服务:FastDFS Storage
+* Redis         提供服务:Redis
+* Solr          提供服务:Solr
 
-### Dubbox Admin服务使用情况
+### Dubbox Admin 服务使用情况
 ![20170320148998294075274.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/Dubbox.png)
 
 ### 任务管理器
 ![20170320148998292034786.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/任务管理器.png)
 
-> 启动了5台虚拟机＋7台Tomcat＋9个Dubbox服务 内存使用情况
+> 启动了 5 台虚拟机＋ 7 台 Tomcat ＋ 9 个 Dubbox 服务 内存使用情况
 
-### 命名规范(自己总结)
+## Pull Request
+想要一起开发的可以 Fork 项目,发[邮件](Mailto:xu.binux@gmail.com?Subject=参与开发xbin-store)给我,我会把关于项目的数据库文件、Json 格式发送给您
+
+欢迎前端大牛,这么庞大的 Js 本人实在搞不来.
+
+期待您的 `Pull Request`.
+
+## 机器ip地址(本机)
+
+### Tomcat地址(本机)
+
+|:---------------:|:---------------:|:---------------:|
+| Portal  |192.168.125.1:8101 |[完成情况](https://github.com/xubinux/xbin-store/blob/master/xbin-store-web-portal/README.md)|
+| Search  |192.168.125.1:8102 |[完成情况](https://github.com/xubinux/xbin-store/blob/master/xbin-store-web-search/README.md)|
+| Item    |192.168.125.1:8103 |[完成情况](https://github.com/xubinux/xbin-store/blob/master/xbin-store-web-item/README.md)|
+| SSO     |192.168.125.1:8104 |[完成情况](https://github.com/xubinux/xbin-store/blob/master/xbin-store-web-sso/README.md)|
+| Admin   |192.168.125.1:8105 |[完成情况](https://github.com/xubinux/xbin-store/tree/master/xbin-store-web-admin/README.md)|
+| Cart    |192.168.125.1:8106 |[完成情况](https://github.com/xubinux/xbin-store/tree/master/xbin-store-web-cart/README.md)|
+| Order   |192.168.125.1:8107 |[完成情况](https://github.com/xubinux/xbin-store/blob/master/xbin-store-web-order/README.md)|
+
+### Dubbox服务地址(本机)
+
+|:---------------:|:---------------:|:---------------:|
+| Admin-Service      | 192.168.125.1:20880 |rest:8510 |
+| Redis-Service      | 192.168.125.1:20881 |rest:8511 |
+| Search-Service     | 192.168.125.1:20882 |rest:8512 |
+| Portal-Service     | 192.168.125.1:20883 |rest:8513 |
+| Item-Service       | 192.168.125.1:20884 |rest:8514 |
+| SSO-Service        | 192.168.125.1:20885 |rest:8515 |
+| Notify-Service     | 192.168.125.1:20886 |rest:8516 |
+| Cart-Service       | 192.168.125.1:20887 |rest:8517 |
+| Order-Service      | 192.168.125.1:20888 |rest:8518 |
+
+
+### 虚拟机
+
+|:---------------:|:---------------:|
+| Zookeeper1    |192.168.125.128|
+| FastDFS       |192.168.125.129|
+| Solr          |192.168.125.131|
+| FastDFS       |192.168.125.132|
+| Redis         |192.168.125.133|
+
+### 项目命名规范
 * 父工程 xx
     * xx-common
     * xx-common-config
@@ -59,37 +106,3 @@
     * xx-service-yy
     * xx-web-yy
     * ......
-
-## Tomcat地址(本机)
-* Manager 192.168.125.1:8100(弃用)
-* Portal  192.168.125.1:8101
-* Search  192.168.125.1:8102
-* Item    192.168.125.1:8103
-* SSO     192.168.125.1:8104
-* Admin   192.168.125.1:8105
-* Cart    192.168.125.1:8106
-* Order   192.168.125.1:8107
-
-## Dubbox服务地址(本机)
-* Manager-Service     192.168.125.1(弃用)
-* Admin-Service       192.168.125.1:20880 rest:8510
-* Redis-Service       192.168.125.1:20881 rest:8511
-* Search-Service      192.168.125.1:20882 rest:8512
-* Portal-Service      192.168.125.1:20883 rest:8513
-* Item-Service        192.168.125.1:20884 rest:8514
-* SSO-Service         192.168.125.1:20885 rest:8515
-* Notify-Service      192.168.125.1:20886 rest:8516
-* Cart-Service        192.168.125.1:20887 rest:8517
-* Order-Service       192.168.125.1:20888 rest:8518
-
-## 机器ip地址(本机)
-
-### 需要联网
-无
-
-### 不需要联网
-* Zookeeper1 192.168.125.128
-* FastDFS 192.168.125.129
-* Solr 192.168.125.131
-* FastDFS 192.168.125.132
-* Redis 192.168.125.133
