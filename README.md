@@ -63,7 +63,7 @@
 ## 机器ip地址(本机)
 
 ### Tomcat地址(本机)
-
+|名称|IP|完成情况|
 |:---------------:|:---------------:|:---------------:|
 | Portal  |192.168.125.1:8101 |[完成情况](https://github.com/xubinux/xbin-store/blob/master/xbin-store-web-portal/README.md)|
 | Search  |192.168.125.1:8102 |[完成情况](https://github.com/xubinux/xbin-store/blob/master/xbin-store-web-search/README.md)|
@@ -74,7 +74,7 @@
 | Order   |192.168.125.1:8107 |[完成情况](https://github.com/xubinux/xbin-store/blob/master/xbin-store-web-order/README.md)|
 
 ### Dubbox服务地址(本机)
-
+| 服务名称|Dubbox服务端口  |rest服务端口|
 |:---------------:|:---------------:|:---------------:|
 | Admin-Service      | 192.168.125.1:20880 |rest:8510 |
 | Redis-Service      | 192.168.125.1:20881 |rest:8511 |
@@ -88,7 +88,7 @@
 
 
 ### 虚拟机
-
+|名称|IP|
 |:---------------:|:---------------:|
 | Zookeeper1    |192.168.125.128|
 | FastDFS       |192.168.125.129|
