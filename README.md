@@ -35,15 +35,11 @@
 ### 启动虚拟机
 ![20170320148998297295027.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998297295027.png)
 
-> Zookeeper1 提供服务:Zookeeper
-
-> Storm1 提供服务:FastDFS Tracker
-
-> Storm2 提供服务:FastDFS Storage
-
-> Redis  提供服务:Redis
-
-> Solr   提供服务:Solr
+* Zookeeper1 提供服务:Zookeeper
+* Storm1 提供服务:FastDFS Tracker
+* Storm2 提供服务:FastDFS Storage
+* Redis  提供服务:Redis
+* Solr   提供服务:Solr
 
 ### Dubbox Admin服务使用情况
 ![20170320148998294075274.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998294075274.png)
