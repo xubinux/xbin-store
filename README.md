@@ -3,37 +3,37 @@
 分布式商城项目
 
 ### 首页
-![20170320148998263242121.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998263242121.png)
+![20170320148998263242121.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/首页.png)
 
 ### 登录
-![20170320148998264384011.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998264384011.png)
+![20170320148998264384011.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/登录.png)
 
 ### 注册
-![201703201489982653612.png](http://on2bs9q7q.bkt.clouddn.com/201703201489982653612.png)
+![201703201489982653612.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/注册.png)
 
 ### 搜索
-![20170320148998266267017.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998266267017.png)
+![20170320148998266267017.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/搜索.png)
 
 ### 商品详情
-![20170320148998269698649.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998269698649.png)
+![20170320148998269698649.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/商品详情.png)
 
 ### 加入购物车
-![20170320148998270641283.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998270641283.png)
+![20170320148998270641283.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/加入购物车.png)
 
 ### 购物车
-![20170320148998271738052.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998271738052.png)
+![20170320148998271738052.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/购物车.png)
 
 ### 订单确认
-![20170320148998272353143.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998272353143.png)
+![20170320148998272353143.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/订单确认.png)
 
 ### 结算页
-![20170320148998273050196.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998273050196.png)
+![20170320148998273050196.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/结算页.png)
 
 ### 后台页面
-![20170320148998275560672.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998275560672.png)
+![20170320148998275560672.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/后台.png)
 
 ### 启动虚拟机
-![20170320148998297295027.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998297295027.png)
+![20170320148998297295027.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/虚拟机.png)
 
 * Zookeeper1 提供服务:Zookeeper
 * Storm1 提供服务:FastDFS Tracker
@@ -42,10 +42,10 @@
 * Solr   提供服务:Solr
 
 ### Dubbox Admin服务使用情况
-![20170320148998294075274.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998294075274.png)
+![20170320148998294075274.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/Dubbox.png)
 
 ### 任务管理器
-![20170320148998292034786.png](http://on2bs9q7q.bkt.clouddn.com/20170320148998292034786.png)
+![20170320148998292034786.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/任务管理器.png)
 
 > 启动了5台虚拟机＋7台Tomcat＋9个Dubbox服务 内存使用情况
 
