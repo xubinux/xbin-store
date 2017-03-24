@@ -1,6 +1,29 @@
 ## xbin-store
-模仿国内知名B2C网站,实现的一个分布式B2C商城,使用Maven构建项目,Jenkins作为持续集成,架构上采用`Dubbox`作为RPC框架采用`kryo`序列化,整体使用`Spring`+`Spring MVC`+`MyBatis`SSM框架,数据库连接池使用`druid`,数据库则使用`MySQL`和`Redis`,网页采用`freemarker`生成静态化页面,存储采用`FastDFS`存储图片等文件,采用`Solr`实现搜索服务,消息中间件暂时采用`ActiveMQ`准备替换为`RocketMQ`,在分布式事务上则采用了[TCC](https://github.com/changmingxie/tcc-transaction)解决订单支付方面时效性要求性高的分布式事务,可靠的消息服务则来解决如会计记录等时效性要求低的分布式事务.
+模仿国内知名B2C网站,实现的一个分布式B2C商城
 
+使用技术:
+
+* 后台
+	* `Maven`构建项目
+	* `Jenkins`作为持续集成
+	* 构上采用`Dubbox`作为RPC框架
+	* `kryo`序列化
+	* 使用`Spring`+`Spring MVC`+`MyBatis`SSM框架
+	* 数据库连接池使用`druid`
+	* 数据库使用`MySQL`和`Redis`
+	* 网页采用`freemarker`生成静态化页面
+	* 存储采用`FastDFS`存储图片等文件
+	* 采用`Solr`实现搜索服务
+	* 采用`Spring Scheduled`做任务调度
+	* 消息中间件暂时采用`ActiveMQ`准备替换为`RocketMQ`,
+	* 在分布式事务上则采用了[TCC](https://github.com/changmingxie/tcc-transaction)解决订单支付方面时效性要求性高的分布式事务,可靠的消息服务则来解决如会计记录等时效性要求低的分布式事务.
+* 前台
+	* 采用基于[AdminLTE](https://github.com/almasaeed2010/AdminLTE)的[roncoo-adminLTE](https://github.com/roncoo/roncoo-adminLTE)(主要增加了Ajax的布局模式)
+	* AdminLTE集成太多Js这里就不一一列举了
+	
+	
+	
+	
 ## 实现目标
 
 本项目最终实现的目标 [点我查看最后完成效果](https://www.jd.com)
