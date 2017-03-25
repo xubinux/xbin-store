@@ -14,6 +14,7 @@
 	* 网页采用`freemarker`生成静态化页面
 	* 存储采用`FastDFS`存储图片等文件
 	* 采用`Solr`实现搜索服务
+	* 负载均衡使用`Nginx`、`Keepalived`实现高可用
 	* 采用`Spring Scheduled`做任务调度
 	* 消息中间件暂时采用`ActiveMQ`准备替换为`RocketMQ`,
 	* 在分布式事务上则采用了[TCC](https://github.com/changmingxie/tcc-transaction)解决订单支付方面时效性要求性高的分布式事务,可靠的消息服务则来解决如会计记录等时效性要求低的分布式事务.
