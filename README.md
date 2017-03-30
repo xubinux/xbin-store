@@ -82,9 +82,15 @@
 ## Pull Request
 想要一起开发的可以 Fork 项目,发[邮件](Mailto:xu.binux@gmail.com?Subject=参与开发xbin-store)给我,我会把关于项目的数据库文件、Json 格式发送给您
 
-欢迎前端大牛,这么庞大的 Js 本人实在搞不来.
+前端、后端都可以参与。
 
 期待您的 `Pull Request`.
+
+## 群
+
+![20170320148998263242121.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/QQ.png)
+
+> 新建了一个Q群，想参与开发或讨论技术的可以扫描二维码，进群验证请填写你的Github用户名，否则一律拒绝。
 
 ## 机器ip地址(本机)
 
