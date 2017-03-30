@@ -5,10 +5,6 @@
 <configuration>
 	<!-- 配置分页插件 -->
 	<plugins>
-		<plugin interceptor="com.github.pagehelper.PageHelper">
-			<!-- 配置数据库的方言 -->
-			<!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库-->        
-        	<property name="dialect" value="mysql"/>
-		</plugin>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"/>
 	</plugins>
 </configuration>
