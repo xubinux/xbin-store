@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <title>京东-欢迎登录</title>
+    <title>XBin-欢迎登录</title>
 
     <!-- Start: injected by Adguard -->
     <script src="/js/content-script.js"
@@ -31,8 +31,8 @@
 <!-- SDK 登录 -->
 <div class="w">
     <div id="logo">
-        <a href="//www.jd.com/" clstag="pageclick|keycount|20150112ABD|45">
-            <img src="/images/logo-201305-b.png" alt="京东" width="170" height="60">
+        <a href="//localhost:8101/" clstag="pageclick|keycount|20150112ABD|45">
+            <img src="/images/logo-201305-b.png" alt="XBin" width="170" height="60">
         </a>
         <b></b>
     </div>
@@ -135,7 +135,7 @@
                                     <span>打开</span>
                                     <a href="/uc/links?tag=apps" target="_blank"
                                        clstag="pageclick|keycount|201607144|9">
-                                        <span class="red">手机京东</span></a>
+                                        <span class="red">手机XBin</span></a>
                                 </li>
                                 <li>扫描二维码</li>
                             </ul>
@@ -169,7 +169,7 @@
                         <li>
                             <a href="javascript:void(0)"
                                onclick="window.location='//qq.jd.com/new/wangyin/login.action'+window.location.search;return false;"
-                               clstag="pageclick|keycount|201607144|5">京东钱包</a>
+                               clstag="pageclick|keycount|201607144|5">XBin钱包</a>
                         </li>
                         <li class="extra-r">
                             <div>
@@ -216,7 +216,7 @@
             </a>
             |
             <a rel="nofollow" target="_blank" href="//app.jd.com/">
-                手机京东
+                手机XBin
             </a>
             |
             <a target="_blank" href="/links.vm/club.jd.com/links.aspx">
@@ -228,17 +228,17 @@
             </a>
             |
             <a href="//club.jd.com/" target="_blank">
-                京东社区
+                XBin社区
             </a>
             |
             <a href="//gongyi.jd.com" target="_blank">
-                京东公益
+                XBin公益
             </a>
             |
             <a target="_blank" href="//en.jd.com/" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
         </div>
         <div class="copyright">
-            Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+            Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;XBinJD.com&nbsp;版权所有
         </div>
     </div>
 </div>

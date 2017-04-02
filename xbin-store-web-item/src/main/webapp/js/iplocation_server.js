@@ -648,7 +648,7 @@ $.getDeliver = function(p){
 //            if (p.code==1&&openCheck&&!iconDesc&&!checkApecialAttr("YuShou")){
 //                upenCheckStr = "，支持货到付款、开箱验机";
 //            }
-//            $("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由 京东 发货并提供售后服务"+upenCheckStr+"。"+iconDesc+"</div>").appendTo("#summary-service");
+//            $("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由 XBin 发货并提供售后服务"+upenCheckStr+"。"+iconDesc+"</div>").appendTo("#summary-service");
 //        }
     }
     if (pageConfig.product.skuid>1000000000){   
@@ -710,13 +710,13 @@ function showVenderServiceInfo(r){
 //                $("#summary-service").html("");
 //                var key=r.id+"_"+r.type;
 //                var dfinfo=(r.vid.length!=7&&r.df&&r.df!="null")?("从 "+r.df+" "):"负责";
-//                var shinfo=r.po=="false"?"京东提供售后服务。":"并提供售后服务。"; //sop & sopl
+//                var shinfo=r.po=="false"?"XBin提供售后服务。":"并提供售后服务。"; //sop & sopl
 //				if(pageConfig.product.isFlashPurchase){
 //					if(r.type==0){
 //						requestDeliveCash = true;
 //						getPOPDeliveCash();
 //					}
-//					$("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由 京东 负责发货，<a href='#none'>"+r.vender+"</a> 完成售后服务。"+iconDesc+"</div>").appendTo("#summary-service");
+//					$("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由 XBin 负责发货，<a href='#none'>"+r.vender+"</a> 完成售后服务。"+iconDesc+"</div>").appendTo("#summary-service");
 //				}
 //				else{
 //					if(r.type==0){
@@ -732,10 +732,10 @@ function showVenderServiceInfo(r){
 //						}
 //					}
 //					else if(r.type==1){
-//						$("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由 京东 发货并提供售后服务。"+iconDesc+"</div>").appendTo("#summary-service");
+//						$("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由 XBin 发货并提供售后服务。"+iconDesc+"</div>").appendTo("#summary-service");
 //					}
 //					else if(r.type==2){
-//						$("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由<a href='"+$.getShopUrl(r)+"' "+(pageConfig.product.isFlashPurchase?"":"target='_blank'")+" clstag='shangpin|keycount|product|bbtn' class='hl_red'>"+r.vender+"</a>"+dfinfo+"发货，京东提供售后服务。"+iconDesc+"</div>").appendTo("#summary-service");
+//						$("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由<a href='"+$.getShopUrl(r)+"' "+(pageConfig.product.isFlashPurchase?"":"target='_blank'")+" clstag='shangpin|keycount|product|bbtn' class='hl_red'>"+r.vender+"</a>"+dfinfo+"发货，XBin提供售后服务。"+iconDesc+"</div>").appendTo("#summary-service");
 //					}
 //					else if(r.type==5){
 //						$("<div class='dt'>服\u3000\u3000务：</div><div class='dd'>由<a href='"+$.getShopUrl(r)+"' "+(pageConfig.product.isFlashPurchase?"":"target='_blank'")+" clstag='shangpin|keycount|product|bbtn' class='hl_red'>"+r.vender+"</a>"+dfinfo+"发货，"+shinfo+iconDesc+"</div>").appendTo("#summary-service");
@@ -1566,7 +1566,7 @@ function getTJAreaSku(r){
 		else{
 			if($('#J_'+r.skuId).length>0)return;
 			$('<div class="mt" id="jd-seller"><span class="fl"><b>其它在售卖家</b></span></div><div class="mc" id="jd-seller1"><ul><li id="J_'+r.skuId+'"><div class="fl"><a target="_blank" href="http://item.jd.com/'
-			+r.skuId+'.html" clstag="shangpin|keycount|product|yipinduoshang">京东商城</a></div><div class="lh hl_red"></div></li></ul></div>').appendTo("#ypds-list");
+			+r.skuId+'.html" clstag="shangpin|keycount|product|yipinduoshang">XBin商城</a></div><div class="lh hl_red"></div></li></ul></div>').appendTo("#ypds-list");
 			$.ajax({
 				url:"http://p.3.cn/prices/get?skuid=J_"+r.skuId+"&type=1&area="+currentAreaInfo.currentProvinceId+"_"+currentAreaInfo.currentCityId+"_"+currentAreaInfo.currentAreaId,
 				dataType:"jsonp",
@@ -2127,7 +2127,7 @@ function showProvinceStockDeliver(r){
 				cutCount ++;
 			}
 			else{
-				spuVenderInfos += '<li id="J_'+r.skuStockVenders[i].skuId+'"><div class="fl"><a href="http://item.jd.com/'+r.skuStockVenders[i].skuId+'.html" clstag="shangpin|keycount|product|yipinduoshang" target="_blank">'+((r.skuStockVenders[i].venderId&&(r.skuStockVenders[i].skuId+"").length==10)?r.skuStockVenders[i].venderName:'京东商城')+'</a></div><div class="lh hl_red"></div></li>';				
+				spuVenderInfos += '<li id="J_'+r.skuStockVenders[i].skuId+'"><div class="fl"><a href="http://item.jd.com/'+r.skuStockVenders[i].skuId+'.html" clstag="shangpin|keycount|product|yipinduoshang" target="_blank">'+((r.skuStockVenders[i].venderId&&(r.skuStockVenders[i].skuId+"").length==10)?r.skuStockVenders[i].venderName:'XBin商城')+'</a></div><div class="lh hl_red"></div></li>';
 				if($('#jd-seller1 #J_'+r.skuStockVenders[i].skuId).length>0)$("#jd-seller,#jd-seller1").remove();
 				topCount ++;
 			}

@@ -8,7 +8,7 @@
     <meta charset="utf-8"/>
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>我的购物车 - 京东商城</title>
+    <title>我的购物车 - XBin商城</title>
 
     <!-- Start: injected by Adguard -->
     <script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?sb=1&ts=1487722296.704474&js=1&domain=cart.jd.com&css=1&generic=1"
@@ -249,14 +249,14 @@
             <li class="fore3 dorpdown" id="ttbar-myjd">
                 <div class="dt cw-icon">
                     <i class="ci-right"><s>◇</s></i>
-                    <a target="_blank" href="//home.jd.com/">我的京东</a>
+                    <a target="_blank" href="//home.jd.com/">我的XBin</a>
                 </div>
                 <div class="dd dorpdown-layer"></div>
             </li>
             <li class="spacer"></li>
             <li class="fore4">
                 <div class="dt">
-                    <a target="_blank" href="//vip.jd.com/">京东会员</a>
+                    <a target="_blank" href="//vip.jd.com/">XBin会员</a>
                 </div>
             </li>
             <li class="spacer"></li>
@@ -270,13 +270,13 @@
                 <div class="dt cw-icon">
                     <i class="ci-left"></i>
                     <i class="ci-right"><s>◇</s></i>
-                    <a target="_blank" href="//app.jd.com/">手机京东</a>
+                    <a target="_blank" href="//app.jd.com/">手机XBin</a>
                 </div>
             </li>
             <li class="spacer"></li>
             <li class="fore7 dorpdown" id="ttbar-atte">
                 <div class="dt cw-icon">
-                    <i class="ci-right"><s>◇</s></i>关注京东
+                    <i class="ci-right"><s>◇</s></i>关注XBin
                 </div>
             </li>
             <li class="spacer"></li>
@@ -352,7 +352,7 @@
                 </li>
                     <%--<li class="switch-cart-item ui-switchable-selected">--%>
                     <%--<a class="" href="//cart.yiyaojd.com/cart">--%>
-                    <%--<em>京东大药房</em>--%>
+                    <%--<em>XBin大药房</em>--%>
                     <%--</a>--%>
                     <%--</li>--%>
             </ul>
@@ -658,9 +658,9 @@
                 <div><a target="_blank" href="//help.jd.com/user/issue/list-133.html">夺宝岛</a></div>
                 <div><a target="_blank" href="//help.jd.com/user/issue/list-134.html">DIY装机</a></div>
                 <div><a rel="nofollow" target="_blank" href="//fuwu.jd.com/">延保服务</a></div>
-                <div><a rel="nofollow" target="_blank" href="//o.jd.com/market/index.action">京东E卡</a></div>
-                <div><a rel="nofollow" target="_blank" href="//mobile.jd.com/">京东通信</a></div>
-                <div><a rel="nofollow" target="_blank" href="//s.jd.com/">京东JD+</a></div>
+                <div><a rel="nofollow" target="_blank" href="//o.jd.com/market/index.action">XBinE卡</a></div>
+                <div><a rel="nofollow" target="_blank" href="//mobile.jd.com/">XBin通信</a></div>
+                <div><a rel="nofollow" target="_blank" href="//s.jd.com/">XBinJD+</a></div>
             </dd>
         </dl>
         <span class="clr"></span>
@@ -672,13 +672,13 @@
                 rel="nofollow" target="_blank" href="//www.jd.com/contact/">联系我们</a>|<a rel="nofollow" target="_blank"
                                                                                         href="//www.jd.com/contact/joinin.aspx">商家入驻</a>|<a
                 rel="nofollow" target="_blank" href="//jzt.jd.com">营销中心</a>|<a rel="nofollow" target="_blank"
-                                                                               href="//app.jd.com/">手机京东</a>|<a
+                                                                               href="//app.jd.com/">手机XBin</a>|<a
                 target="_blank" href="//club.jd.com/links.aspx">友情链接</a>|<a target="_blank"
                                                                             href="//media.jd.com/">销售联盟</a>|<a
-                href="//club.jd.com/" target="_blank">京东社区</a>|<a href="//sale.jd.com/act/FTrWPesiDhXt5M6.html"
+                href="//club.jd.com/" target="_blank">XBin社区</a>|<a href="//sale.jd.com/act/FTrWPesiDhXt5M6.html"
                                                                   target="_blank">风险监测</a>|<a
                 href="//sale.jd.com/act/cyeSVqiO8GB.html" target="_blank" clstag="h|keycount|2016|43">隐私政策</a>|<a
-                href="//gongyi.jd.com" target="_blank">京东公益</a>|<a href="//en.jd.com/" target="_blank">English Site</a>|<a
+                href="//gongyi.jd.com" target="_blank">XBin公益</a>|<a href="//en.jd.com/" target="_blank">English Site</a>|<a
                 href="//en.jd.com/help/question-58.html" target="_blank">Contact Us</a></div>
         <div class="copyright"><a target="_blank"
                                   href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000088"><img
@@ -688,9 +688,9 @@
                 rel="nofollow"
                 href="//img30.360buyimg.com/uba/jfs/t1036/328/1487467280/1405104/ea57ab94/5732f60aN53b01d06.jpg"
                 target="_blank">出版物经营许可证</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="//misc.360buyimg.com/wz/wlwhjyxkz.jpg"
-                                                                        target="_blank">网络文化经营许可证京网文[2014]2148-348号</a>&nbsp;&nbsp;|&nbsp;&nbsp;违法和不良信息举报电话：4006561155<br>Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有&nbsp;&nbsp;|&nbsp;&nbsp;消费者维权热线：4006067733&nbsp;&nbsp;&nbsp;&nbsp;<a
-                class="mod_copyright_license" target="_blank" href="//sale.jd.com/act/7Y0Rp81MwQqc.html">经营证照</a><br>京东旗下网站：<a
-                href="https://www.jdpay.com/" target="_blank">京东钱包</a>
+                                                                        target="_blank">网络文化经营许可证京网文[2014]2148-348号</a>&nbsp;&nbsp;|&nbsp;&nbsp;违法和不良信息举报电话：4006561155<br>Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;XBinJD.com&nbsp;版权所有&nbsp;&nbsp;|&nbsp;&nbsp;消费者维权热线：4006067733&nbsp;&nbsp;&nbsp;&nbsp;<a
+                class="mod_copyright_license" target="_blank" href="//sale.jd.com/act/7Y0Rp81MwQqc.html">经营证照</a><br>XBin旗下网站：<a
+                href="https://www.jdpay.com/" target="_blank">XBin钱包</a>
         </div>
         <div class="authentication">
             <a rel="nofollow" target="_blank" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026">

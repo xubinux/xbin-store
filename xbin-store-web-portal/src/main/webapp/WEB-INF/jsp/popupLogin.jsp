@@ -127,7 +127,7 @@
                         <span>打开</span>
                         <a href="/uc/links?tag=apps" target="_blank"
                            clstag="pageclick|keycount|201607144|9">
-                            <span class="red">手机京东</span>
+                            <span class="red">手机XBin</span>
                         </a>
                     </li>
                     <li>扫描二维码</li>
@@ -165,7 +165,7 @@
             <li>
                 <a href="javascript:void(0)"
                    onclick="parent.window.location='//qq.jd.com/new/wangyin/login.action'+window.location.search;return false;"
-                   clstag="pageclick|keycount|201607144|5">京东钱包</a>
+                   clstag="pageclick|keycount|201607144|5">XBin钱包</a>
             </li>
             <li class="extra-r">
                 <div>

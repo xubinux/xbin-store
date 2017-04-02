@@ -38,7 +38,7 @@
     <div class="info-wrap clearfix">
         <div class="icon i-suc"></div>
         <div class="info-con">
-            <div class="tit">注册成功！${username} 欢迎加入京东</div>
+            <div class="tit">注册成功！${username} 欢迎加入XBin</div>
             <div class="con">我们已为您准备了两份新人好礼~ 祝您购物愉快<a href="//www.jd.com" target="_blank" clstag="pageclick|keycount|2016091220|1"> 去首页</a></div>
         </div>
     </div>
@@ -77,15 +77,15 @@
         <a rel="nofollow" target="_blank" href="//zhaopin.jd.com/">人才招聘</a>|
         <a rel="nofollow" target="_blank" href="//www.jd.com/contact/joinin.aspx">商家入驻</a>|
         <a rel="nofollow" target="_blank" href="//www.jd.com/intro/service.aspx">广告服务</a>|
-        <a rel="nofollow" target="_blank" href="//app.jd.com/">手机京东</a>|
+        <a rel="nofollow" target="_blank" href="//app.jd.com/">手机XBin</a>|
         <a target="_blank" href="//club.jd.com/links.aspx">友情链接</a>|
         <a target="_blank" href="//media.jd.com">销售联盟</a>|
-        <a href="//club.jd.com/" target="_blank">京东社区</a>|
-        <a href="//gongyi.jd.com" target="_blank">京东公益</a>|
+        <a href="//club.jd.com/" target="_blank">XBin社区</a>|
+        <a href="//gongyi.jd.com" target="_blank">XBin公益</a>|
         <a target="_blank" href="//en.jd.com/" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
     </div>
     <div class="copyright">
-        Copyright&copy;2004-2016&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+        Copyright&copy;2004-2016&nbsp;&nbsp;XBinJD.com&nbsp;版权所有
     </div>
 </div>
 <script type="text/javascript" src="/js/jquery.1.7.js"></script>

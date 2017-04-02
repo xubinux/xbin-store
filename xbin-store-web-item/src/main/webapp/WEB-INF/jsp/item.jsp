@@ -6,7 +6,7 @@
 <html lang="zh-CN">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
-    <title>${item.title}-京东</title>
+    <title>${item.title}-XBin</title>
     <meta name="keywords" content="AppleiPhone7 Plus,AppleiPhone7 Plus,AppleiPhone7 Plus报价,AppleiPhone7 Plus报价"/>
     <meta name="description"
           content="${item.title}"/>
@@ -307,14 +307,14 @@
             <li class="fore3 dorpdown" id="ttbar-myjd" clstag="shangpin|keycount|topitemnormal|b04">
                 <div class="dt cw-icon">
                     <i class="ci-right"><s>◇</s></i>
-                    <a target="_blank" href="//home.jd.com/">我的京东</a>
+                    <a target="_blank" href="//home.jd.com/">我的XBin</a>
                 </div>
                 <div class="dd dorpdown-layer"></div>
             </li>
             <li class="spacer"></li>
             <li class="fore4" clstag="shangpin|keycount|topitemnormal|a04">
                 <div class="dt">
-                    <a target="_blank" href="//vip.jd.com/">京东会员</a>
+                    <a target="_blank" href="//vip.jd.com/">XBin会员</a>
                 </div>
             </li>
             <li class="spacer"></li>
@@ -328,13 +328,13 @@
                 <div class="dt cw-icon">
                     <i class="ci-left"></i>
                     <i class="ci-right"><s>◇</s></i>
-                    <a target="_blank" href="//app.jd.com/">手机京东</a>
+                    <a target="_blank" href="//app.jd.com/">手机XBin</a>
                 </div>
             </li>
             <li class="spacer"></li>
             <li class="fore7 dorpdown" id="ttbar-atte" clstag="shangpin|keycount|topitemnormal|a09">
                 <div class="dt cw-icon">
-                    <i class="ci-right"><s>◇</s></i>关注京东
+                    <i class="ci-right"><s>◇</s></i>关注XBin
                 </div>
             </li>
             <li class="spacer"></li>
@@ -357,7 +357,7 @@
 </div><!-- #shortcut-2014 -->
 <div class="w">
     <div id="logo-2014">
-        <a href="//www.jd.com/" clstag="shangpin|keycount|topitemnormal|b01" class="logo">京东</a>
+        <a href="//www.jd.com/" clstag="shangpin|keycount|topitemnormal|b01" class="logo">XBin</a>
     </div>
     <div id="search-2014">
         <ul id="shelper" class="hide"></ul>
@@ -406,7 +406,7 @@
                     <a target="_blank" href="//beauty.jd.com">美妆馆</a>
                 </li>
                 <li class="fore4" clstag="shangpin|keycount|topitemnormal|c06" id="nav-chaoshi">
-                    <a target="_blank" href="//chaoshi.jd.com">京东超市</a>
+                    <a target="_blank" href="//chaoshi.jd.com">XBin超市</a>
                 </li>
                 <li class="fore5" clstag="shangpin|keycount|topitemnormal|c07">
                     <a target="_blank" href="//fresh.jd.com/">生鲜</a>
@@ -538,10 +538,10 @@
             <div class="J-hove-wrap EDropdown fr">
                 <div class="item">
                     <div class="name">
-                        <a href="//apple.jd.com/" target="_blank" title="京东Apple产品专营店"
-                           clstag="shangpin|keycount|product|dianpuname1">京东Apple产品专营店</a>
+                        <a href="//apple.jd.com/" target="_blank" title="XBinApple产品专营店"
+                           clstag="shangpin|keycount|product|dianpuname1">XBin|Apple产品专营店</a>
                         <em class="u-jd">
-                            <span>JD</span>自营
+                            <span>XB</span>自营
                         </em>
                     </div>
                 </div>
@@ -691,7 +691,7 @@
                             <dl>
                                 <dt class="fl"></dt>
                                 <dd class="lh"><a class="J-open-tb" href="#none"
-                                                  title="仅可购买京东自营iPhone部分手机产品商品 有效期2017-02-21至2017-03-03"> <span
+                                                  title="仅可购买XBin自营iPhone部分手机产品商品 有效期2017-02-21至2017-03-03"> <span
                                         class="quan-item">                                    <s></s><b></b>                                    <span
                                         class="text">满5199减300</span>                                </span> <span
                                         class="quan-item">                                    <s></s><b></b>                                    <span
@@ -747,7 +747,7 @@
                         <ul class="choose-support lh">
                             <li id="support-old2new" clstag="shangpin|keycount|product|zhichi_old2new_655"><a
                                     target="_blank" href="//sale.jd.com/act/02ZCO1Nqk7eALJw.html"
-                                    data-title="免费提供旧机回收服务，完成回收服务后可获得京东E卡或京东钱包现金再次用于京东消费。"> <i
+                                    data-title="免费提供旧机回收服务，完成回收服务后可获得XBinE卡或XBin钱包现金再次用于XBin消费。"> <i
                                     class="sprite-old2new"></i> <span>以旧换新，闲置手机回收</span> </a></li>
                             <li id="support-tcbg" clstag="shangpin|keycount|product|zhichi_tcbg_655"><a href="#none"
                                                                                                         data-title="告别营业厅排队等待，在线变更套餐更快捷更方便。还可享受赠话费、赠流量活动，点击查看详情。">
@@ -755,7 +755,7 @@
                             <li id="support-giftbuy" clstag="shangpin|keycount|product|zhichi_giftbuy_655"><a
                                     target="_blank"
                                     href="//cart-gift.jd.com/cart/addGiftToCart.action?pid=3133817&amp;pcount=1&amp;ptype=1"
-                                    data-title="可为商品选择京东定制礼品包装和贺卡后下单"> <i class="sprite-giftbuy"></i> <span>礼品购</span>
+                                    data-title="可为商品选择XBin定制礼品包装和贺卡后下单"> <i class="sprite-giftbuy"></i> <span>礼品购</span>
                             </a></li>
                         </ul>
                     </div>
@@ -927,7 +927,7 @@
                                                                        class="sendpay_211"
                                                                        clstag="shangpin|keycount|product|promisefw_1">
                                             211限时达 </a><a target="_blank"
-                                                          title="我们提供多种自提服务，包括京东自提点、京东校园派、自助提货柜、移动自提车等服务，自提订单满49元免运费，不足金额订单收取3元/单运费。"
+                                                          title="我们提供多种自提服务，包括XBin自提点、XBin校园派、自助提货柜、移动自提车等服务，自提订单满49元免运费，不足金额订单收取3元/单运费。"
                                                           href="//help.jd.com/user/issue/103-983.html"
                                                           class="special_ziti noborder"
                                                           clstag="shangpin|keycount|product|promisefw_1"> 自提 </a></div>
@@ -937,7 +937,7 @@
                             </div>
                             <div class="J-dcashDesc dcashDesc fl"></div>
                         </div>
-                        <div id="summary-service" class="summary-service" clstag="shangpin|keycount|product|fuwu_1">由 京东
+                        <div id="summary-service" class="summary-service" clstag="shangpin|keycount|product|fuwu_1">由 XBin
                             发货，并提供售后服务。23:00前完成下单,预计<b>明天(02月22日)</b>送达
                         </div>
                     </div>
@@ -1268,7 +1268,7 @@
                                     <div class="content">
                                         <dl>
                                             <dd>
-                                                增值保障是指凡在京东购买商品或服务的消费者，在保障期间内遇到无论是正常使用中的问题还是意外事故，即可享受增值保障服务。保障内容包括：延长保修、只换不修、意外保护、服务保障。覆盖家电、手机数码、电脑办公、汽车用品、服饰家居等商品。
+                                                增值保障是指凡在XBin购买商品或服务的消费者，在保障期间内遇到无论是正常使用中的问题还是意外事故，即可享受增值保障服务。保障内容包括：延长保修、只换不修、意外保护、服务保障。覆盖家电、手机数码、电脑办公、汽车用品、服饰家居等商品。
                                             </dd>
                                         </dl>
                                         <p>如有疑问，请与<a href="//chat.jd.com/pop/chat?shopId=162403"
@@ -1437,13 +1437,13 @@
             <div class="popbox-inner" data-fixed="pro-detail-hd-fixed">
                 <div class="mt">
                     <h3>
-                        <a href="//apple.jd.com/" target="_blank" title="京东Apple产品专营店"
-                           clstag="shangpin|keycount|product|dianpuname2_京东Apple产品专营店">京东Apple产品专营店</a>
+                        <a href="//apple.jd.com/" target="_blank" title="XBinApple产品专营店"
+                           clstag="shangpin|keycount|product|dianpuname2_XBinApple产品专营店">XBinApple产品专营店</a>
                     </h3>
                     <div class="im-wrap clearfix">
                         <a class="J-popbox-im im" title="联系供应商" data-code="1" data-name="联系供应商" data-seller="联系供应商"
                            data-domain="chat.jd.com" clstag="shangpin|keycount|product|dongdong2_1">
-                            <div class="im gys-im" title="联系供应商" data-seller="京东Apple产品专营店" data-code="1"
+                            <div class="im gys-im" title="联系供应商" data-seller="XBinApple产品专营店" data-code="1"
                                  data-domain="chat.jd.com"><i class="sprite-im"></i></div>
                         </a>
                     </div>
@@ -2081,32 +2081,32 @@
 
                             <dt>
                                 <i class="goods"></i>
-                                <strong>京东承诺</strong>
+                                <strong>XBin承诺</strong>
                             </dt>
                             <dd>
-                                京东平台卖家销售并发货的商品，由平台卖家提供发票和相应的售后服务。请您放心购买！<br/>
+                                XBin平台卖家销售并发货的商品，由平台卖家提供发票和相应的售后服务。请您放心购买！<br/>
                                 注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
                             </dd>
 
                             <dt>
                                 <i class="goods"></i><strong>正品行货</strong>
                             </dt>
-                            <dd>京东商城向您保证所售商品均为正品行货，京东自营商品开具机打发票或电子发票。</dd>
+                            <dd>XBin商城向您保证所售商品均为正品行货，XBin自营商品开具机打发票或电子发票。</dd>
                             <dt><i class="unprofor"></i><strong>全国联保</strong></dt>
                             <dd>
-                                凭质保证书及京东商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由京东联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。京东商城还为您提供具有竞争力的商品价格和<a
+                                凭质保证书及XBin商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由XBin联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。XBin商城还为您提供具有竞争力的商品价格和<a
                                     href='//help.jd.com/help/question-892.html' target='_blank'>运费政策</a>，请您放心购买！
                                 <br/><br/>注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
                             </dd>
                         </dl>
                     </div>
                     <div id="state">
-                        <strong>权利声明：</strong><br/>京东上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是京东重要的经营资源，未经许可，禁止非法转载使用。
+                        <strong>权利声明：</strong><br/>XBin上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是XBin重要的经营资源，未经许可，禁止非法转载使用。
                         <p><b>注：</b>本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。</p>
                         <br/>
                         <strong>价格说明：</strong><br/>
-                        <p><b>京东价：</b>京东价为商品的销售价，是您最终决定是否购买商品的依据。</p>
-                        <p><b>划线价：</b>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在京东平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
+                        <p><b>XBin价：</b>XBin价为商品的销售价，是您最终决定是否购买商品的依据。</p>
+                        <p><b>划线价：</b>商品展示的划横线价格为参考价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在XBin平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
                         </p>
                         <p><b>折扣：</b>如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。
                         </p>
@@ -2116,7 +2116,7 @@
                 </div>
             </div>
         </div>
-        <div style="display: none"><a href="//cps.jd.com">销售联盟</a><a href="//gongyi.jd.com">京东公益</a><a
+        <div style="display: none"><a href="//cps.jd.com">销售联盟</a><a href="//gongyi.jd.com">XBin公益</a><a
                 href="//club.jd.com/links.aspx">友情链接</a>
         </div>
         <div id="try-report" class="try-report"></div>
@@ -2193,9 +2193,9 @@
                     <div><a target="_blank" href="//help.jd.com/user/issue/list-133.html">夺宝岛</a></div>
                     <div><a target="_blank" href="//help.jd.com/user/issue/list-134.html">DIY装机</a></div>
                     <div><a rel="nofollow" target="_blank" href="//fuwu.jd.com/">延保服务</a></div>
-                    <div><a rel="nofollow" target="_blank" href="//o.jd.com/market/index.action">京东E卡</a></div>
-                    <div><a rel="nofollow" target="_blank" href="//mobile.jd.com/">京东通信</a></div>
-                    <div><a rel="nofollow" target="_blank" href="//s.jd.com/">京东JD+</a></div>
+                    <div><a rel="nofollow" target="_blank" href="//o.jd.com/market/index.action">XBinE卡</a></div>
+                    <div><a rel="nofollow" target="_blank" href="//mobile.jd.com/">XBin通信</a></div>
+                    <div><a rel="nofollow" target="_blank" href="//s.jd.com/">XBinJD+</a></div>
                 </dd>
             </dl>
             <span class="clr"></span>
@@ -2208,12 +2208,12 @@
                                                                                             target="_blank"
                                                                                             href="//www.jd.com/contact/joinin.aspx">商家入驻</a>|<a
                     rel="nofollow" target="_blank" href="//jzt.jd.com">营销中心</a>|<a rel="nofollow" target="_blank"
-                                                                                   href="//app.jd.com/">手机京东</a>|<a
+                                                                                   href="//app.jd.com/">手机XBin</a>|<a
                     target="_blank" href="//club.jd.com/links.aspx">友情链接</a>|<a target="_blank" href="//media.jd.com/">销售联盟</a>|<a
-                    href="//club.jd.com/" target="_blank">京东社区</a>|<a href="//sale.jd.com/act/FTrWPesiDhXt5M6.html"
+                    href="//club.jd.com/" target="_blank">XBin社区</a>|<a href="//sale.jd.com/act/FTrWPesiDhXt5M6.html"
                                                                       target="_blank">风险监测</a>|<a
                     href="//sale.jd.com/act/cyeSVqiO8GB.html" target="_blank" clstag="h|keycount|2016|43">隐私政策</a>|<a
-                    href="//gongyi.jd.com" target="_blank">京东公益</a>|<a href="//en.jd.com/" target="_blank">English
+                    href="//gongyi.jd.com" target="_blank">XBin公益</a>|<a href="//en.jd.com/" target="_blank">English
                 Site</a>|<a href="//en.jd.com/help/question-58.html" target="_blank">Contact Us</a></div>
             <div class="copyright"><a target="_blank"
                                       href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000088"><img
@@ -2223,10 +2223,10 @@
                     rel="nofollow"
                     href="//img30.360buyimg.com/uba/jfs/t1036/328/1487467280/1405104/ea57ab94/5732f60aN53b01d06.jpg"
                     target="_blank">出版物经营许可证</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="//misc.360buyimg.com/wz/wlwhjyxkz.jpg"
-                                                                            target="_blank">网络文化经营许可证京网文[2014]2148-348号</a>&nbsp;&nbsp;|&nbsp;&nbsp;违法和不良信息举报电话：4006561155<br>Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有&nbsp;&nbsp;|&nbsp;&nbsp;消费者维权热线：4006067733&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                                                            target="_blank">网络文化经营许可证京网文[2014]2148-348号</a>&nbsp;&nbsp;|&nbsp;&nbsp;违法和不良信息举报电话：4006561155<br>Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;XBinJD.com&nbsp;版权所有&nbsp;&nbsp;|&nbsp;&nbsp;消费者维权热线：4006067733&nbsp;&nbsp;&nbsp;&nbsp;<a
                     class="mod_copyright_license" target="_blank"
-                    href="//sale.jd.com/act/7Y0Rp81MwQqc.html">经营证照</a><br>京东旗下网站：<a href="https://www.jdpay.com/"
-                                                                                     target="_blank">京东钱包</a>
+                    href="//sale.jd.com/act/7Y0Rp81MwQqc.html">经营证照</a><br>XBin旗下网站：<a href="https://www.jdpay.com/"
+                                                                                     target="_blank">XBin钱包</a>
             </div>
             <div class="authentication">
                 <a rel="nofollow" target="_blank"

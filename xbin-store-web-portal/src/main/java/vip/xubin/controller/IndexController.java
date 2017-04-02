@@ -71,7 +71,7 @@ public class IndexController {
     @RequestMapping("/index2")
     public String index2() {
 
-        return "index2";
+        return "index";
     }
     @RequestMapping("/sideBar/popupLogin")
     public String popupLogin() {

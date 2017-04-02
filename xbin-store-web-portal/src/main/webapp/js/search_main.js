@@ -1704,11 +1704,11 @@ function ebook_download(b, a) {
                 var d = "http://gw.e.jd.com/downrecord/downrecord_insert.action?ebookId=" + b + "&key=" + a + "&callback=?";
                 $.getJSON(d, function(f) {
                     if (f.code == 1) {
-                        var e = confirm("如您已安装京东LeBook客户端，请点击“确定”自动启动客户端\n如您尚未安装京东LeBook客户端，请点击“取消”将引导您免费安装客户端");
+                        var e = confirm("如您已安装XBinLeBook客户端，请点击“确定”自动启动客户端\n如您尚未安装XBinLeBook客户端，请点击“取消”将引导您免费安装客户端");
                         if (e == true) {
                             window.location = "LEBK:///Bought"
                         } else {
-                            if (confirm('如果您没有安装LeBook客户端，请点击"确定"按钮到京东网站下载\n如果您不需要安装，请点击"取消"按钮')) {
+                            if (confirm('如果您没有安装LeBook客户端，请点击"确定"按钮到XBin网站下载\n如果您不需要安装，请点击"取消"按钮')) {
                                 window.open("http://e.jd.com/ebook/lebook_pc.aspx")
                             }
                         }

@@ -31,9 +31,9 @@
     <link rel="dns-prefetch" href="//mercury.jd.com"/>
     <link rel="dns-prefetch" href="//x.jd.com"/>
     <link rel="dns-prefetch" href="//wl.jd.com"/>
-    <title>${query} - 商品搜索 - 京东</title>
-    <meta name="Keywords" content="平板电脑,京东平板电脑"/>
-    <meta name="description" content="在京东找到了184329件平板电脑的类似商品，其中包含了“电脑整机”，“电子教育”等类型的平板电脑的商品。"/>
+    <title>${query} - 商品搜索 - XBin</title>
+    <meta name="Keywords" content="平板电脑,XBin平板电脑"/>
+    <meta name="description" content="在XBin找到了184329件平板电脑的类似商品，其中包含了“电脑整机”，“电子教育”等类型的平板电脑的商品。"/>
     <link type="text/css" rel="stylesheet" href="/css/ui.css"/>
     <link type="text/css" rel="stylesheet" href="/css/search.css"/>
     <script type="text/javascript" src="/js/search.js"></script>
@@ -59,14 +59,14 @@
             <li class="fore3 dorpdown" id="ttbar-myjd" clstag="shangpin|keycount|toplist1|a04">
                 <div class="dt cw-icon">
                     <i class="ci-right"><s>◇</s></i>
-                    <a target="_blank" href="//home.jd.com/">我的京东</a>
+                    <a target="_blank" href="//home.jd.com/">我的XBin</a>
                 </div>
                 <div class="dd dorpdown-layer"></div>
             </li>
             <li class="spacer"></li>
             <li class="fore4" clstag="shangpin|keycount|toplist1|a05">
                 <div class="dt">
-                    <a target="_blank" href="//vip.jd.com/">京东会员</a>
+                    <a target="_blank" href="//vip.jd.com/">XBin会员</a>
                 </div>
             </li>
             <li class="spacer"></li>
@@ -80,13 +80,13 @@
                 <div class="dt cw-icon">
                     <i class="ci-left"></i>
                     <i class="ci-right"><s>◇</s></i>
-                    <a target="_blank" href="//app.jd.com/">手机京东</a>
+                    <a target="_blank" href="//app.jd.com/">手机XBin</a>
                 </div>
             </li>
             <li class="spacer"></li>
             <li class="fore7 dorpdown" id="ttbar-atte" clstag="shangpin|keycount|toplist1|a08">
                 <div class="dt cw-icon">
-                    <i class="ci-right"><s>◇</s></i>关注京东
+                    <i class="ci-right"><s>◇</s></i>关注XBin
                 </div>
             </li>
             <li class="spacer"></li>
@@ -112,7 +112,7 @@
 </div>
 <div class="w">
     <div id="logo-2014">
-        <a href="//www.jd.com/" class="logo" clstag="shangpin|keycount|toplist1|b01">京东</a>
+        <a href="//www.jd.com/" class="logo" clstag="shangpin|keycount|toplist1|b01">XBin</a>
     </div>
     <div id="search-2014">
         <ul id="shelper" class="hide"></ul>
@@ -163,7 +163,7 @@
                     <a target="_blank" href="//beauty.jd.com">美妆馆</a>
                 </li>
                 <li id="nav-chaoshi" class="fore4" clstag="shangpin|keycount|toplist1|c05">
-                    <a target="_blank" href="//chaoshi.jd.com">京东超市</a>
+                    <a target="_blank" href="//chaoshi.jd.com">XBin超市</a>
                 </li>
                 <li id="nav-fresh" class="fore5" clstag="shangpin|keycount|toplist1|c06">
                     <a target="_blank" href="//fresh.jd.com/">生鲜</a>
@@ -1032,7 +1032,7 @@
                             <div id="J_feature" class="f-feature">
                                 <ul>
                                     <li><a data-field="wtype" data-val="1" class="" href="javascript:;"
-                                           onclick="searchlog(1,0,0,43)"><i></i>京东配送</a></li>
+                                           onclick="searchlog(1,0,0,43)"><i></i>XBin配送</a></li>
                                     <li><a data-field="cod" data-val="1" class="" href="javascript:;"
                                            onclick="searchlog(1,0,0,34)"><i></i>货到付款</a></li>
                                     <li><a data-field="stock" data-val="1" class="" href="javascript:;"
@@ -1054,7 +1054,7 @@
                                         <div class="p-img">
                                             <a target="_blank"
                                                title='${item.title}'
-                                               href="//item.jd.com/${item.id}.html"
+                                               href="//localhost:8103/item/${item.id}.html"
                                                onclick="searchlog(1,${item.id},0,2,'','flagsClk=1614811784')">
                                                 <img width="220" height="220" class="err-product" data-img="1"
                                                      src="${item.image}"/>
@@ -1081,7 +1081,7 @@
                                                          onclick="searchlog(1,${item.id},0,3,'','flagsClk=1614811784')">5.7万+</a>人评价</strong>
                                         </div>
                                         <div class="p-icons" id="J_pro_${item.id}">
-                                            <img src="//img14.360buyimg.com/uba/jfs/t3139/175/3796130719/1386/3a9cc545/57f8ac4fN87e531d5.png"
+                                            <img src="/images/xb.png"
                                                  alt="" width="44" height="16" class="goods-icons-img J-picon-tips"
                                                  data-tips="自营，品质保障">
                                             <i class="goods-icons-s1 J-picon-tips" data-tips="本商品支持货到付款">货到付款</i>
@@ -1352,7 +1352,7 @@
                                     <div class="p-name">
                                         <a target="_blank"
                                            href="https://ccc-x.jd.com/dsp/nc?ext=Y2xpY2sueC5qZC5jb20vSmRDbGljay8_eHVpZD01MjAwNyZ4c2l0ZWlkPTEwNTg1NTQyOF8yOTEmdG89aHR0cDovL2l0ZW0uamQuY29tLzExMTc2ODc5ODczLmh0bWw&log=Ot1HZzx3QB0DImFs3KFBy2I7FJUsiKe2Qe1ZIjkmVabXYH_Z3T9k16-Cebgua1yrDOb84jDdS3gkkoCdewYxcZyzjBJvkB5_nV5Gqysp1OQ_uYRc3OQZawoK8Cx7qKl2IasAneYOWCuYMO84w9n_oHH7d2hzux5hdAKH5C49UAjWJGK3TdOC2bstFr1d7JcXT_7K4dZtSPS-jY3JXUyXS6hzwkfAKlW0fRq9tpCZdK5nTvvaEimWV9gJm6EyjucSUru4nMT8WYMelDpb2VBm8K2MyK6dYnWz5ycPWkR2KDyEpBHmo_kl_dB_GClVQC4UI6sAMWAnDCVnk4HZ1zzFWi3nsunOWX2pNL66qxcq9VfDCuRnbPhlRwUb76i68NwzT_4oMUrpz0hcTTREYlb7Q5aMy1-eUIn0XjrrdoZgq74SLTqd6LWGCSSaZt08xO5XMnW-23a8vQXvJbu95eLsVA&v=404">
-                                            <em>【京东配送 下单领礼】华为 荣耀平板2 8英寸高通616八核安卓<font class="skcolor_ljg">平板电脑</font>手机3G运行
+                                            <em>【XBin配送 下单领礼】华为 荣耀平板2 8英寸高通616八核安卓<font class="skcolor_ljg">平板电脑</font>手机3G运行
                                                 荣耀平板2 3GB+16GB WiFi版珍珠白</em>
                                         </a>
                                     </div>
@@ -1552,7 +1552,7 @@
                                     <div class="p-name">
                                         <a target="_blank"
                                            href="https://ccc-x.jd.com/dsp/nc?ext=Y2xpY2sueC5qZC5jb20vSmRDbGljay8_eHVpZD01MjAwNyZ4c2l0ZWlkPTEwNTg1NTQyNl8yOTEmdG89aHR0cDovL2l0ZW0uamQuY29tLzExMDk2MDQzOTU2Lmh0bWw&log=Ot1HZzx3QB0DImFs3KFBy2I7FJUsiKe2Qe1ZIjkmVaa46A9-YO3rCtHg07OljwVKr1moHgUVotpHqI-b_YpuUkq29Kzl5GOPHhhfdxRpWvQ_O6DZMjnXWUxdw3FhQUL_1vNYKmLz4t5jazReuh0kfvJfLE2NoCXPxEq9J6Lh4-5vjngJkdz0WRaO8IaSwL_CHbLIwuIqdzs43H6QNLU080mNchgRw-Qpr1ULMCn74o4SDsTOLTj74SGs-hlu3MjVGvbSztr0-nBgrrB97CpAQo_YJ4F3xTXL7IjsP3RX8aljIygJ2yhjlE56V9XeLUghKUQOIe1ysLVmv1Lt3JFVDYjlTlqsNcfwv9ACo-KxQqXiug00bulcgeS7sMET886aUKEf2rjzYRfTGY6WQQkgnK4E5_OnN5T5FE4OvqzmwZsae9a6BBkvWVxiDMQLIfPM4nzNWSnzpFZZLUDqZ4LDFA&v=404">
-                                            <em>【京东配送 下单领礼】华为 荣耀平板2 8英寸高通616八核安卓<font class="skcolor_ljg">平板电脑</font>手机3G运行
+                                            <em>【XBin配送 下单领礼】华为 荣耀平板2 8英寸高通616八核安卓<font class="skcolor_ljg">平板电脑</font>手机3G运行
                                                 荣耀平板2 3GB+32GB WiFi版香槟金</em>
                                         </a>
                                     </div>
@@ -1790,9 +1790,9 @@
                 <div><a target="_blank" href="//help.jd.com/user/issue/list-133.html">夺宝岛</a></div>
                 <div><a target="_blank" href="//help.jd.com/user/issue/list-134.html">DIY装机</a></div>
                 <div><a rel="nofollow" target="_blank" href="//fuwu.jd.com/">延保服务</a></div>
-                <div><a rel="nofollow" target="_blank" href="//o.jd.com/market/index.action">京东E卡</a></div>
-                <div><a rel="nofollow" target="_blank" href="//mobile.jd.com/">京东通信</a></div>
-                <div><a rel="nofollow" target="_blank" href="//s.jd.com/">京东JD+</a></div>
+                <div><a rel="nofollow" target="_blank" href="//o.jd.com/market/index.action">XBinE卡</a></div>
+                <div><a rel="nofollow" target="_blank" href="//mobile.jd.com/">XBin通信</a></div>
+                <div><a rel="nofollow" target="_blank" href="//s.jd.com/">XBinJD+</a></div>
             </dd>
         </dl>
         <span class="clr"></span>
@@ -1804,13 +1804,13 @@
                 rel="nofollow" target="_blank" href="//www.jd.com/contact/">联系我们</a>|<a rel="nofollow" target="_blank"
                                                                                         href="//www.jd.com/contact/joinin.aspx">商家入驻</a>|<a
                 rel="nofollow" target="_blank" href="//jzt.jd.com">营销中心</a>|<a rel="nofollow" target="_blank"
-                                                                               href="//app.jd.com/">手机京东</a>|<a
+                                                                               href="//app.jd.com/">手机XBin</a>|<a
                 target="_blank" href="//club.jd.com/links.aspx">友情链接</a>|<a target="_blank"
                                                                             href="//media.jd.com/">销售联盟</a>|<a
-                href="//club.jd.com/" target="_blank">京东社区</a>|<a href="//sale.jd.com/act/FTrWPesiDhXt5M6.html"
+                href="//club.jd.com/" target="_blank">XBin社区</a>|<a href="//sale.jd.com/act/FTrWPesiDhXt5M6.html"
                                                                   target="_blank">风险监测</a>|<a
                 href="//sale.jd.com/act/cyeSVqiO8GB.html" target="_blank" clstag="h|keycount|2016|43">隐私政策</a>|<a
-                href="//gongyi.jd.com" target="_blank">京东公益</a>|<a href="//en.jd.com/" target="_blank">English Site</a>|<a
+                href="//gongyi.jd.com" target="_blank">XBin公益</a>|<a href="//en.jd.com/" target="_blank">English Site</a>|<a
                 href="//en.jd.com/help/question-58.html" target="_blank">Contact Us</a></div>
         <div class="copyright"><a target="_blank"
                                   href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000088"><img
@@ -1820,9 +1820,9 @@
                 rel="nofollow"
                 href="//img30.360buyimg.com/uba/jfs/t1036/328/1487467280/1405104/ea57ab94/5732f60aN53b01d06.jpg"
                 target="_blank">出版物经营许可证</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="//misc.360buyimg.com/wz/wlwhjyxkz.jpg"
-                                                                        target="_blank">网络文化经营许可证京网文[2014]2148-348号</a>&nbsp;&nbsp;|&nbsp;&nbsp;违法和不良信息举报电话：4006561155<br>Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有&nbsp;&nbsp;|&nbsp;&nbsp;消费者维权热线：4006067733&nbsp;&nbsp;&nbsp;&nbsp;<a
-                class="mod_copyright_license" target="_blank" href="//sale.jd.com/act/7Y0Rp81MwQqc.html">经营证照</a><br>京东旗下网站：<a
-                href="https://www.jdpay.com/" target="_blank">京东钱包</a>
+                                                                        target="_blank">网络文化经营许可证京网文[2014]2148-348号</a>&nbsp;&nbsp;|&nbsp;&nbsp;违法和不良信息举报电话：4006561155<br>Copyright&nbsp;&copy;&nbsp;2004-2017&nbsp;&nbsp;XBinJD.com&nbsp;版权所有&nbsp;&nbsp;|&nbsp;&nbsp;消费者维权热线：4006067733&nbsp;&nbsp;&nbsp;&nbsp;<a
+                class="mod_copyright_license" target="_blank" href="//sale.jd.com/act/7Y0Rp81MwQqc.html">经营证照</a><br>XBin旗下网站：<a
+                href="https://www.jdpay.com/" target="_blank">XBin钱包</a>
         </div>
         <div class="authentication">
             <a rel="nofollow" target="_blank" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026">
