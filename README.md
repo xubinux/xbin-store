@@ -3,6 +3,10 @@
 ## xbin-store
 模仿国内知名B2C网站,实现的一个分布式B2C商城
 
+群 626068936 :u7a7a: 
+
+ps.进群参与开发或讨论 进群验证请填写Github账户名
+
 使用技术:
 
 * 后台
@@ -82,15 +86,11 @@
 ## Pull Request
 想要一起开发的可以 Fork 项目,发[邮件](Mailto:xu.binux@gmail.com?Subject=参与开发xbin-store)给我,我会把关于项目的数据库文件、Json 格式发送给您
 
+添加群626068936参与开发或讨论
+
 前端、后端都可以参与。
 
 期待您的 `Pull Request`.
-
-## 群
-
-![20170320148998263242121.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/QQ.png)
-
-> 新建了一个Q群，想参与开发或讨论技术的可以扫描二维码，进群验证请填写你的Github用户名，否则一律拒绝。
 
 ## 机器ip地址(本机)
 
