@@ -35,6 +35,9 @@ ps.进群参与开发或讨论 进群验证请填写Github账户名
 
 本项目最终实现的目标 [点我查看最后完成效果](https://www.jd.com)
 
+##结构图
+![20170320148998263242121.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/xbin-store.png)
+
 ## 运行截图
 ### 首页
 ![20170320148998263242121.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/首页.png)
