@@ -77,8 +77,6 @@ GitHub：  https://github.com/xubinux/xbin-store
 
 OSChina: http://git.oschina.net/binu/xbin-store
 
-IDEA 可以直接 VCS -> `Checkout from Version Control` -> Git -> 填写地址`https://git.oschina.net/binu/xbin-store.git`
-
 IDEA导入可以只导入`xbin-store`父工程 会自动导入全部模块
 
 eclipse自行解决
@@ -160,8 +158,9 @@ eclipse自行解决
 | Order-Service      | 192.168.125.1:20888 |rest:8518 |
 
 ### 5、启动
-按照依赖启动 Redis-Service 先启动 其他 service 启动,在 web 启动。
+zookeeper启动 redis启动 FastDFS启动
 
+按照依赖启动 Redis-Service 先启动 其他 service 启动,在 web 启动。
 ### 结构图
 ![20170407149155166510416.png](http://on2bs9q7q.bkt.clouddn.com/20170407149155166510416.png)
 
