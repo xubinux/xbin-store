@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>xbin-store</artifactId>
-        <groupId>vip.xubin</groupId>
+        <groupId>cn.binux</groupId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../xbin-store/pom.xml</relativePath>
     </parent>
@@ -12,17 +12,11 @@
 
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-
     <artifactId>xbin-store-service-item-api</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>vip.xubin</groupId>
-            <artifactId>xbin-store-common-pojo</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>vip.xubin</groupId>
+            <groupId>cn.binux</groupId>
             <artifactId>xbin-store-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

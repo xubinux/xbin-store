@@ -1,10 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>vip.xubin</groupId>
+    <groupId>cn.binux</groupId>
     <artifactId>xbin-store</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <modules>
         <module>../xbin-store-common</module>
         <module>../xbin-store-common-mapper</module>
@@ -35,11 +38,17 @@
         <module>../xbin-store-service-order-api</module>
         <module>../xbin-store-service-order</module>
         <module>../xbin-store-web-order</module>
+        <!--<module>../xbin-store-service-message-api</module>-->
+        <!--<module>../xbin-store-service-message</module>-->
     </modules>
-    <packaging>pom</packaging>
-
     <name>xbin-store</name>
-    <url>http://maven.apache.org</url>
+    <url>http://binux.cn</url>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.1.RELEASE</version>
+    </parent>
 
     <!-- 配置maven地址 -->
     <distributionManagement>
@@ -49,7 +58,7 @@
             <url>http://localhost:8077/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
-            <id>nsnapshots</id>
+            <id>snapshots</id>
             <name>Nexus Snapshot Repository</name>
             <url>http://localhost:8077/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
@@ -82,40 +91,39 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springboot.druid.version>0.0.1-SNAPSHOT</springboot.druid.version>
+        <springboot.mybatis.version>1.2.0</springboot.mybatis.version>
+        <springboot.pagehelper.version>1.1.0</springboot.pagehelper.version>
+        <springboot.dubbox.version>0.0.1-SNAPSHOT</springboot.dubbox.version>
         <junit.version>4.12</junit.version>
-        <spring.version>4.2.4.RELEASE</spring.version>
         <cglib.version>3.2.2</cglib.version>
-        <mybatis.version>3.2.8</mybatis.version>
-        <mybatis.spring.version>1.2.2</mybatis.spring.version>
-        <mybatis.paginator.version>1.2.15</mybatis.paginator.version>
         <mysql.version>5.1.32</mysql.version>
-        <slf4j.version>1.6.4</slf4j.version>
-        <jackson.version>2.4.2</jackson.version>
-        <druid.version>1.0.9</druid.version>
+        <slf4j.version>1.7.16</slf4j.version>
+        <jackson.version>2.8.7</jackson.version>
         <httpclient.version>4.3.5</httpclient.version>
         <jstl.version>1.2</jstl.version>
-        <servlet-api.version>2.5</servlet-api.version>
-        <jsp-api.version>2.0</jsp-api.version>
+        <servlet-api.version>3.1.0</servlet-api.version>
         <joda-time.version>2.5</joda-time.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <commons-io.version>1.3.2</commons-io.version>
         <commons-net.version>3.3</commons-net.version>
-        <pagehelper.version>5.0.0</pagehelper.version>
         <jsqlparser.version>0.9.1</jsqlparser.version>
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <jedis.version>2.7.2</jedis.version>
         <solrj.version>4.10.3</solrj.version>
         <dubbo.version>2.8.4</dubbo.version>
         <zookeeper.version>3.4.7</zookeeper.version>
-        <zkclient.version>0.1</zkclient.version>
+        <zkclient.version>0.7</zkclient.version>
         <activemq.version>5.11.2</activemq.version>
         <freemarker.version>2.3.23</freemarker.version>
         <quartz.version>2.2.2</quartz.version>
         <fastjson.version>1.2.28</fastjson.version>
         <dubbo.version>2.8.4</dubbo.version>
-        <tomcat_embed_version>8.0.11</tomcat_embed_version>
+        <tomcat.embed.version>8.5.13</tomcat.embed.version>
+        <tomcat.embed.logging.version>8.5.2</tomcat.embed.logging.version>
         <javassist.version>3.15.0-GA</javassist.version>
         <mina.version>1.1.7</mina.version>
+        <servlet-api.version>2.5</servlet-api.version>
         <grizzly.version>2.1.4</grizzly.version>
         <xstream.version>1.4.1</xstream.version>
         <bsf.version>3.1</bsf.version>
@@ -137,7 +145,9 @@
         <kryo-serializers.version>0.26</kryo-serializers.version>
         <fst.version>1.55</fst.version>
         <fast.version>1.24</fast.version>
+        <springfox.swagger2.version>2.6.1</springfox.swagger2.version>
     </properties>
+
     <dependencyManagement>
         <dependencies>
             <!-- 时间操作组件 -->
@@ -198,26 +208,17 @@
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
-            <!-- Mybatis -->
+            <!--mybatis-->
             <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${springboot.mybatis.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis.spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.miemiedev</groupId>
-                <artifactId>mybatis-paginator</artifactId>
-                <version>${mybatis.paginator.version}</version>
-            </dependency>
+            <!--pagehelper-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
-                <version>${pagehelper.version}</version>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${springboot.pagehelper.version}</version>
             </dependency>
             <!-- MySql -->
             <dependency>
@@ -227,68 +228,9 @@
             </dependency>
             <!-- 连接池 -->
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
-            <!-- Spring -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-beans</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-webmvc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jdbc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-aspects</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-jms</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context-support</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cglib</groupId>
-                <artifactId>cglib</artifactId>
-                <version>${cglib.version}</version>
-            </dependency>
-            <!-- JSP相关 -->
-            <dependency>
-                <groupId>jstl</groupId>
-                <artifactId>jstl</artifactId>
-                <version>${jstl.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>${servlet-api.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>jsp-api</artifactId>
-                <version>${jsp-api.version}</version>
-                <scope>provided</scope>
+                <groupId>cn.binux</groupId>
+                <artifactId>spring-boot-starter-druid</artifactId>
+                <version>${springboot.druid.version}</version>
             </dependency>
             <!-- 文件上传组件 -->
             <dependency>
@@ -308,14 +250,14 @@
                 <artifactId>solr-solrj</artifactId>
                 <version>${solrj.version}</version>
             </dependency>
-            <!-- zookeeper jar begin -->
+            <!-- zookeeper -->
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
                 <version>${zookeeper.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.github.sgroschupf</groupId>
+                <groupId>com.101tec</groupId>
                 <artifactId>zkclient</artifactId>
                 <version>${zkclient.version}</version>
             </dependency>
@@ -331,21 +273,37 @@
                 <artifactId>activemq-all</artifactId>
                 <version>${activemq.version}</version>
             </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${servlet-api.version}</version>
+            </dependency>
             <!-- dubbox jar begin -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>dubbo</artifactId>
                 <version>${dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>javax.servlet</groupId>
+                        <artifactId>javax.servlet-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>cn.binux</groupId>
+                <artifactId>spring-boot-starter-dubbox</artifactId>
+                <version>${springboot.dubbox.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>tomcat-embed-core</artifactId>
-                <version>${tomcat_embed_version}</version>
+                <version>${tomcat.embed.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>tomcat-embed-logging-juli</artifactId>
-                <version>${tomcat_embed_version}</version>
+                <version>${tomcat.embed.logging.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.javassist</groupId>
@@ -474,11 +432,24 @@
                 <version>${fst.version}</version>
             </dependency>
             <!-- dubbox jar end -->
+
             <!-- fastdfs -->
             <dependency>
                 <groupId>org.csource</groupId>
                 <artifactId>fastdfs</artifactId>
                 <version>${fast.version}</version>
+            </dependency>
+
+            <!-- swagger2 -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.swagger2.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -501,22 +472,11 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
         </plugins>
-        <pluginManagement>
-            <plugins>
-                <!-- 配置Tomcat插件 -->
-                <plugin>
-                    <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat7-maven-plugin</artifactId>
-                    <version>2.2</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
-
 </project>

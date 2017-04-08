@@ -1,0 +1,50 @@
+#DUBBO
+dubbox:
+  application:
+    name: xbin-store-web-sso
+    organization: dubbox
+    owner: binux
+  registry:
+    protocol: zookeeper
+    address: 192.168.125.128:2181
+  annotation:
+    package: cn.binux.controller
+
+#spring:
+#  mvc:
+#    view:
+#      prefix: /templates/
+#      suffix: .html
+#  freemarker:
+#    cache: false
+#    request-context-attribute: request
+
+server:
+  port: 8104
+  session-timeout: 1000000 #用户回话session过期时间，以秒为单位
+  context-path: /index #配置访问路径，默认为/
+  tomcat:
+    uri-encoding: UTF-8 #配置Tomcat编码，默认为UTF-8
+    compression: on #Tomcat是否开启压缩，默认为关闭
+
+# swagger2
+swagger2:
+  package: cn.binux.controller
+  path: /apis
+
+# Redis
+redisKey:
+  # 缓存时间
+  expire_time: 120
+  prefix:
+    # 验证码Redis前缀
+    verifycode: 'VERIFYCODE:'
+
+# Cookie 用户登录保存的key
+token_login: JKxk8waMTk4PZC
+# 密码错误
+password_error: '({\"pwd\":\"\\u8d26\\u6237\\u540d\\u4e0e\\u5bc6\\u7801\\u4e0d\\u5339\\u914d\\uff0c\\u8bf7\\u91cd\\u65b0\\u8f93\\u5165\",\"_t\":\"_ntInoTX\"})'
+# 用户名不存在
+user_not_exist: '({\"pwd\":\"\\u8d26\\u6237\\u540d\\u4e0e\\u5bc6\\u7801\\u4e0d\\u5339\\u914d\\uff0c\\u8bf7\\u91cd\\u65b0\\u8f93\\u5165<br/>\\u5982\\u9700\\u6d77\\u5916\\u624b\\u673a\\u767b\\u5f55\\u8bf7\\u6dfb\\u52a0 <a href=\\\"javascript:void(0);\\\" id=\\\"country_code_selector\\\" class=\\\"flk13\\\" style=\\\"color:blue;\\\">\\u56fd\\u5bb6\\u533a\\u53f7</a>\",\"_t\":\"_ntqtNMt\",\"countryTips\":true})\n'
+# 成功响应首页
+portal_path: '({\"success\":\"http://localhost:8101\"})'

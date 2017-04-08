@@ -1,0 +1,41 @@
+#DUBBOX
+dubbox:
+  application: 
+    name: xbin-store-service-notify
+    organization: dubbox
+    owner: binux
+  registry: 
+    protocol: zookeeper
+    address: 192.168.125.128:2181
+  annotation:
+    package: cn.binux.notify
+  protocol:
+    name: dubbo
+    port: 20886
+    host: 192.168.125.1
+    timeout: 30000
+    threadpool: fixed
+    threads: 500
+    accepts: 1000
+    serialization: kryo
+    optimizer: cn.binux.serial.SerializationOptimizerImpl
+
+# Redis
+redisKey:
+  # 缓存时间 默认半小时
+  expire_time: 3600
+  prefix:
+    # 号码登录次数前缀
+    mobile_login_time:
+      key: 'MOBILE_LOGIN_TIME:'
+      expire_time: 3600
+    # 号码code前缀
+    mobile_login_code:
+      key: 'MOBILE_LOGIN_CODE:'
+      expire_time: 120
+
+# Redis 一段时间允许发送几条短信
+mobile_number_ceiling: 3
+
+server:
+  port: 8051

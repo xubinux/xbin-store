@@ -587,8 +587,8 @@
         "jiadian.jd.com/|家电城||0",
         "//sale.jd.com/act/QGKqdHvopWietx.html|品牌日||0",
         "//smarthome.jd.com/|智能生活馆||0",
-        "//sale.jd.com/act/rSRFscLklGhxXW2H.html|京东净化馆||0",
-        "//sale.jd.com/act/eRszkp8fyiS3Yt.html|京东帮服务店||0",
+        "//sale.jd.com/act/rSRFscLklGhxXW2H.html|xbin净化馆||0",
+        "//sale.jd.com/act/eRszkp8fyiS3Yt.html|xbin帮服务店||0",
         "sale.jd.com/act/nRIkpl3KqwDU.html#?from=zctgw00050 |家电众筹馆||0"
       ]
     },
@@ -685,7 +685,7 @@
                   "style": 0
                 },
                 {
-                  "n": "mobile.jd.com/|京东通信||0",
+                  "n": "mobile.jd.com/|xbin通信||0",
                   "s": [
                   ],
                   "style": 0
@@ -4533,7 +4533,7 @@
                   "style": 0
                 },
                 {
-                  "n": "1672-2599-6980|京东卡||0",
+                  "n": "1672-2599-6980|xbin卡||0",
                   "s": [
                   ],
                   "style": 0
@@ -9274,7 +9274,7 @@
               "n": "licai.jd.com|理财||0",
               "s": [
                 {
-                  "n": "xjk.jr.jd.com/index.htm|京东小金库||0",
+                  "n": "xjk.jr.jd.com/index.htm|xbin小金库||0",
                   "s": [
                   ],
                   "style": 0
@@ -9370,7 +9370,7 @@
               "n": "baitiao.jd.com|白条||0",
               "s": [
                 {
-                  "n": "baitiao.jd.com|京东白条||0",
+                  "n": "baitiao.jd.com|xbin白条||0",
                   "s": [
                   ],
                   "style": 0
@@ -9382,7 +9382,7 @@
                   "style": 0
                 },
                 {
-                  "n": "gb.jd.com|京东钢镚||0",
+                  "n": "gb.jd.com|xbin钢镚||0",
                   "s": [
                   ],
                   "style": 0
@@ -9406,7 +9406,7 @@
                   "style": 0
                 },
                 {
-                  "n": "jincai.jd.com/apply/list.html|京东金采||0",
+                  "n": "jincai.jd.com/apply/list.html|xbin金采||0",
                   "s": [
                   ],
                   "style": 0
@@ -9418,7 +9418,7 @@
               "n": "jdpay.com|钱包||0",
               "s": [
                 {
-                  "n": "jdpay.com|京东钱包||0",
+                  "n": "jdpay.com|xbin钱包||0",
                   "s": [
                   ],
                   "style": 0
