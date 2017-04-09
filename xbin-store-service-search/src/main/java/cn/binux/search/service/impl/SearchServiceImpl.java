@@ -1,15 +1,15 @@
 package cn.binux.search.service.impl;
 
 import cn.binux.constant.Const;
-import cn.binux.mapper.SearchMapper;
 import cn.binux.pojo.SearchResult;
 import cn.binux.pojo.SolrItem;
 import cn.binux.pojo.XbinResult;
+import cn.binux.search.mapper.SearchMapper;
 import cn.binux.search.service.SearchService;
 import com.alibaba.dubbo.config.annotation.Service;
 import org.apache.log4j.Logger;
+import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
-import org.apache.solr.client.solrj.SolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
@@ -33,8 +33,11 @@ public class SearchServiceImpl implements SearchService {
     @Autowired
     private SearchMapper searchMapper;
 
+    //@Autowired
+    //private SolrServer solrServer;
+
     @Autowired
-    private SolrServer solrServer;
+    private SolrClient solrClient;
 
     private static Logger logger = Logger.getLogger(SearchServiceImpl.class);
 
@@ -60,11 +63,11 @@ public class SearchServiceImpl implements SearchService {
                 document.addField("item_sell_point", solrItem.getSell_point());
                 document.addField("item_desc", solrItem.getItem_desc());
 
-                solrServer.add(document);
+                solrClient.add(document);
 
             }
 
-            solrServer.commit();
+            solrClient.commit();
 
             logger.info("===========>导入商品成功 导入商品" + solrItemList.size() + "件");
         } catch (Exception e) {
@@ -100,7 +103,7 @@ public class SearchServiceImpl implements SearchService {
 
         query.setHighlightSimplePost("</em>");
 
-        QueryResponse response = solrServer.query(query);
+        QueryResponse response = solrClient.query(query);
 
         SolrDocumentList results = response.getResults();
 

@@ -1,8 +1,9 @@
 package cn.binux.search.listener;
 
-import cn.binux.mapper.SearchMapper;
+
 import cn.binux.pojo.SolrItem;
-import org.apache.solr.client.solrj.SolrServer;
+import cn.binux.search.mapper.SearchMapper;
+import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.common.SolrInputDocument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,8 +28,11 @@ public class ItemAddListener implements MessageListener {
     @Autowired
     private SearchMapper searchMapper;
 
+    //@Autowired
+    //private SolrServer solrServer;
+
     @Autowired
-    private SolrServer solrServer;
+    private SolrClient solrClient;
 
     @Override
     public void onMessage(Message message) {
@@ -61,9 +65,11 @@ public class ItemAddListener implements MessageListener {
             document.addField("item_sell_point", solrItem.getSell_point());
             document.addField("item_desc", solrItem.getItem_desc());
 
-            solrServer.add(document);
+            solrClient.add(document);
+            //solrServer.add(document);
 
-            solrServer.commit();
+            solrClient.commit();
+            //solrServer.commit();
 
             logger.info("添加索引成功商品id:" + itemId);
 

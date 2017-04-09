@@ -1,5 +1,6 @@
 package cn.binux.admin.generate;
 
+
 import cn.binux.mapper.TbIndexSlideAdMapper;
 import cn.binux.pojo.TbIndexSlideAd;
 import cn.binux.utils.FastDFSClientUtils;

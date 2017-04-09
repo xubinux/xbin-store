@@ -4,7 +4,7 @@ import cn.binux.pojo.XbinResult;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 import com.alibaba.fastjson.JSONObject;
 
-import javax.ws.rs.*;
+//import javax.ws.rs.*;
 
 /**
  * 用户登录相关服务
@@ -12,9 +12,9 @@ import javax.ws.rs.*;
  * @author xubin.
  * @create 2017-02-08 下午2:47
  */
-@Path("/user")
-@Consumes({ContentType.TEXT_PLAIN_UTF_8,ContentType.APPLICATION_JSON_UTF_8})
-@Produces({ContentType.APPLICATION_JSON_UTF_8,ContentType.TEXT_PLAIN_UTF_8})
+//@Path("/user")
+//@Consumes({ContentType.TEXT_PLAIN_UTF_8,ContentType.APPLICATION_JSON_UTF_8})
+//@Produces({ContentType.APPLICATION_JSON_UTF_8,ContentType.TEXT_PLAIN_UTF_8})
 public interface UserService {
 
     //http://192.168.125.1:8515/user/check/{param}/{type}
@@ -31,9 +31,9 @@ public interface UserService {
      *           data: false // 返回数据，true：数据可用，false：数据不可用
      *          }
      */
-    @GET
-    @Path("/check/{param}/{type}")
-    XbinResult checkUserDate(@PathParam("param") String data, @PathParam("type") Integer type, String callback);
+    //@GET
+    //@Path("/check/{param}/{type}")
+    XbinResult checkUserDate(/**@PathParam("param")*/ String data, /**@PathParam("type")*/ Integer type, String callback);
 
     //http://192.168.125.1:8515/user/register
     /**
@@ -47,8 +47,8 @@ public interface UserService {
      *           data: null
      *         }
      */
-    @POST
-    @Path("/register")
+    //@POST
+    //@Path("/register")
     XbinResult register(JSONObject user);
 
     //http://192.168.125.1:8515/user/register
@@ -63,8 +63,8 @@ public interface UserService {
      *           data: "fe5cb546aeb3ce1bf37abcb08a40493e" //登录成功，返回token
      *         }
      */
-    @POST
-    @Path("/login")
+    //@POST
+    //@Path("/login")
     XbinResult login(JSONObject user);
 
     //http://192.168.125.1:8515/user/token/fe5cb546aeb3ce1bf37abcb08a40493e
@@ -81,9 +81,9 @@ public interface UserService {
      *         }
      */
 
-    @GET
-    @Path("/token/{token}")
-    XbinResult token(@PathParam("token") String token, String callback);
+    //@GET
+    //@Path("/token/{token}")
+    XbinResult token(/**@PathParam("token")*/ String token, String callback);
 
     //http://192.168.125.1:8515/user/token/fe5cb546aeb3ce1bf37abcb08a40493e
     /**
@@ -98,9 +98,9 @@ public interface UserService {
      *           data: null
      *         }
      */
-    @GET
-    @Path("/logout/{token}")
-    XbinResult logout(@PathParam("token") String token, String callback);
+    //@GET
+    //@Path("/logout/{token}")
+    XbinResult logout(/**@PathParam("token")*/ String token, String callback);
 
     /**
      * 请求格式 POST
@@ -112,9 +112,9 @@ public interface UserService {
      *           "morePin":["sssss740","sssss5601","sssss76676"] //isEngaged = isPinEngaged时返回推荐
      *         }
      */
-    @POST
-    @Path("/validateuser/{isEngaged}")
-    String validateUser(@PathParam("isEngaged") String isEngaged,String regName,String email,String phone);
+    //@POST
+    //@Path("/validateuser/{isEngaged}")
+    String validateUser(/**@PathParam("isEngaged")*/ String isEngaged,String regName,String email,String phone);
 
     /**
      * 请求格式 POST
@@ -126,8 +126,8 @@ public interface UserService {
      *           "success": 0 可用 1 不可用
      *         }
      */
-    @POST
-    @Path("/validate/validateuser")
+    //@POST
+    //@Path("/validate/validateuser")
     String validateAuthCode(String authCode,String uuid);
 
     /**

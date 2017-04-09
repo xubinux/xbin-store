@@ -33,16 +33,13 @@ public class Swagger2 {
     @Value("${dubbox.application.name}")
     private String title;
 
-    @Value("${swagger2.path}")
-    private String path;
-
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage(basePackage))
-                .paths(PathSelectors.ant(path))
+                .paths(PathSelectors.any())
                 .build();
     }
 
@@ -52,7 +49,7 @@ public class Swagger2 {
 
         return new ApiInfoBuilder()
                 .title(title + " RESTful APIs")
-                .description(title + "RESTful API详情!")
+                .description(title + "  RESTful API详情!")
                 .contact(contact)
                 .version("1.0")
                 .build();

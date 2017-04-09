@@ -11,6 +11,7 @@ public class XbinStoreServiceOrderApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
 	}
 
 }

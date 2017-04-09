@@ -55,7 +55,7 @@ public class UserController {
      * @param ReturnUrl 返回跳转URL
      * @return
      */
-    @RequestMapping("/register")
+    @RequestMapping(value = "/register",method = RequestMethod.GET)
     public String showRegister(Model model, String ReturnUrl) {
 
         model.addAttribute("uid", UUID.randomUUID().toString());
@@ -69,7 +69,7 @@ public class UserController {
      * @param returnUrl 返回跳转URL
      * @return
      */
-    @RequestMapping("/login")
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
     public String showLogin(Model model, String returnUrl) {
 
         model.addAttribute("returnUrl", returnUrl);
@@ -84,7 +84,7 @@ public class UserController {
      * @param model
      * @return
      */
-    @RequestMapping("/success")
+    @RequestMapping(value = "/success",method = RequestMethod.GET)
     public String showSuccess(String username, Model model) {
 
         model.addAttribute("username", username);
@@ -141,7 +141,7 @@ public class UserController {
 
     }
 
-    @RequestMapping("/loginservice")
+    @RequestMapping(value = "/loginservice")
     @ResponseBody
     public String valida(String callback, String method, Integer uid) {
         return callback + "({\"Identity\":{\"Unick\":\"\",\"Name\":\"\",\"IsAuthenticated\":false}})";
@@ -217,7 +217,7 @@ public class UserController {
      * @param uuid          Redis验证码uuid
      * @return
      */
-    @RequestMapping("register/sendRegEmail")
+    @RequestMapping("/register/sendRegEmail")
     @ResponseBody
     public String sendRegEmail(String regName, String pwdRepeat, String pwd, String phone, String mobileCode, String uuid, String authCode, String email) {
         return userService.register(regName, pwd, pwdRepeat, phone, mobileCode, uuid, authCode, email);

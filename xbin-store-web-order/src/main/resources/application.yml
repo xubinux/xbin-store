@@ -21,16 +21,9 @@ dubbox:
 
 server:
   port: 8107
-  session-timeout: 1000000 #用户回话session过期时间，以秒为单位
-  context-path: /index #配置访问路径，默认为/
-  tomcat:
-    uri-encoding: UTF-8 #配置Tomcat编码，默认为UTF-8
-    compression: on #Tomcat是否开启压缩，默认为关闭
 
 # swagger2
-swagger2:
-  package: cn.binux.controller
-  path: /apis
+swagger2.package: cn.binux.controller
 
 # Redis
 redisKey:

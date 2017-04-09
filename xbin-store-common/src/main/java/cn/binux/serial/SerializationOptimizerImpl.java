@@ -1,8 +1,9 @@
 package cn.binux.serial;
 
+
+import cn.binux.pojo.*;
 import com.alibaba.dubbo.common.serialize.support.SerializationOptimizer;
 import com.alibaba.fastjson.JSONObject;
-import cn.binux.pojo.*;
 
 import java.util.Collection;
 import java.util.LinkedList;

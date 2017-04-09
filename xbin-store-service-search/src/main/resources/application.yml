@@ -50,7 +50,7 @@ druid:
           reset-enable: false
 mybatis:
     type-aliases-package: cn.binux.pojo
-    mapper-locations: classpath:mapper/*.xml
+    mapper-locations: classpath:cn.binux.mapper/*.xml
 
 
 pagehelper:
@@ -58,6 +58,15 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
+
+# SOLR
+spring:
+  data:
+    solr:
+      host: http://192.168.125.131:8080/solr/collection1
+#      zkHost:
+      repositories:
+        enabled: true
 
 server:
   port: 8512

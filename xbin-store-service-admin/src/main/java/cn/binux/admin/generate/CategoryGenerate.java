@@ -1,5 +1,6 @@
 package cn.binux.admin.generate;
 
+
 import cn.binux.mapper.TbCategoryImageMapper;
 import cn.binux.mapper.TbCategorySecondaryMapper;
 import cn.binux.pojo.TbCategoryImage;
