@@ -1,12 +1,11 @@
-> 目前项目已经全部换成 `Spring Boot` 但是目前还是存在一些问题 今天不想改了 
+> 凌晨2点了 就不在测试了 现在服务应该都是可以运行的 还有一些小 Bug 我有时间在修改
 >
-> 1、`Solr` 和 `MQ` 没有配置 也就是说搜索模块暂时使用不了
+>  `MQ` 目前没有配置 等后面再集成进来
 > 
-> 2、 Web 工程 我还没整合好 页面只是后缀从`.jsp`换成了`Html` 访问也有问题 明天再解决!
->
-> 3、 运行流程 明天重写！！！
+> 页面引擎换成了 `Beetl` 项目部署 明天修改下
 
 ## xbin-store
+
 模仿国内知名B2C网站,实现的一个分布式B2C商城
 
 进群参与开发或讨论 群 626068936 :u7a7a: 
@@ -14,6 +13,7 @@
 使用技术:
 
 * 后台
+	* 使用`Spring Boot` 构建整个项目 去除 XML 配置
 	* `Maven`构建项目
 	* `Jenkins`作为持续集成
 	* 构上采用`Dubbox`作为RPC框架
@@ -21,10 +21,11 @@
 	* 使用`Spring`+`Spring MVC`+`MyBatis`SSM框架
 	* 数据库连接池使用`druid`
 	* 数据库使用`MySQL`和`Redis`
+	* 页面引擎采用 `Beetl`
 	* 网页采用`freemarker`生成静态化页面
 	* 存储采用`FastDFS`存储图片等文件
 	* 采用`Solr`实现搜索服务
-	* 负载均衡使用`Nginx`、`Keepalived`实现高可用
+	* 负载均衡使用`Nginx`、`keepalived`实现高可用
 	* 采用`Spring Scheduled`做任务调度
 	* 消息中间件暂时采用`ActiveMQ`准备替换为`RocketMQ`,
 	* 在分布式事务上则采用了[TCC](https://github.com/changmingxie/tcc-transaction)解决订单支付方面时效性要求性高的分布式事务,可靠的消息服务则来解决如会计记录等时效性要求低的分布式事务.

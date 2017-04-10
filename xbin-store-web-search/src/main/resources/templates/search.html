@@ -1011,7 +1011,7 @@
                                 <a class="fp-prev disabled" href="javascript:;">&lt;</a>
                                 <a class="fp-next" href="javascript:;">&gt;</a>
                             </div>
-                            <div class="f-result-sum">共<span id="J_resCount" class="num">${itemList.size()}</span>件商品
+                            <div class="f-result-sum">共<span id="J_resCount" class="num">${itemList.~ size}</span>件商品
                             </div>
                             <span class="clr"></span>
                         </div>
@@ -1043,7 +1043,11 @@
                     </div>
                     <div id="J_goodsList" class="goods-list-v2 gl-type-1 J-goods-list">
                         <ul class="gl-warp clearfix" data-tpl="1">
-                            <c:forEach items="${itemList}" var="item">
+                            <%
+                            for(item in itemList){
+                            %>
+
+                            <!--<c:forEach items="${itemList}" var="item">-->
                                 <li data-sku="${item.id}" class="gl-item">
                                     <div class="gl-i-wrap">
                                         <div class="p-img">
@@ -1096,14 +1100,14 @@
                                         </div>
                                     </div>
                                 </li>
-                            </c:forEach>
-
+                            <!--</c:forEach>-->
+                            <%}%>
                         </ul>
                         <span class="clr"></span></div>
-                    <%--<div id="J_scroll_loading" class="notice-loading-more" data-pos="30" data-log-id="1486976224.75047">--%>
-                    <%--<span>正在加载中，请稍后~~</span></div>--%>
+                    <!--<div id="J_scroll_loading" class="notice-loading-more" data-pos="30" data-log-id="1486976224.75047">-->
+                    <!--<span>正在加载中，请稍后~~</span></div>-->
                     <div class="page clearfix">
-                        <%--<div id="J_bottomPage" class="p-wrap"></div>--%>
+                        <!--<div id="J_bottomPage" class="p-wrap"></div>-->
                         <div class="page clearfix">
                             <div id="J_bottomPage" class="p-wrap">
                                 <span class="p-num">

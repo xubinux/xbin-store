@@ -3,10 +3,6 @@ package cn.binux.item.service;
 import cn.binux.pojo.TbItem;
 import cn.binux.pojo.TbItemDesc;
 
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-
 /**
  * 商品 Service
  *
@@ -21,12 +17,12 @@ public interface ItemService {
     //http://localhost:8514/item/ItemService/getItemById/{id}
     //@POST()
     //@Path("/getItemById/{id}")
-    TbItem getItemById(@PathParam("id") long itemId);
+    TbItem getItemById(/**@PathParam("id")*/ Long itemId);
 
     //http://localhost:8514/item/ItemService/getItemDescById/{id}
     //@POST()
     //@Path("/getItemDescById/{id}")
-    TbItemDesc getItemDescById(@PathParam("id") long itemId);
+    TbItemDesc getItemDescById(/**@PathParam("id")*/ Long itemId);
 
 
 }

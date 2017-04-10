@@ -44,7 +44,7 @@ public class JedisClientCluster implements JedisClient {
     }
 
     @Override
-    public long expire(String key, int second) {
+    public long expire(String key, Integer second) {
 
         return jedisCluster.expire(key, second);
     }

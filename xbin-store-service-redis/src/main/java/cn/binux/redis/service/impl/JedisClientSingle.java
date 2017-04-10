@@ -85,7 +85,7 @@ public class JedisClientSingle implements JedisClient {
     }
 
     @Override
-    public long expire(String key, int second) {
+    public long expire(String key, Integer second) {
 
         Jedis resource = jedisPool.getResource();
 

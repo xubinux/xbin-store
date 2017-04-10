@@ -51,7 +51,7 @@ public class ItemServiceImpl implements ItemService {
     private Integer REDIS_EXPIRE_TIME;
 
     @Override
-    public TbItem getItemById(long itemId) {
+    public TbItem getItemById(Long itemId) {
 
         String key = ITEM_INFO_PROFIX + itemId + ITEM_INFO_BASE_SUFFIX;
 
@@ -90,7 +90,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public TbItemDesc getItemDescById(long itemId) {
+    public TbItemDesc getItemDescById(Long itemId) {
 
         String key = ITEM_INFO_PROFIX + itemId + ITEM_INFO_DESC_SUFFIX;
 

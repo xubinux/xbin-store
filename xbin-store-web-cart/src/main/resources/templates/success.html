@@ -7,12 +7,7 @@
     <meta name="format-detection" content="telephone=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <%--<!-- Start: injected by Adguard -->--%>
-    <%--<script src="//local.adguard.com/adguard-ajax-api/injections/content-script.js?sb=1&ts=1487649806.572475&js=1&domain=cart.jd.com&css=1&generic=1"--%>
-            <%--type="text/javascript" crossorigin="anonymous"></script>--%>
-    <%--<script src="//local.adguard.com/adguard-ajax-api/injections/userscripts/Adguard Assistant?ts=1487649974.511372"--%>
-            <%--type="text/javascript" crossorigin="anonymous"></script>--%>
-    <%--<!-- End: injected by Adguard -->--%>
+
     <link rel="stylesheet" type="text/css"
           href="/css/cart.css"/>
     <title>商品已成功加入购物车</title>
@@ -223,9 +218,10 @@
 <div class="main">
     <div class="success-wrap">
         <div class="w" id="result">
-            <c:choose>
+            <% if(cartInfo != null){ %>
+            <!--<c:choose>-->
 
-                <c:when test="${cartInfo != null}">
+                <!--<c:when test="${cartInfo != null}">-->
                     <div class="m succeed-box">
                         <div class="mc success-cont">
                             <div class="success-lcol">
@@ -261,9 +257,7 @@
                             </div>
                         </div>
                     </div>
-                </c:when>
-
-                <c:otherwise>
+            <% }else{ %>
                     <div class="m succeed-box">
                         <div class="mc error-cont">
                             <div class="error-lcol">
@@ -281,8 +275,7 @@
                             </div>
                         </div>
                     </div>
-                </c:otherwise>
-            </c:choose>
+            <%}%>
         </div>
     </div>
     <div class="w">

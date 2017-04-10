@@ -432,49 +432,7 @@
                     <span>收起地址</span><b></b>
                 </div>
 
-                <!--yanwenqi 自提地址项目 -->
 
-                <%--<div id="selfPickArea" class="consignee-scroll mt10">--%>
-                    <%--<div class="consignee-cont">--%>
-                        <%--<div class="hr" id="selfPickLine"></div>--%>
-                        <%--<div class="picksite-lead hide" id="firstAccessTip">--%>
-                            <%--<i class="pl-joy"></i>--%>
-                            <%--<span class="pl-info">自提地址挪位置啦~根据您的配送习惯，<br>我们为您新增了自提点</span>--%>
-                            <%--<span class="pl-btn" onclick="doHandleFirstAccess()">我知道了</span>--%>
-                            <%--<i class="pl-cls" onclick="doHandleFirstAccess()"></i>--%>
-                            <%--<i class="pl-arrow"></i>--%>
-                        <%--</div>--%>
-                        <%--<ul id="selfPickInfo">--%>
-                            <%--<li id="defaultSelfPick" defaultselfpick="1" style="" class="">--%>
-                                <%--<div id="selfPickSiteName" class="consignee-item"--%>
-                                     <%--clstag="pageclick|keycount|trade_201602181|40"--%>
-                                     <%--onclick="doSelectSelfPickSite(&quot;404536&quot;,&quot;南京晓庄学院自提车&quot;)">--%>
-                                    <%--<span id="pickName" pickid="404536" limit="8">自提点</span>--%>
-                                    <%--<b></b>--%>
-                                <%--</div>--%>
-                                <%--<div class="addr-detail">--%>
-											<%--<span class="addr-name" limit="6" title="许彬">--%>
-											<%--许彬--%>
-											<%--</span>--%>
-                                    <%--<span class="addr-info" limit="45" title="南京晓庄学院XBin派自提车 南京市江宁区弘景大道3601号校内近东门">--%>
-												 <%--南京晓庄学院自提车 南京市江宁区弘景大道3601号校内近东门											</span>--%>
-                                    <%--<span class="addr-tel">--%>
-												<%--156****0077--%>
-											<%--</span>--%>
-                                <%--</div>--%>
-                                <%--<div class="addr-ops">--%>
-                                    <%--<a id="selfPickEdit" href="#none" onclick="openEditSelfPickConsigneeDialog()"--%>
-                                       <%--clstag="pageclick|keycount|trade_201602181|41"--%>
-                                       <%--class="ftx-05 mr10 edit-selfconsignee" fid="404536">更换自提地址</a>--%>
-                                    <%--<i class="pick-err-icon noPickChoose hide"></i><span--%>
-                                        <%--class="ftx-01 mr10 noPickChoose hide">部分商品不支持</span>--%>
-                                    <%--<a class="ftx-05 selfpick-edit selfPickChoose hide" href="#none"--%>
-                                       <%--onclick="openEditSelfPickConsigneeDialog()">重新选择</a>--%>
-                                <%--</div>--%>
-                            <%--</li>--%>
-                        <%--</ul>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
                 <!--end-->
 
                 <input id="consigneeList_giftSenderConsigneeMobile" value="" type="hidden">
@@ -550,7 +508,11 @@
                                                     ，再加45.00元，可返回购物车领取赠品
                                                 </strong>
                                             </div>
-                                            <c:forEach items="${cartInfos}" var="c">
+
+                                            <%
+                                            for(c in cartInfos){
+                                            %>
+                                            <!--<c:forEach items="${cartInfos}" var="c">-->
                                                 <div class="goods-item goods-item-extra" goods-id="${c.id}" sx-type="0">
                                                     <div class="p-img">
                                                         <a target="_blank"
@@ -565,22 +527,14 @@
                                                                    target="_blank">${c.name}</a>
                                                             </div>
                                                             <div class="p-price">
-                                                                <strong class="jd-price">￥<fmt:formatNumber
-                                                                        groupingUsed="false"
-                                                                        maxFractionDigits="2"
-                                                                        minFractionDigits="2"
-                                                                        value="${c.price / 100 }"/>
+                                                                <strong class="jd-price">￥${c.price / 100 }"
                                                                 </strong>
                                                                 <!--增加预售金额显示 end-->
                                                                 <span class="p-num">x${c.num}</span>
                                                                 <span id="pre-state" class="p-state"
                                                                       skuid="${c.id}">有货</span>
                                                                 <span class="p-weight">
-                                                                    <%--<fmt:formatNumber--%>
-                                                                        <%--groupingUsed="false"--%>
-                                                                        <%--maxFractionDigits="2"--%>
-                                                                        <%--minFractionDigits="2"--%>
-                                                                        <%--value="${c.weight / 1000 }"/>--%>
+
                                                                     kg</span>
 
                                                             </div>
@@ -593,7 +547,9 @@
 
                                                     <div class="clr"></div>
                                                 </div>
-                                            </c:forEach>
+                                            <%
+                                            }
+                                            %>
 
                                         </div>
                                     </div>
@@ -729,12 +685,8 @@
             <!--  预售 计算支付展现方式 begin -->
             <div class="statistic fr">
                 <div class="list">
-                    <span><em class="ftx-01">${cartInfos.size()}</em> 件商品，总商品金额：</span>
-                    <em class="price" id="warePriceId" value="${totalPrices}">￥<fmt:formatNumber
-                            groupingUsed="false"
-                            maxFractionDigits="2"
-                            minFractionDigits="2"
-                            value="${totalPrices / 100 }"/></em>
+                    <span><em class="ftx-01">${cartInfos.~ size}</em> 件商品，总商品金额：</span>
+                    <em class="price" id="warePriceId" value="${totalPrices}">￥${totalPrices / 100 }"</em>
                 </div>
                 <div class="list">
                     <span>返现：</span>
@@ -789,11 +741,7 @@
             <div class="trade-foot-detail-com">
                 <div class="fc-price-info">
                     <span class="price-tit">应付总额：</span>
-                    <span class="price-num" id="sumPayPriceId">￥<fmt:formatNumber
-                            groupingUsed="false"
-                            maxFractionDigits="2"
-                            minFractionDigits="2"
-                            value="${totalPrices / 100 }"/></span>
+                    <span class="price-num" id="sumPayPriceId">￥${totalPrices / 100 }"</span>
                 </div>
                 <div class="fc-baitiao-info" style="display: none;">
                     <span>白条支付：<em>30天免息</em>（不使用优惠）<i class="bt-edit-icon" onclick="javascript:btDetail();"

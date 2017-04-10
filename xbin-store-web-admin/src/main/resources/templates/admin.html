@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page trimDirectiveWhitespaces="true" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +52,7 @@
   <link rel="stylesheet" href="/plugins/ionslider/ion.rangeSlider.skinNice.css">
   <!-- bootstrap slider -->
   <link rel="stylesheet" href="/plugins/bootstrap-slider/slider.css">
-    <link href="/plugins/bootstrap/css/bootstrap-treeview.min.css"/>
+  <link href="/plugins/bootstrap/css/bootstrap-treeview.min.css"/>
   <!-- Morris chart -->
   <link rel="stylesheet" href="/plugins/morris/morris.css">
   <!-- jvectormap -->
@@ -69,29 +66,29 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
   <script>
-    function iFrameHeight() {
-      var ifm= document.getElementById("content");
-      var subWeb = document.frames ? document.frames["content"].document : ifm.contentDocument;
-      if(ifm != null && subWeb != null) {
-        ifm.height = subWeb.body.scrollHeight;
+      function iFrameHeight() {
+          var ifm= document.getElementById("content");
+          var subWeb = document.frames ? document.frames["content"].document : ifm.contentDocument;
+          if(ifm != null && subWeb != null) {
+              ifm.height = subWeb.body.scrollHeight;
+          }
       }
-    }
-    function initFileInput(ctrlName, uploadUrl,fileCount) {
-      var control = $('#' + ctrlName);
+      function initFileInput(ctrlName, uploadUrl,fileCount) {
+          var control = $('#' + ctrlName);
 
-      control.fileinput({
-        language: 'zh', //设置语言
-        uploadUrl: uploadUrl, //上传的地址
-        allowedFileExtensions : ['jpg', 'png','gif'],//接收的文件后缀
-        maxFileCount: fileCount,
-        enctype: 'multipart/form-data',
-        showUpload: true, //是否显示上传按钮
-        showCaption: false,//是否显示标题
-        browseClass: "btn btn-primary", //按钮样式
-        previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
-        msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
-      });
-    }
+          control.fileinput({
+              language: 'zh', //设置语言
+              uploadUrl: uploadUrl, //上传的地址
+              allowedFileExtensions : ['jpg', 'png','gif'],//接收的文件后缀
+              maxFileCount: fileCount,
+              enctype: 'multipart/form-data',
+              showUpload: true, //是否显示上传按钮
+              showCaption: false,//是否显示标题
+              browseClass: "btn btn-primary", //按钮样式
+              previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+              msgFilesTooMany: "选择上传的文件数量({n}) 超过允许的最大数值{m}！",
+          });
+      }
   </script>
 </head>
 <body class="sidebar-mini ajax-template skin-blue fixed">
@@ -647,48 +644,6 @@
           <!--</table>-->
           <!--</div>-->
           <!--</div>-->
-          <%--<div class="col-md-6">--%>
-            <%--<div class="box box-primary">--%>
-              <%--<div class="box-header with-border">--%>
-                <%--<h3 class="box-title">更多相关知识</h3>--%>
-              <%--</div>--%>
-              <%--<table class="table table-striped">--%>
-                <%--<tbody>--%>
-                <%--<tr>--%>
-                  <%--<td><strong>Spring Boot</strong></td>--%>
-                  <%--<td width="80">--%>
-                    <%--<a href="http://www.roncoo.com/course/view/c99516ea604d4053908c1768d6deee3d" class="btn bg-blue btn-xs">view</a>--%>
-                  <%--</td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                  <%--<td><strong>龙果运维平台安装使用</strong></td>--%>
-                  <%--<td width="80">--%>
-                    <%--<a href="http://www.roncoo.com/course/view/a2d58fe08172447696412fb7af1de620" class="btn bg-blue btn-xs">view</a>--%>
-                  <%--</td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                  <%--<td><strong>龙果开源支付系统业务介绍与部署</strong></td>--%>
-                  <%--<td width="80">--%>
-                    <%--<a href="http://www.roncoo.com/course/view/a09d8badbce04bd380f56034f8e68be0" class="btn bg-blue btn-xs">view</a>--%>
-                  <%--</td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                  <%--<td><strong>SSM框架实战应用</strong></td>--%>
-                  <%--<td width="80">--%>
-                    <%--<a href="http://www.roncoo.com/course/view/993d7660a19f41ed94d5bd4f0b414ede" class="btn bg-blue btn-xs">view</a>--%>
-                  <%--</td>--%>
-                <%--</tr>--%>
-                <%--<tr>--%>
-                  <%--<td><strong>Dubbo</strong></td>--%>
-                  <%--<td width="80">--%>
-                    <%--<a href="http://www.roncoo.com/course/view/f614343765bc4aac8597c6d8b38f06fd" class="btn bg-blue btn-xs">view</a>--%>
-                  <%--</td>--%>
-                <%--</tr>--%>
-
-                <%--</tbody>--%>
-              <%--</table>--%>
-            <%--</div>--%>
-          <%--</div>--%>
         </div>
       </div>
     </section>
@@ -899,7 +854,7 @@
   <div class="box">
     <i class="fa fa-refresh fa-spin"></i>
     <span class="tip">
-       正在加载 · · ·    
+       正在加载 · · ·
     </span>
   </div>
 </div>

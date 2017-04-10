@@ -29,7 +29,7 @@ public class ItemController {
     private ItemService itemService;
 
     @RequestMapping("/item/{id}")
-    public String  getItemByItemId(@PathVariable("id") long itemId, Model model) {
+    public String  getItemByItemId(@PathVariable("id") Long itemId, Model model) {
 
         TbItemVO item = new TbItemVO(itemService.getItemById(itemId));
 

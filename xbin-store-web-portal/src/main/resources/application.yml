@@ -10,14 +10,16 @@ dubbox:
   annotation:
     package: cn.binux.controller
 
-#spring:
-#  mvc:
-#    view:
-#      prefix: /templates/
-#      suffix: .html
-#  freemarker:
-#    cache: false
-#    request-context-attribute: request
+#配置模板想到classpath路径，后面须加上"/"
+beetl:
+  templates-path: templates/
+  config:
+      html-tag-flag: true
+#配置模板的后缀，自动读取spring.mvc.view.suffix
+spring:
+  mvc:
+    view:
+      suffix: .html
 
 server:
   port: 8101

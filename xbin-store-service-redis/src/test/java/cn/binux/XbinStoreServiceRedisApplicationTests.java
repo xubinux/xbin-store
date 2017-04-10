@@ -17,9 +17,6 @@ public class XbinStoreServiceRedisApplicationTests {
 	@Test
 	public void contextLoads() {
 
-
-		jedisClient.set("2222", "2232");
-
 	}
 
 }

@@ -1,13 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page trimDirectiveWhitespaces="true" %>
-<%@ page session="false" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=GBK"/>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <title>登录弹框</title>
+    <title>��¼����</title>
     <link type="text/css" rel="stylesheet"
           href="/css/login-form-box.css"
           source="widget">
@@ -23,23 +19,23 @@
     </script>
 </head>
 <body>
-<!-- SDK 登录 -->
+<!-- SDK ��¼ -->
 <div class="login-form">
     <div class="login-tab login-tab-l">
         <a href="javascript:void(0)" clstag="pageclick|keycount|201607144|1">
-            扫码登录
+            ɨ���¼
         </a>
     </div>
     <div class="login-tab login-tab-r">
         <a href="javascript:void(0)" clstag="pageclick|keycount|201607144|2">
-            账户登录
+            �˻���¼
         </a>
     </div>
     <div class="login-box">
         <div class="mt tab-h">
         </div>
         <div class="msg-wrap">
-            <div class="msg-warn hide"><b></b>公共场所不建议自动登录，以防账号丢失</div>
+            <div class="msg-warn hide"><b></b>���������������Զ���¼���Է��˺Ŷ�ʧ</div>
             <div class="msg-error hide"><b></b></div>
         </div>
         <div class="mc">
@@ -58,16 +54,16 @@
                         <label for="loginname" class="login-label name-label"></label>
                         <input id="loginname" type="text" class="itxt" name="loginname" tabindex="1" autocomplete="off"
                                value="897960453"
-                               placeholder="邮箱/用户名/已验证手机"/>
+                               placeholder="����/�û���/����֤�ֻ�"/>
                         <span class="clear-btn"></span>
                     </div>
                     <div id="entry" class="item item-fore2">
                         <label class="login-label pwd-label" for="nloginpwd"></label>
                         <label id="sloginpwd" style="display: none;"></label>
                         <input type="password" id="nloginpwd" name="nloginpwd" class="itxt itxt-error"
-                               tabindex="2" autocomplete="off" placeholder="密码"/>
+                               tabindex="2" autocomplete="off" placeholder="����"/>
                         <span class="clear-btn"></span>
-                        <span class="capslock"><b></b>大小写锁定已打开</span>
+                        <span class="capslock"><b></b>��Сд�����Ѵ�</span>
                     </div>
 
 
@@ -77,7 +73,7 @@
                         <img id="JD_Verification1" class="verify-code"
                              src2="//authcode.jd.com/verify/image?a=1&amp;acid=7ca46dff-9c9a-4552-9dff-6c22143bb446&amp;uid=7ca46dff-9c9a-4552-9dff-6c22143bb446"
                              onclick="this.src= document.location.protocol +'//authcode.jd.com/verify/image?a=1&amp;acid=7ca46dff-9c9a-4552-9dff-6c22143bb446&amp;uid=7ca46dff-9c9a-4552-9dff-6c22143bb446&amp;yys='+new Date().getTime();$('#authcode').val('');"/>
-                        <a href="javascript:void(0)" onclick="$('#JD_Verification1').click();">看不清换一张</a>
+                        <a href="javascript:void(0)" onclick="$('#JD_Verification1').click();">�����廻һ��</a>
                     </div>
 
                     <div class="item item-fore4">
@@ -86,19 +82,19 @@
                                                                     <input id="autoLogin" name="chkRememberMe" type="checkbox"
                                                                            class="jdcheckbox" tabindex="3"
                                                                            clstag="pageclick|keycount|20150112ABD|6">
-                                            <label for="">自动登录</label>
+                                            <label for="">�Զ���¼</label>
                                                             </span>
                             <span class="forget-pw-safe">
 								<a href="/uc/links?tag=safe" class=""
                                    target="_blank"
-                                   clstag="pageclick|keycount|201607144|3">忘记密码</a>
+                                   clstag="pageclick|keycount|201607144|3">��������</a>
 							</span>
                         </div>
                     </div>
                     <div class="item item-fore5">
                         <div class="login-btn">
                             <a href="javascript:;" class="btn-img btn-entry" id="loginsubmit" tabindex="6"
-                               clstag="pageclick|keycount|201607144|3">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                               clstag="pageclick|keycount|201607144|3">��&nbsp;&nbsp;&nbsp;&nbsp;¼</a>
                         </div>
                     </div>
                 </form>
@@ -111,8 +107,8 @@
             <div class="qrcode-error-2016">
                 <div class="qrcode-error-mask">
                 </div>
-                <p class="err-cont">服务器出错</p>
-                <a href="javascript:void(0)" class="refresh-btn">刷新</a>
+                <p class="err-cont">����������</p>
+                <a href="javascript:void(0)" class="refresh-btn">ˢ��</a>
             </div>
             <div class="qrcode-main">
                 <div class="qrcode-img">
@@ -124,22 +120,22 @@
             <div class="qrcode-panel">
                 <ul>
                     <li class="fore1">
-                        <span>打开</span>
+                        <span>��</span>
                         <a href="/uc/links?tag=apps" target="_blank"
                            clstag="pageclick|keycount|201607144|9">
-                            <span class="red">手机XBin</span>
+                            <span class="red">�ֻ�XBin</span>
                         </a>
                     </li>
-                    <li>扫描二维码</li>
+                    <li>ɨ���ά��</li>
                 </ul>
             </div>
             <div class="coagent qr-coagent" id="qrCoagent">
                 <ul>
                     <li>
-                        <b></b><em>免输入</em>
+                        <b></b><em>������</em>
                     </li>
-                    <li><b class="faster"></b><em>更快&nbsp;</em></li>
-                    <li><b class="more-safe"></b><em>更安全</em></li>
+                    <li><b class="faster"></b><em>����&nbsp;</em></li>
+                    <li><b class="more-safe"></b><em>����ȫ</em></li>
                 </ul>
             </div>
         </div>
@@ -159,20 +155,20 @@
                 <a href="javascript:void(0)"
                    onclick="parent.window.location='//qq.jd.com/new/wx/login.action'+window.location.search;return false;"
                    clstag="pageclick|keycount|201607144|7" class="pdl"><b
-                        class="weixin-icon"></b><span>微信</span></a>
+                        class="weixin-icon"></b><span>΢��</span></a>
                 <span class="line">|</span>
             </li>
             <li>
                 <a href="javascript:void(0)"
                    onclick="parent.window.location='//qq.jd.com/new/wangyin/login.action'+window.location.search;return false;"
-                   clstag="pageclick|keycount|201607144|5">XBin钱包</a>
+                   clstag="pageclick|keycount|201607144|5">XBinǮ��</a>
             </li>
             <li class="extra-r">
                 <div>
                     <div class="regist-link"><a
                             href="//reg.jd.com/reg/person?ReturnUrl=http%3A%2F%2Fwww.jd.com"
                             clstag="pageclick|keycount|201607144|8"
-                            target="_blank"><b></b>立即注册</a></div>
+                            target="_blank"><b></b>����ע��</a></div>
                 </div>
             </li>
         </ul>
@@ -223,7 +219,7 @@
 
 <script type="text/javascript" src="/js2/jseqf.js"></script>
 
-<!-- SDK 登录 -->
+<!-- SDK ��¼ -->
 </body>
 </html>
 

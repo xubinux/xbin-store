@@ -33,6 +33,18 @@ public class AdminController {
 
     private Random random = new Random();
 
+    @RequestMapping("/index")
+    public String showIndex(Model model) {
+
+        ManageUserVO userVO = new ManageUserVO();
+        userVO.setCreated(new Date());
+        userVO.setName("許彬");
+        userVO.setJob("CEO");
+
+        model.addAttribute("user", userVO);
+
+        return "index";
+    }
     @RequestMapping("/admin")
     public String showAdmin(Model model) {
 
