@@ -1,9 +1,3 @@
-> 凌晨2点了 就不在测试了 现在服务应该都是可以运行的 还有一些小 Bug 我有时间在修改
->
->  `MQ` 目前没有配置 等后面再集成进来
-> 
-> 页面引擎换成了 `Beetl` 项目部署 明天修改下
-
 ## xbin-store
 
 模仿国内知名B2C网站,实现的一个分布式B2C商城
@@ -16,7 +10,7 @@
 	* 使用`Spring Boot` 构建整个项目 去除 XML 配置
 	* `Maven`构建项目
 	* `Jenkins`作为持续集成
-	* 构上采用`Dubbox`作为RPC框架
+	* 上采用`Dubbox`作为RPC框架
 	* `kryo`序列化
 	* 使用`Spring`+`Spring MVC`+`MyBatis`SSM框架
 	* 数据库连接池使用`druid`
@@ -25,9 +19,10 @@
 	* 网页采用`freemarker`生成静态化页面
 	* 存储采用`FastDFS`存储图片等文件
 	* 采用`Solr`实现搜索服务
+	* `Swagger2` 生成 RESTful Apis文档
 	* 负载均衡使用`Nginx`、`keepalived`实现高可用
 	* 采用`Spring Scheduled`做任务调度
-	* 消息中间件暂时采用`ActiveMQ`准备替换为`RocketMQ`,
+	* 消息中间件暂时采用`RabbitMQ`,
 	* 在分布式事务上则采用了[TCC](https://github.com/changmingxie/tcc-transaction)解决订单支付方面时效性要求性高的分布式事务,可靠的消息服务则来解决如会计记录等时效性要求低的分布式事务.
 * 前台
 	* 采用基于[AdminLTE](https://github.com/almasaeed2010/AdminLTE)的[roncoo-adminLTE](https://github.com/roncoo/roncoo-adminLTE)(主要增加了Ajax的布局模式)
@@ -73,68 +68,164 @@ ps.有虚拟机最好，并不是一定要求虚拟机。开发也可以全部�
 
 教程写的不是很好 **勿喷**！！！
 
-## 运行流程
+##运行流程
+
+进群 626068936 查看群文件 群里更新比较方便
 
 ### 1、下载源码
 GitHub：  https://github.com/xubinux/xbin-store
 
 OSChina: http://git.oschina.net/binu/xbin-store
 
-IDEA导入可以只导入`xbin-store`父工程 会自动导入全部模块
+IDEA导入可以只导入`xbin-store/pom.xml`父工程 会自动导入全部模块
 
 eclipse自行解决
 
 > 不介意的话可以点个`Star`或者`Fork` 谢谢！
 
-### 2、配置私服地址
+###2、修改配置文件
+修改为Spring Boot后本项目只有两处配置文件地址 `项目/src/main/resources/application.yml` 和`fastdfs_client.conf` 
 
-不配置私服的可以自行下载群文件中的`dubbo 2.8.4.jar` 和`fastDFS 1.2.4.jar` 但是听群友说dubbo的jar包只能下源码重新编译才能使用,我是自己编译的,你们可以试试。
+####需要修改的地方 有注释修改的地方
+application.yml 
+```
+service配置
+-----------------------------------------------------------
+#DUBBOX
+dubbox:
+  application: 
+    name: xbin-store-service-sso # 模块名
+    organization: dubbox 
+    owner: binux # 负责人
+  registry: 
+    protocol: zookeeper 
+    address: 192.168.125.128:2181 #修改 zookeeper 地址 
+ annotation:
+    package: cn.binux.sso # dubbo扫描包路径
+  protocol:
+    name: dubbo 
+    port: 20885 # 暴露端口
+    host: 192.168.125.1 #修改 本机ip 多网卡配置
+    timeout: 30000 
+    threadpool: fixed
+    threads: 500
+    accepts: 1000
+    serialization: kryo
+    optimizer: cn.binux.serial.SerializationOptimizerImpl
+  
+web模块配置
+----------------------------------------------------------- 
+ #DUBBO
+dubbox:
+  application:
+    name: xbin-store-web-portal
+    organization: dubbox
+    owner: binux
+  registry:
+    protocol: zookeeper
+    address: 192.168.125.128:2181 #修改 zookeeper地址
+  annotation:
+    package: cn.binux.controller
 
-> 服务器由群里`@K`提供 就不发布在网上了 只供群里使用
+#配置模板想到classpath路径，后面须加上"/"
+beetl:
+  templates-path: templates/
+  config:
+      html-tag-flag: true
+#配置模板的后缀，自动读取spring.mvc.view.suffix
+spring:
+  mvc:
+    view:
+      suffix: .html
+ 
+涉及数据库操作 admin/cart/item/order/protal/search/sso
+-----------------------------------------------------------
+druid:
+    url: jdbc:mysql://localhost:3306/xbin_store?characterEncoding=utf-8 # 数据库地址
+    driver-class: com.mysql.jdbc.Driver
+    username: root #修改 用户名
+    password: OZo+t9QET+ctzd5Esn9q0GJP5hXtWWIKEsX8c4/w6z4C4AnxrwpvySNgBS89XdazOavjXXZp0oeZtQ3P9lLGEA== #修改 数据库密码
+    # 需加密 java -cp druid-0.2.23.jar com.alibaba.druid.filter.config.ConfigTools you_password
+    initial-size: 1
+    min-idle: 1
+    max-active: 20
+    test-on-borrow: true
+    max-wait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    validation-query: SELECT 1 FROM DUAL
+    test-While-Idle: true
+    test-on-return: false
+    pool-prepared-statements: false
+    max-pool-prepared-statement-per-connection-size: 20
+    filters: stat,wall,log4j,config
+    connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true
+    monitor:
+          enabled: false # druid监控 默认关闭
+          druid-stat-view: /druid/*
+          druid-web-stat-filter: /*
+          allow: 219.230.50.107,127.0.0.1 # 允许访问地址
+          deny: 192.168.1.73  # 禁止访问地址
+          login-username: admin # 用户名
+          login-password: 123456 # 密码
+          exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+          reset-enable: false
+mybatis:
+    type-aliases-package: cn.binux.pojo
+    mapper-locations: classpath:mapper/*.xml
 
-### 3、修改配置文件
-本项目一共有 2 大处配置文件地址 `xbin-store-common-config` 和各个工程
-`main/resources/config/config.properties` 
 
-前者是整个项目的公共配置如:数据库、MQ等服务器地址都可以在这配置
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
 
-后者是每个项目单独的配置如:dubbo配置、一些常量等配置
+-----------------------------------------------------------
+redis模块
+# REDIS (RedisProperties)
+redis:
+  cluster: false # false为单机版 
+  # 集群请设置为 true
+  # 并设置clusterNodes 格式: 192.168.125.133:6379,192.168.125.134:6379
+  single-host: 192.168.125.133  #修改 redis地址单机配置
+  single-port: 6379
+  
+-----------------------------------------------------------
+search模块
+# SOLR
+spring:
+  data:
+    solr:
+      host: http://192.168.125.131:8080/solr/collection1 #修改 配置Solr地址
+#      zkHost: #集群配置这个
+      repositories:
+        enabled: true
 
-#### 需要修改的地方
-1. `xbin-store-common-config/src/main/resources/db.properties`
-	* jdbc.url
-	* jdbc.username
-	* jdbc.password
-	* 密码需要加密`java -cp druid-0.2.23.jar com.alibaba.druid.filter.config.ConfigTools you_password`
-2. `xbin-store-common-config/src/main/resources/mq_config.properties`
-	* mq.brokerURL
-3. `xbin-store-common-config/src/main/resources/public_system.properties`
-	* dubbo.registry.address
-	* fastdfs.base.url
-	* solr.single.url
-	* redis.server.single
-4. 各个模块的`config.properties`端口不要修改 如要修改请使用全局搜索替换原来端口
+```
+
+fastdfs_client.conf  #修改 需要使用FastDFS的模块在resource下加此配置文件
+```
+tracker_server = 192.168.125.129:22122
+```
 
 如有遗漏 请在群中给我**反馈**。
 
-### 4、编译
+###3、编译
 
 直接`install`父工程
 
 ![install](http://on2bs9q7q.bkt.clouddn.com/20170407149154764295690.png)
 
-### 新建Tomcat和dubbo服务
-#### dubbo模板
-![20170407149154909476281.png](http://on2bs9q7q.bkt.clouddn.com/20170407149154909476281.png)
+###新建Spring Boot
+![20170412149198074286507.png](http://on2bs9q7q.bkt.clouddn.com/20170412149198074286507.png)
 
-其他`dubbox服务`只需修改`Main class`和`Use classpath of module`
+启动每个模块的 cn.binux.XbinStore模块名Application/Main 即启动
 
-#### Tomcat模板
-![20170407149154907556461.png](http://on2bs9q7q.bkt.clouddn.com/20170407149154907556461.png)
+###4、启动
+Zookeeper启动 redis启动 FastDFS启动 Solr启动
 
-其他修改`port`和`Artifact`即可
-
-不使用 IDEA 的启动 dubbo 服务直接运行每个 service 服务的 `src/test/java/vip/xubin/Provider.java`中的 main 方法启动服务
+按照依赖启动 查看下方依赖图
 
 #### Tomcat地址(本机)
 |名称|IP|完成情况|
@@ -164,6 +255,10 @@ eclipse自行解决
 zookeeper启动 redis启动 FastDFS启动
 
 按照依赖启动 Redis-Service 先启动 其他 service 启动,在 web 启动。
+
+###项目依赖
+![20170412149198629621093.png](http://on2bs9q7q.bkt.clouddn.com/20170412149198629621093.png)
+
 ### 结构图
 ![20170407149155166510416.png](http://on2bs9q7q.bkt.clouddn.com/20170407149155166510416.png)
 
