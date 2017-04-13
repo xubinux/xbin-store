@@ -259,10 +259,10 @@ zookeeper启动 redis启动 FastDFS启动
 按照依赖启动 Redis-Service 先启动 其他 service 启动,在 web 启动。
 
 ### 项目依赖(暂时)
-![20170412149198629621093.png](http://on2bs9q7q.bkt.clouddn.com/20170412149198629621093.png)
+![20170413149208646298768.png](http://on2bs9q7q.bkt.clouddn.com/20170413149208646298768.png)
 
 ### 结构图(暂时)
-![20170407149155166510416.png](http://on2bs9q7q.bkt.clouddn.com/20170407149155166510416.png)
+![20170407149155166510416.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/xbin-store.png)
 
 ### 项目开发进度(暂时)
 ![20170413149208582280568.jpg](http://on2bs9q7q.bkt.clouddn.com/20170413149208582280568.jpg)
