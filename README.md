@@ -318,17 +318,17 @@ Zookeeper启动 redis启动 FastDFS启动 Solr启动
 本项目最终实现的目标 [点我查看最后完成效果](https://www.jd.com)
 
 ## 运行截图
-![首页.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/首页.png)
-![登录.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/登录.png)
-![注册.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/注册.png)
-![搜索.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/搜索.png)
-![商品详情.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/商品详情.png)
-![加入购物车.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/加入购物车.png)
-![购物车.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/购物车.png)
-![订单确认.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/订单确认.png)
-![结算页.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/结算页.png)
-![后台页面.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/后台.png)
-![启动虚拟机.png](http://git.oschina.net/binu/xbin-store/raw/master/Images/虚拟机.png)
+![20170320148998263242121.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/首页.png)
+![20170320148998264384011.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/登录.png)
+![201703201489982653612.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/注册.png)
+![20170320148998266267017.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/搜索.png)
+![20170320148998269698649.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/商品详情.png)
+![20170320148998270641283.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/加入购物车.png)
+![20170320148998271738052.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/购物车.png)
+![20170320148998272353143.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/订单确认.png)
+![20170320148998273050196.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/结算页.png)
+![20170320148998275560672.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/后台.png)
+![20170320148998297295027.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/虚拟机.png)
 
 * Zookeeper1    提供服务:Zookeeper
 * Storm1        提供服务:FastDFS Tracker
