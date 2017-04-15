@@ -8,7 +8,7 @@ dubbox:
     protocol: zookeeper
     address: 192.168.125.128:2181
   annotation:
-    package: cn.binux.controller
+    package: cn.binux.admin.controller
 
 #spring:
 #  mvc:
@@ -35,7 +35,7 @@ server:
 
 
 # swagger2
-swagger2.package: cn.binux.controller
+swagger2.package: cn.binux.admin.controller
 
 # fastdfs url
 fastdfs.base.url: http://192.168.125.132/

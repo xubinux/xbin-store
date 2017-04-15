@@ -8,7 +8,7 @@ dubbox:
     protocol: zookeeper
     address: 192.168.125.128:2181
   annotation:
-    package: cn.binux.controller
+    package: cn.binux.search.controller
 
 #配置模板想到classpath路径，后面须加上"/"
 beetl:
@@ -25,7 +25,7 @@ server:
   port: 8102
 
 # swagger2
-swagger2.package: cn.binux.controller
+swagger2.package: cn.binux.search.controller
 
 ## Search Rows
 search_result_rows: 60

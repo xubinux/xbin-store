@@ -8,7 +8,7 @@ dubbox:
     protocol: zookeeper
     address: 192.168.125.128:2181
   annotation:
-    package: cn.binux.controller
+    package: cn.binux.item.controller
 
 #配置模板想到classpath路径，后面须加上"/"
 beetl:
@@ -26,5 +26,5 @@ server:
 
 
 # swagger2
-swagger2.package: cn.binux.controller
+swagger2.package: cn.binux.item.controller
 
