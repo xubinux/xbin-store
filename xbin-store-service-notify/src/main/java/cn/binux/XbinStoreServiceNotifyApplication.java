@@ -10,6 +10,5 @@ public class XbinStoreServiceNotifyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(XbinStoreServiceNotifyApplication.class, args);
 
-		Main.main(args);
 	}
 }

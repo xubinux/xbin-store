@@ -14,6 +14,5 @@ public class XbinStoreServicePortalApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(XbinStoreServicePortalApplication.class, args);
 
-		Main.main(args);
 	}
 }
