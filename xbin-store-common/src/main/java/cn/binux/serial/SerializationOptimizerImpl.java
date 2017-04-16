@@ -18,7 +18,6 @@ public class SerializationOptimizerImpl implements SerializationOptimizer {
         classes.add(TbItem.class);
         classes.add(TbContentCategory.class);
         classes.add(TbContent.class);
-        classes.add(TbItemCat.class);
         classes.add(TbItemDesc.class);
         classes.add(TbItemParam.class);
         classes.add(TbOrder.class);

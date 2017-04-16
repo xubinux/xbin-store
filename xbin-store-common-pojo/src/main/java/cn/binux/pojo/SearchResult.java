@@ -1,5 +1,7 @@
 package cn.binux.pojo;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -10,6 +12,7 @@ import java.util.List;
  * @creater 2016-08-23 22:03
  */
 
+@Data
 public class SearchResult implements Serializable {
 
     //商品集合
@@ -21,35 +24,4 @@ public class SearchResult implements Serializable {
     //当前页
     private long curPage;
 
-    public List<SolrItem> getItemList() {
-        return itemList;
-    }
-
-    public void setItemList(List<SolrItem> itemList) {
-        this.itemList = itemList;
-    }
-
-    public long getRecordCount() {
-        return recordCount;
-    }
-
-    public void setRecordCount(long recordCount) {
-        this.recordCount = recordCount;
-    }
-
-    public long getPageCount() {
-        return pageCount;
-    }
-
-    public void setPageCount(long pageCount) {
-        this.pageCount = pageCount;
-    }
-
-    public long getCurPage() {
-        return curPage;
-    }
-
-    public void setCurPage(long curPage) {
-        this.curPage = curPage;
-    }
 }
