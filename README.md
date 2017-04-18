@@ -1,3 +1,9 @@
+> 配置被覆盖问题:
+>
+> 复制一份`application.yml` 改名 `application-dev.yml` 
+>
+>启动时增加参数 `--spring.profiles.active=dev` 以后我会更新`application.yml`此文件会更新配置, Pull 代码后请查看变化。
+
 ## xbin-store
 [![License](https://img.shields.io/badge/license-GPL-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/xubinux/xbin-store.svg?style=social&label=Stars)](https://github.com/xubinux/xbin-store)[![GitHub forks](https://img.shields.io/github/forks/xubinux/xbin-store.svg?style=social&label=Fork)](https://github.com/xubinux/xbin-store)
@@ -331,8 +337,8 @@ Zookeeper启动 redis启动 FastDFS启动 Solr启动
 ![20170320148998297295027.png](https://raw.githubusercontent.com/xubinux/xbin-store/master/Images/虚拟机.png)
 
 * Zookeeper1    提供服务:Zookeeper
-* Storm1        提供服务:FastDFS Tracker
-* Storm2        提供服务:FastDFS Storage
+* FastDFS1        提供服务:FastDFS Tracker
+* FastDFS2        提供服务:FastDFS Storage
 * Redis         提供服务:Redis
 * Solr          提供服务:Solr
 
