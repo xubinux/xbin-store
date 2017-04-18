@@ -55,19 +55,19 @@
         <repository>
             <id>releases</id>
             <name>Nexus Release Repository</name>
-            <url>http://localhost:8077/nexus/content/repositories/releases/</url>
+            <url>http://101.200.40.220:8077/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id>
             <name>Nexus Snapshot Repository</name>
-            <url>http://localhost:8077/nexus/content/repositories/snapshots/</url>
+            <url>http://101.200.40.220:8077/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
     <repositories>
         <repository>
             <id>nexus</id>
-            <url>http://localhost:8077/nexus/content/groups/public/</url>
+            <url>http://101.200.40.220:8077/nexus/content/groups/public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -79,7 +79,7 @@
     <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
-            <url>http://localhost:8077/nexus/content/groups/public/</url>
+            <url>http://101.200.40.220:8077/nexus/content/groups/public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
