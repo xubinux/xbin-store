@@ -9,6 +9,11 @@ dubbox:
     address: 192.168.125.128:2181
   annotation:
     package: cn.binux.sso.controller
+  monitor:
+    enabled: true
+    address: 192.168.125.1:6060
+    username: admin
+    password: admin
 
 #配置模板想到classpath路径，后面须加上"/"
 beetl:
