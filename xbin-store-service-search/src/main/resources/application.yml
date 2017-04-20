@@ -20,7 +20,7 @@ dubbox:
     serialization: kryo
     optimizer: cn.binux.serial.SerializationOptimizerImpl
   monitor:
-    enabled: true
+    enabled: false
     address: 192.168.125.1:6060
     username: admin
     password: admin
@@ -71,7 +71,7 @@ spring:
       host: http://192.168.125.131:8080/solr/collection1
 #      zkHost:
       repositories:
-        enabled: true
+        enabled: false
 
 server:
   port: 8512

@@ -737,7 +737,7 @@
 				tooltip_split: false,
 				handle: 'round',
 				reversed: false,
-				enabled: true,
+				enabled: false,
 				formatter: function(val) {
 					if (Array.isArray(val)) {
 						return val[0] + " : " + val[1];

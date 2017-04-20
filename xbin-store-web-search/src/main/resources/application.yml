@@ -10,7 +10,7 @@ dubbox:
   annotation:
     package: cn.binux.search.controller
   monitor:
-    enabled: true
+    enabled: false
     address: 192.168.125.1:6060
     username: admin
     password: admin
