@@ -72,7 +72,6 @@ redisKey:
   # 缓存时间 一天
   expire_time: 86400
   prefix:
-    cookie_cart_key: 'COOKIE_CART_KEY'
     cart_info_profix: 'CART_INFO:'
     cart_order_info_profix: 'CART_ORDER_INFO:'
     cart_order_index_profix: 'CART_ORDER_INDEX:'

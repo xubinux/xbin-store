@@ -33,5 +33,8 @@ server:
 # swagger2
 swagger2.package: cn.binux.cart.controller
 
-# Cookie Cart key
-cookie_cart_key: COOKIE_CART_KEY
+# Redis
+redisKey:
+  prefix:
+    # 用户登录信息前缀
+    user_session: 'USER_SESSION:'
