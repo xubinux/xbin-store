@@ -22,8 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class LoginInterceptor implements HandlerInterceptor {
 
-    @Value("${cookie.token_login}")
-    private String TOKEN_LOGIN;
     @Value("${sso_login_page}")
     private String SSO_LOGIN_PAGE;
     @Value("${redisKey.prefix.cart_order_info_profix}")
@@ -31,12 +29,18 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Reference(version = Const.XBIN_STORE_SSO_VERSION)
     private UserService userService;
+
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         //执行handler之前执行此方法 true 放行 false 拦截
-        String cookieValue = CookieUtils.getCookieValue(httpServletRequest, TOKEN_LOGIN);
+        String cookieValue = CookieUtils.getCookieValue(httpServletRequest, Const.TOKEN_LOGIN);
         //获取访问URL
         String url = httpServletRequest.getRequestURL().toString();
+
+        if (url.contains("getOrderInfo")) {
+            url = "http://localhost:8107/cart";
+        }
+
         if (StringUtils.isBlank(cookieValue)) {
             //跳转登录页面
             httpServletResponse.sendRedirect(SSO_LOGIN_PAGE + "?returnUrl=" + url);
