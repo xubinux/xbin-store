@@ -3,7 +3,6 @@ package cn.binux.notify.service.impl;
 import cn.binux.constant.Const;
 import cn.binux.notify.service.NotifyUserService;
 import cn.binux.redis.service.JedisClient;
-import cn.binux.utils.ConvertUtils;
 import cn.binux.utils.FastJsonConvert;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
@@ -61,7 +60,7 @@ public class NotifyUserServiceImpl implements NotifyUserService {
 
         HashMap<String, Object> map = new HashMap<>();
 
-        System.out.println(mobile);
+        //System.out.println(mobile);
 
         //截取手机号码如+008615669970088
         String phone = mobile.substring(5, mobile.length());
@@ -119,13 +118,9 @@ public class NotifyUserServiceImpl implements NotifyUserService {
             jedisClient.expire(key1, MOBILE_LOGIN_CODE_EXPIRE);
 
             String result = "该手机还可获取" + nub + "次验证码，请尽快完成验证 验证码:" + code;
-            String convert = ConvertUtils.convert(result);
-            map.put("remain", convert);
+            map.put("remain", result);
 
-            System.out.println(convert);
-
-            return "({'remain':'" + convert + "'})";
-
+            return "({'remain':'" + result + "'})";
 
         } catch (Exception e) {
             logger.error("Redis 服务出错", e);

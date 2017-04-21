@@ -7,11 +7,9 @@ import cn.binux.pojo.TbUserExample;
 import cn.binux.pojo.XbinResult;
 import cn.binux.redis.service.JedisClient;
 import cn.binux.sso.service.UserService;
-import cn.binux.utils.ConvertUtils;
 import cn.binux.utils.FastJsonConvert;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
-import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -132,27 +130,24 @@ public class UserServiceImpl implements UserService {
      *         }
      */
     @Override
-    public XbinResult register(JSONObject user) {
+    public XbinResult register(TbUser user) {
 
-        TbUser tbUser = null;
-        if (StringUtils.isNotBlank(user.toString())) {
-            tbUser = FastJsonConvert.convertJSONToObject(user, TbUser.class);
-        } else {
+        if (user == null) {
             return XbinResult.build(400, "error", "数据为空");
         }
 
-        boolean usernameb = (boolean) checkUserDate(tbUser.getUsername(), ERROR, null).getData();
-        boolean phoneb = (boolean) checkUserDate(tbUser.getPhone(), 2, null).getData();
-        boolean emailb = (boolean) checkUserDate(tbUser.getEmail(), 3, null).getData();
+        boolean usernameb = (boolean) checkUserDate(user.getUsername(), ERROR, null).getData();
+        boolean phoneb = (boolean) checkUserDate(user.getPhone(), 2, null).getData();
+        boolean emailb = (boolean) checkUserDate(user.getEmail(), 3, null).getData();
 
         if (usernameb & phoneb & emailb) {
-            tbUser.setPassword(DigestUtils.md5DigestAsHex(tbUser.getPassword().getBytes()));
+            user.setPassword(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()));
 
-            tbUser.setCreated(new Date());
-            tbUser.setUpdated(new Date());
+            user.setCreated(new Date());
+            user.setUpdated(new Date());
 
             try {
-                userMapper.insert(tbUser);
+                userMapper.insert(user);
             } catch (Exception e) {
 
                 logger.error("保存数据库失败！注册失败", e);
@@ -179,12 +174,9 @@ public class UserServiceImpl implements UserService {
      */
 
     @Override
-    public XbinResult login(JSONObject user) {
+    public XbinResult login(TbUser user) {
 
-        TbUser tbUser = null;
-        if (StringUtils.isNotBlank(user.toString())) {
-            tbUser = FastJsonConvert.convertJSONToObject(user, TbUser.class);
-        } else {
+        if (user == null) {
             return XbinResult.build(400, "error", "数据为空");
         }
 
@@ -192,7 +184,7 @@ public class UserServiceImpl implements UserService {
 
         TbUserExample.Criteria criteria = example.createCriteria();
 
-        criteria.andUsernameEqualTo(tbUser.getUsername());
+        criteria.andUsernameEqualTo(user.getUsername());
         //criteria.andPasswordEqualTo(DigestUtils.md5DigestAsHex(tbUser.getPassword().getBytes()));
 
         List<TbUser> list = userMapper.selectByExample(example);
@@ -203,7 +195,7 @@ public class UserServiceImpl implements UserService {
 
         TbUser check = list.get(0);
 
-        if (!check.getPassword().equals(DigestUtils.md5DigestAsHex(tbUser.getPassword().getBytes()))) {
+        if (!check.getPassword().equals(DigestUtils.md5DigestAsHex(user.getPassword().getBytes()))) {
             return XbinResult.build(401, "用户名或密码错误");
         }
 
@@ -457,8 +449,7 @@ public class UserServiceImpl implements UserService {
         if (!pwd.equals(pwdRepeat)) {
 
             String info = "两次密码不正确";
-            String convert = ConvertUtils.convert(info);
-            return "({'info':'" + convert + "'})";
+            return "({'info':'" + info + "'})";
 
         }
 
@@ -481,16 +472,14 @@ public class UserServiceImpl implements UserService {
             if (StringUtils.isBlank(code) || !code.equalsIgnoreCase(authCode)) {
 
                 String info = "验证码不正确或已过期，请重新获取";
-                String convert = ConvertUtils.convert(info);
-                return "({'info':'" + convert + "'})";
+                return "({'info':'" + info + "'})";
 
             }
 
         } else {
 
             String info = "验证码不能为空";
-            String convert = ConvertUtils.convert(info);
-            return "({'info':'" + convert + "'})";
+            return "({'info':'" + info + "'})";
 
         }
 
@@ -506,14 +495,12 @@ public class UserServiceImpl implements UserService {
             if (StringUtils.isBlank(phonecode) || !phonecode.equals(mobileCode)) {
 
                 String info = "短信验证码不正确或已过期,请重新获取";
-                String convert = ConvertUtils.convert(info);
-                return "({'info':'" + convert + "'})";
+                return "({'info':'" + info + "'})";
 
             }
         } else {
             String info = "手机号码不能为空";
-            String convert = ConvertUtils.convert(info);
-            return "({'info':'" + convert + "'})";
+            return "({'info':'" + info + "'})";
         }
 
         if (StringUtils.isNotBlank(regName)) {

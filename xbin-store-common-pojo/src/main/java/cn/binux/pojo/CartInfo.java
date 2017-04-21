@@ -1,6 +1,8 @@
 package cn.binux.pojo;
 
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -22,6 +24,10 @@ public class CartInfo implements Serializable{
     private Long price;
     private Long weight;
     private Integer num;
+    @Setter(value = AccessLevel.PRIVATE)
     private Long sum;
 
+    public Long getSum() {
+        return price * num;
+    }
 }

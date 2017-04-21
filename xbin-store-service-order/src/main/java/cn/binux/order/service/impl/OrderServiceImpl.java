@@ -52,8 +52,6 @@ public class OrderServiceImpl implements OrderService {
     //@Resource(name = "orderSaveTopic")
     //private Destination destination;
 
-    @Value("${redisKey.prefix.cookie_cart_key}")
-    private String COOKIE_CART_KEY;
     @Value("${redisKey.prefix.cart_order_info_profix}")
     private String CART_ORDER_INFO_PROFIX;
     @Value("${redisKey.prefix.cart_order_index_profix}")
@@ -109,6 +107,7 @@ public class OrderServiceImpl implements OrderService {
         order.setBuyerRate(Const.EVALUATE_NO);
         //设置订单创建时间
         order.setCreateTime(new Date());
+        order.setUpdateTime(new Date());
 
         Long payment = 0L;
         List<CartInfo> cartInfos = null;
@@ -150,9 +149,9 @@ public class OrderServiceImpl implements OrderService {
                 orderItem.setTotalFee(cartInfo.getSum());
                 orderItem.setWeights(cartInfo.getWeight() + "");
                 // 记录日志
-                logger.info("保存订单项,订单项ID:" + orderItemId);
                 orderItemMapper.insert(orderItem);
 
+                logger.info("保存订单项,订单:" + orderItem.toString());
                 payment += cartInfo.getSum();
             }
         }
@@ -166,11 +165,11 @@ public class OrderServiceImpl implements OrderService {
 
 
         // 移除购物车选中商品️
-        if (cartInfoAll.size() > split.length) {
+        if (cartInfoAll.size() >= split.length) {
             for (int i = split.length - 1; i >= 0; i--) {
                 cartInfoAll.remove(Integer.parseInt(split[i]));
             }
-            logger.info("移除购物车购买商品！数量:" + split.length);
+            logger.debug("移除购物车购买商品！数量:" + split.length);
         } else {
             logger.error("订单项数量小于和index数量");
             return XbinResult.build(400, "系统错误!");
