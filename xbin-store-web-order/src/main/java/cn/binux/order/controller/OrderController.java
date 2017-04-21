@@ -35,12 +35,8 @@ public class OrderController {
 
     private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 
-    @Value("${cookie.cookie_cart_key}")
-    private String COOKIE_CART_KEY;
     @Value("${redisKey.prefix.cart_order_info_profix}")
     private String CART_ORDER_INFO_PROFIX;
-    @Value("${cookie.token_login}")
-    private String TOKEN_LOGIN;
     @Value("${redisKey.expire_time}")
     private Integer REDIS_ORDER_EXPIRE_TIME;
     @Value("${redisKey.prefix.cart_order_index_profix}")
@@ -59,8 +55,8 @@ public class OrderController {
     @RequestMapping("/order/getOrderInfo")
     public String showOrder(String ids,String indexs,String nums, Model model, HttpServletResponse response, HttpServletRequest request) {
 
-        String cookieValue = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
-        String userCookieValue = CookieUtils.getCookieValue(request, TOKEN_LOGIN);
+        String cookieValue = CookieUtils.getCookieValue(request, Const.CART_KEY);
+        String userCookieValue = CookieUtils.getCookieValue(request, Const.TOKEN_LOGIN);
 
         List<CartInfo> cartInfoList = new ArrayList<>();
         List<CartInfo> cartInfos = null;
@@ -127,8 +123,8 @@ public class OrderController {
     @RequestMapping("/order/getPay")
     public String getPay(Integer addrId, Integer noAnnoyance, Integer paymentType,String orderId, String shippingName, HttpServletResponse response, HttpServletRequest request) {
 
-        String cartCookieValue = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
-        String userCookieValue = CookieUtils.getCookieValue(request, TOKEN_LOGIN);
+        String cartCookieValue = CookieUtils.getCookieValue(request, Const.CART_KEY);
+        String userCookieValue = CookieUtils.getCookieValue(request, Const.TOKEN_LOGIN);
 
         XbinResult result = orderService.generateOrder(userCookieValue,cartCookieValue,addrId, noAnnoyance, paymentType,orderId, shippingName);
 

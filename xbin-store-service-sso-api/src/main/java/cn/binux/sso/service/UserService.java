@@ -1,5 +1,6 @@
 package cn.binux.sso.service;
 
+import cn.binux.pojo.TbUser;
 import cn.binux.pojo.XbinResult;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 import com.alibaba.fastjson.JSONObject;
@@ -49,7 +50,7 @@ public interface UserService {
      */
     //@POST
     //@Path("/register")
-    XbinResult register(JSONObject user);
+    XbinResult register(TbUser user);
 
     //http://192.168.125.1:8515/user/register
     /**
@@ -65,7 +66,7 @@ public interface UserService {
      */
     //@POST
     //@Path("/login")
-    XbinResult login(JSONObject user);
+    XbinResult login(TbUser user);
 
     //http://192.168.125.1:8515/user/token/fe5cb546aeb3ce1bf37abcb08a40493e
     /**

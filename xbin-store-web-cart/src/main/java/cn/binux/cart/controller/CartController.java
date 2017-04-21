@@ -3,8 +3,11 @@ package cn.binux.cart.controller;
 import cn.binux.cart.service.CartService;
 import cn.binux.constant.Const;
 import cn.binux.pojo.CartInfo;
+import cn.binux.pojo.TbUser;
 import cn.binux.pojo.XbinResult;
+import cn.binux.redis.service.JedisClient;
 import cn.binux.utils.CookieUtils;
+import cn.binux.utils.FastJsonConvert;
 import com.alibaba.dubbo.config.annotation.Reference;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -17,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -32,26 +36,53 @@ public class CartController {
 
     private static final Logger logger = LoggerFactory.getLogger(CartController.class);
 
-    @Value("${cookie_cart_key}")
-    private String COOKIE_CART_KEY;
-
     @Reference(version = Const.XBIN_STORE_CART_VERSION)
     private CartService cartService;
+    @Reference(version = Const.XBIN_STORE_REDIS_VERSION)
+    private JedisClient jedisClient;
 
+    @Value("${redisKey.prefix.user_session}")
+    private String USER_SESSION;
 
     @RequestMapping("/cart")
     public String showCart( HttpServletRequest request, HttpServletResponse response,Model model) {
 
-        String cookieUUID = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
+        String cookieUUID = CookieUtils.getCookieValue(request, Const.CART_KEY);
+        String tokenLogin = CookieUtils.getCookieValue(request, Const.TOKEN_LOGIN);
 
-        List<CartInfo> cartInfos = cartService.getCartInfoListByCookiesId(cookieUUID);
+        TbUser user = null;
+        String userJson = null;
+        if (StringUtils.isNoneEmpty(tokenLogin)) {
+
+            try {
+                userJson = jedisClient.get(USER_SESSION + tokenLogin);
+            } catch (Exception e) {
+                logger.error("Redis 错误", e);
+            }
+
+            if (StringUtils.isNoneEmpty(userJson)) {
+                user = FastJsonConvert.convertJSONToObject(userJson, TbUser.class);
+            }
+            model.addAttribute("user", user);
+        } else {
+            model.addAttribute("user", user);
+        }
+
+        List<CartInfo> cartInfos = new ArrayList<>();
+        if (StringUtils.isNoneEmpty(cookieUUID)) {
+            cartInfos= cartService.getCartInfoListByCookiesId(cookieUUID);
+        }
+
+        if (cartInfos.size() == 0) {
+            model.addAttribute("cartInfos", null);
+            return "cart";
+        }
 
         int totalPrice = 0;
-        if (cartInfos != null && cartInfos.size() > 0) {
-            for (int i = 0; i < cartInfos.size(); i++) {
-                CartInfo cartInfo = cartInfos.get(i);
-                totalPrice += cartInfo.getSum();
-            }
+
+        for (int i = 0; i < cartInfos.size(); i++) {
+            CartInfo cartInfo = cartInfos.get(i);
+            totalPrice += cartInfo.getSum();
         }
 
         model.addAttribute("cartInfos", cartInfos);
@@ -85,12 +116,12 @@ public class CartController {
 
     @RequestMapping("/add")
     public String addCart(Long pid, Integer pcount, HttpServletRequest request, HttpServletResponse response, Model model) {
-        String cookieUUID = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
+        String cookieUUID = CookieUtils.getCookieValue(request, Const.CART_KEY);
         if (StringUtils.isBlank(cookieUUID)) {
 
             String uuid = UUID.randomUUID().toString().replaceAll("-", "");
 
-            CookieUtils.setCookie(request, response, COOKIE_CART_KEY, uuid);
+            CookieUtils.setCookie(request, response, Const.CART_KEY, uuid);
 
             XbinResult result = cartService.addCart(pid, pcount, uuid);
 
@@ -124,7 +155,7 @@ public class CartController {
     @RequestMapping("/decreOrIncre")
     @ResponseBody
     public XbinResult decreOrIncre(Long pid, Integer pcount,Integer type,Integer index, HttpServletRequest request, HttpServletResponse response, Model model) {
-        String cookieUUID = CookieUtils.getCookieValue(request, COOKIE_CART_KEY);
+        String cookieUUID = CookieUtils.getCookieValue(request, Const.CART_KEY);
         if (StringUtils.isBlank(cookieUUID)) {
 
             model.addAttribute("msg","没有此Cookie!");

@@ -8,7 +8,7 @@ dubbox:
     protocol: zookeeper
     address: 192.168.125.128:2181
   annotation:
-    package: cn.binux.order.controller
+    package: cn.binux.order.controller,cn.binux.order.interceptor
   monitor:
     enabled: false
     address: 192.168.125.1:6060
@@ -42,11 +42,6 @@ redisKey:
     # Redis购物车索引信息前缀
     cart_order_index_profix: 'CART_ORDER_INDEX:'
 
-# Cookie 用户登录保存的key
-cookie:
-  token_login: JKxk8waMTk4PZC
-  cookie_cart_key: COOKIE_CART_KEY
-
 
 #SSO 系统登录页面
-sso_login_page: http://localhost:8104/login.html
+sso_login_page: 'http://localhost:8104/login.html'

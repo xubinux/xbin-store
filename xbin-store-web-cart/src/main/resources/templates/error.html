@@ -234,16 +234,11 @@
             <br>
             <img class="error-img" src="//static.360buyimg.com/devfe/error-new/1.0.0/css/i/error_06.png">
             <!--<img class="error-img" src="../../../css/i/error_06.png">-->
-            <c:choose>
-
-            <c:when test="${msg == null}">
+            <% if(msg != null){ %>
                 <b  style="font-size:25px;">&nbsp;&nbsp;&nbsp;&nbsp;抱歉!&nbsp;&nbsp;您访问的页面<span style="color:red">失联</span>啦...</b>
-            </c:when>
-            <c:otherwise>
+            <% }else{ %>
                 <b style="font-size:25px;">&nbsp;&nbsp;&nbsp;&nbsp;${msg}</b>
-            </c:otherwise>
-            </c:choose>
-
+            <%}%>
             <br>
             <br>
             <br>

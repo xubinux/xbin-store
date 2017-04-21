@@ -6,7 +6,6 @@ import cn.binux.pojo.TbUser;
 import cn.binux.pojo.XbinResult;
 import cn.binux.sso.service.UserService;
 import cn.binux.utils.CookieUtils;
-import cn.binux.utils.FastJsonConvert;
 import com.alibaba.dubbo.config.annotation.Reference;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,9 +33,6 @@ public class UserController {
     @Reference(version = Const.XBIN_STORE_NOTIFY_VERSION)
     private NotifyUserService notifyUserService;
 
-    @Value("${token_login}")
-    private String TOKEN_LOGIN;
-
     @Value("${user_not_exist}")
     private String USER_NOT_EXIST;
 
@@ -53,7 +49,7 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "/register",method = RequestMethod.GET)
-    public String showRegister(Model model, String ReturnUrl) {
+    public String showRegister(Model model, String returnUrl) {
 
         model.addAttribute("uid", UUID.randomUUID().toString());
 
@@ -97,7 +93,7 @@ public class UserController {
     @RequestMapping(value = "/user/register", method = RequestMethod.POST)
     @ResponseBody
     public XbinResult register(TbUser user) {
-        return userService.register(FastJsonConvert.convertObjectToJSONObject(user));
+        return userService.register(user);
     }
 
     /**
@@ -112,11 +108,11 @@ public class UserController {
     @ResponseBody
     public String login(TbUser user, String returnUrl, HttpServletResponse response, HttpServletRequest request) {
 
-        XbinResult result = userService.login(FastJsonConvert.convertObjectToJSONObject(user));
+        XbinResult result = userService.login(user);
 
         if (result.getStatus() == 200) {
 
-            CookieUtils.setCookie(request, response, TOKEN_LOGIN, result.getData().toString());
+            CookieUtils.setCookie(request, response, Const.TOKEN_LOGIN, result.getData().toString());
             //有返回URL 跳转
             if (StringUtils.isNotBlank(returnUrl)) {
                 return "({'success':'" + returnUrl + "'})";

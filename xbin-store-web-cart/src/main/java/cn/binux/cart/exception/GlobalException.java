@@ -2,6 +2,7 @@ package cn.binux.cart.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * @create 2017-02-05 下午3:49
  */
 
-
+@Component
 public class GlobalException implements HandlerExceptionResolver {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalException.class);
