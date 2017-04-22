@@ -5,7 +5,10 @@ import cn.binux.mapper.TbIndexSlideAdMapper;
 import cn.binux.pojo.TbIndexSlideAd;
 import cn.binux.utils.FastDFSClientUtils;
 import cn.binux.utils.FastJsonConvert;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -22,13 +25,16 @@ import java.util.Map;
  * @create 2017-02-14 下午7:59
  */
 
+@SpringBootApplication
+@MapperScan(basePackages = "cn.binux.mapper")
 public class BigADGenerate {
 
+    @Autowired
+    static TbIndexSlideAdMapper indexSlideAdMapper;
+
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/spring-context.xml");
 
-        TbIndexSlideAdMapper indexSlideAdMapper = applicationContext.getBean(TbIndexSlideAdMapper.class);
-
+        SpringApplication.run(BigADGenerate.class, args);
         // 读取txt内容为字符串
         StringBuffer txtContent = new StringBuffer();
         // 每次读取的byte数

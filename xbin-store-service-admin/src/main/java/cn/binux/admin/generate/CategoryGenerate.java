@@ -7,7 +7,10 @@ import cn.binux.pojo.TbCategoryImage;
 import cn.binux.pojo.TbCategorySecondary;
 import cn.binux.utils.FastDFSClientUtils;
 import cn.binux.utils.FastJsonConvert;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -24,13 +27,20 @@ import java.util.Map;
  * @create 2017-02-14 下午7:59
  */
 
+
+@SpringBootApplication
+@MapperScan(basePackages = "cn.binux.mapper")
 public class CategoryGenerate {
 
-    public static void main(String[] args) {
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/spring-context.xml");
+    @Autowired
+    static TbCategoryImageMapper categoryImageMapper;
 
-        TbCategoryImageMapper categoryImageMapper = applicationContext.getBean(TbCategoryImageMapper.class);
-        TbCategorySecondaryMapper categorySecondaryMapper = applicationContext.getBean(TbCategorySecondaryMapper.class);
+    @Autowired
+    static TbCategorySecondaryMapper categorySecondaryMapper;
+
+    public static void main(String[] args) {
+
+        SpringApplication.run(CategoryGenerate.class, args);
 
         // 读取txt内容为字符串
         StringBuffer txtContent = new StringBuffer();
