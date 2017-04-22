@@ -10,5 +10,6 @@ public class XbinStoreServiceRedisApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(XbinStoreServiceRedisApplication.class, args);
 
+		Main.main(args);
 	}
 }
