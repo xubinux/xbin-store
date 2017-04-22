@@ -3,26 +3,40 @@ package cn.binux.redis.service.impl;
 import cn.binux.constant.Const;
 import cn.binux.redis.service.JedisClient;
 import com.alibaba.dubbo.config.annotation.Service;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 
 /**
  * @author 許彬.
- * @creater 2016-08-22 16:24
+ * @creater 2017-04-22
  */
 @Service(version = Const.XBIN_STORE_REDIS_VERSION)
-//@com.alibaba.dubbo.config.annotation.Service(interfaceClass = vip.xubin.redis.service.JedisClient.class, protocol = {"dubbo"}, retries = 0)
 public class JedisClientSingle implements JedisClient {
 
     @Autowired
     private JedisPool jedisPool;
 
+    @Value("${redis.password}")
+    private String password;
+
+    private Jedis getResource() {
+        Jedis resource = jedisPool.getResource();
+        if (StringUtils.isBlank(password)) {
+            return resource;
+        } else {
+            resource.auth(password);
+            return resource;
+        }
+    }
+
     @Override
     public String get(String key) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
 
         String string = resource.get(key);
 
@@ -35,7 +49,9 @@ public class JedisClientSingle implements JedisClient {
     @Override
     public String set(String key, String value) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
+
+        resource.auth(password);
 
         String string = resource.set(key, value);
 
@@ -48,7 +64,7 @@ public class JedisClientSingle implements JedisClient {
     @Override
     public String hget(String hkey, String key) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
 
         String string = resource.hget(hkey, key);
 
@@ -61,7 +77,7 @@ public class JedisClientSingle implements JedisClient {
     @Override
     public long hset(String hkey, String key, String value) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
 
         Long hset = resource.hset(hkey, key, value);
 
@@ -74,7 +90,7 @@ public class JedisClientSingle implements JedisClient {
     @Override
     public long incr(String key) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
 
         Long incr = resource.incr(key);
 
@@ -87,7 +103,7 @@ public class JedisClientSingle implements JedisClient {
     @Override
     public long expire(String key, Integer second) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
 
         Long expire = resource.expire(key, second);
 
@@ -100,7 +116,7 @@ public class JedisClientSingle implements JedisClient {
     @Override
     public long ttl(String key) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
 
         Long ttl = resource.ttl(key);
 
@@ -112,7 +128,7 @@ public class JedisClientSingle implements JedisClient {
     @Override
     public long del(String key) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
 
         Long del = resource.del(key);
 
@@ -124,7 +140,7 @@ public class JedisClientSingle implements JedisClient {
     @Override
     public long hdel(String hkey, String key) {
 
-        Jedis resource = jedisPool.getResource();
+        Jedis resource = getResource();
 
         Long hdel = resource.hdel(hkey, key);
 
