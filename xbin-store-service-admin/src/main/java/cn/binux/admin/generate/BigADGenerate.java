@@ -42,7 +42,7 @@ public class BigADGenerate {
         InputStream in = null;
         try {
             // 文件输入流
-            in = new FileInputStream(new File("/Volumes/HGST/IdeaProjects/xbin-store/xbin-store-service-admin/src/main/resources/BigAD.json"));
+            in = BigADGenerate.class.getResourceAsStream("/BigAD.json");
             int len;
             while ((len = in.read(b)) > 0) {
                 // 字符串拼接
