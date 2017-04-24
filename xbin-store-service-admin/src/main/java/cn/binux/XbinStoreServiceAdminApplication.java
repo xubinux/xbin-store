@@ -1,5 +1,6 @@
 package cn.binux;
 
+import com.alibaba.dubbo.container.Main;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +13,6 @@ public class XbinStoreServiceAdminApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(XbinStoreServiceAdminApplication.class, args);
-
+		Main.main(args);
 	}
 }
