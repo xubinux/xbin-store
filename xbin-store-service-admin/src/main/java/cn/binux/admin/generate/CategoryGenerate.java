@@ -14,7 +14,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.Date;
 import java.util.List;
@@ -32,11 +34,19 @@ import java.util.Map;
 @MapperScan(basePackages = "cn.binux.mapper")
 public class CategoryGenerate {
 
-    @Autowired
-    static TbCategoryImageMapper categoryImageMapper;
+    private static TbCategoryImageMapper tbCategoryImageMapper;
+
+    private static TbCategorySecondaryMapper tbCategorySecondaryMapper;
 
     @Autowired
-    static TbCategorySecondaryMapper categorySecondaryMapper;
+    public void setTbCategoryImageMapper(TbCategoryImageMapper tbCategoryImageMapper) {
+        this.tbCategoryImageMapper = tbCategoryImageMapper;
+    }
+
+    @Autowired
+    public void setTbCategorySecondaryMapper(TbCategorySecondaryMapper tbCategorySecondaryMapper) {
+        this.tbCategorySecondaryMapper = tbCategorySecondaryMapper;
+    }
 
     public static void main(String[] args) {
 
@@ -49,7 +59,7 @@ public class CategoryGenerate {
         InputStream in = null;
         try {
             // 文件输入流
-            in = new FileInputStream(new File("/Volumes/HGST/IdeaProjects/xbin-store/xbin-store-service-admin/src/main/resources/Category.json"));
+            in = in = CategoryGenerate.class.getResourceAsStream("/Category.json");
             int len;
             while ((len = in.read(b)) > 0) {
                 // 字符串拼接
@@ -91,8 +101,7 @@ public class CategoryGenerate {
                 categoryImage.setImageUrl(s);
                 categoryImage.setCreated(new Date());
                 categoryImage.setUpdated(new Date());
-
-                categoryImageMapper.insert(categoryImage);
+                tbCategoryImageMapper.insert(categoryImage);
             }
 
             List listp = (List) mapo.get("p");
@@ -111,7 +120,7 @@ public class CategoryGenerate {
                     categoryImage.setCreated(new Date());
                     categoryImage.setUpdated(new Date());
 
-                    categoryImageMapper.insert(categoryImage);
+                    tbCategoryImageMapper.insert(categoryImage);
                 }
 
             List map0 = (List) mapo.get("s");
@@ -131,7 +140,7 @@ public class CategoryGenerate {
                 categorySecondary.setCreated(new Date());
                 categorySecondary.setUpdated(new Date());
 
-                categorySecondaryMapper.insert(categorySecondary);
+                tbCategorySecondaryMapper.insert(categorySecondary);
 
 
                 if (map2 != null && map2.size() > 0) {
@@ -151,7 +160,7 @@ public class CategoryGenerate {
                         categorySecondary3.setCreated(new Date());
                         categorySecondary3.setUpdated(new Date());
 
-                        categorySecondaryMapper.insert(categorySecondary3);
+                        tbCategorySecondaryMapper.insert(categorySecondary3);
 
                         if (map4 != null && map4.size() > 0) {
                             for (int k = 0; k < map4.size(); k++) {
@@ -170,7 +179,7 @@ public class CategoryGenerate {
                                 categorySecondary4.setCreated(new Date());
                                 categorySecondary4.setUpdated(new Date());
 
-                                categorySecondaryMapper.insert(categorySecondary4);
+                                tbCategorySecondaryMapper.insert(categorySecondary4);
 
                                 if (map6 != null && map6.size() > 0) {
                                     System.out.println(s5);
@@ -197,7 +206,7 @@ public class CategoryGenerate {
                     categorySecondary.setCreated(new Date());
                     categorySecondary.setUpdated(new Date());
 
-                    categorySecondaryMapper.insert(categorySecondary);
+                    tbCategorySecondaryMapper.insert(categorySecondary);
                 }
 
         }
