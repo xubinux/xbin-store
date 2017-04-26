@@ -29,8 +29,12 @@ import java.util.Map;
 @MapperScan(basePackages = "cn.binux.mapper")
 public class BigADGenerate {
 
+    private static TbIndexSlideAdMapper tbIndexSlideAdMapper;
+
     @Autowired
-    static TbIndexSlideAdMapper indexSlideAdMapper;
+    public void setTbIndexSlideAdMapper(TbIndexSlideAdMapper tbIndexSlideAdMapper) {
+        this.tbIndexSlideAdMapper = tbIndexSlideAdMapper;
+    }
 
     public static void main(String[] args) {
 
@@ -86,13 +90,11 @@ public class BigADGenerate {
                 indexSlideAd.setUpdated(new Date());
                 indexSlideAd.setStatus(1);
 
-                indexSlideAdMapper.insert(indexSlideAd);
+                tbIndexSlideAdMapper.insert(indexSlideAd);
             }
 
 
         }
-
-        //saveToFastDFS("http://img1.360buyimg.com/da/jfs/t3277/84/6062111341/95397/a6665294/589ac5e0N2f54619b.jpg");
     }
 
     public static String  saveToFastDFS(String destUrl) {
