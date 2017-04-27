@@ -51,8 +51,6 @@ public class JedisClientSingle implements JedisClient {
 
         Jedis resource = getResource();
 
-        resource.auth(password);
-
         String string = resource.set(key, value);
 
         resource.close();

@@ -30,4 +30,4 @@ redis:
   cluster: false
   single-host: 192.168.125.133
   single-port: 6379
-
+  password:
