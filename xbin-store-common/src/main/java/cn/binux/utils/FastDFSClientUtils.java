@@ -9,12 +9,14 @@ import java.io.*;
 
 
 /**
- * 
+ * Replaced by {@link StorageService}<BR>
  * <B>系统名称：</B><BR>
  * <B>模块名称：</B><BR>
  * <B>中文类名：</B>FastDFS分布式文件系统操作客户端<BR>
  * <B>概要说明：</B>FastDFS分布式文件系统操作客户端<BR>
+ * 
  */
+@Deprecated
 public class FastDFSClientUtils {
 
 	private static final String CONF_FILENAME = Thread.currentThread().getContextClassLoader().getResource("fastdfs_client.conf").getPath();

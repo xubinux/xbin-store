@@ -74,3 +74,9 @@ redisKey:
     index_ad: 'INDEX_AD'
 server:
   port: 8052
+  
+storage:
+  type: fastdfs
+  fastdfs:
+    tracker_server: 192.168.125.129:22122
+  
