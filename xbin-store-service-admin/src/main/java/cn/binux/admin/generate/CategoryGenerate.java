@@ -1,18 +1,6 @@
 package cn.binux.admin.generate;
 
 
-import cn.binux.mapper.TbCategoryImageMapper;
-import cn.binux.mapper.TbCategorySecondaryMapper;
-import cn.binux.pojo.TbCategoryImage;
-import cn.binux.pojo.TbCategorySecondary;
-import cn.binux.utils.FastDFSClientUtils;
-import cn.binux.utils.FastJsonConvert;
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -21,6 +9,23 @@ import java.net.URL;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+
+import javax.imageio.ImageIO;
+
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import cn.binux.mapper.TbCategoryImageMapper;
+import cn.binux.mapper.TbCategorySecondaryMapper;
+import cn.binux.pojo.TbCategoryImage;
+import cn.binux.pojo.TbCategorySecondary;
+import cn.binux.utils.FastDFSClientUtils;
+import cn.binux.utils.FastJsonConvert;
+import cn.binux.utils.StorageFactory;
+import cn.binux.utils.StorageService;
 
 /**
  * json格式Category转成Java格式
@@ -37,6 +42,8 @@ public class CategoryGenerate {
     private static TbCategoryImageMapper tbCategoryImageMapper;
 
     private static TbCategorySecondaryMapper tbCategorySecondaryMapper;
+    
+    private static StorageService storageService;
 
     @Autowired
     public void setTbCategoryImageMapper(TbCategoryImageMapper tbCategoryImageMapper) {
@@ -50,7 +57,8 @@ public class CategoryGenerate {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(CategoryGenerate.class, args);
+    	ConfigurableApplicationContext ctx = SpringApplication.run(new Object[]{CategoryGenerate.class, StorageFactory.class}, args);
+    	storageService = ctx.getBean(StorageService.class);
 
         // 读取txt内容为字符串
         StringBuffer txtContent = new StringBuffer();
@@ -59,7 +67,7 @@ public class CategoryGenerate {
         InputStream in = null;
         try {
             // 文件输入流
-            in = in = CategoryGenerate.class.getResourceAsStream("/Category.json");
+            in = CategoryGenerate.class.getResourceAsStream("/Category.json");
             int len;
             while ((len = in.read(b)) > 0) {
                 // 字符串拼接
@@ -224,7 +232,8 @@ public class CategoryGenerate {
             ImageIO.write(image, "jpg", baos);
             baos.flush();
 
-            return FastDFSClientUtils.upload(baos.toByteArray(), "jpg");
+            //return FastDFSClientUtils.upload(baos.toByteArray(), "jpg");
+            return storageService.upload(baos.toByteArray(), "jpg");
         } catch (Exception e) {
         } finally {
             if (baos != null) {

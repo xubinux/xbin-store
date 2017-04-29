@@ -44,3 +44,10 @@ swagger2.package: cn.binux.admin.controller
 
 # fastdfs url
 fastdfs.base.url: http://192.168.125.132/
+
+# fastdfs storage
+storage:
+  type: fastdfs
+  fastdfs:
+    tracker_server: 192.168.125.129:22122
+

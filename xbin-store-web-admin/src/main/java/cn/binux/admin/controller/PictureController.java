@@ -1,16 +1,19 @@
 package cn.binux.admin.controller;
 
-import cn.binux.utils.FastDFSClientUtils;
-import cn.binux.utils.FastJsonConvert;
+import java.io.IOException;
+import java.util.HashMap;
+
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.util.HashMap;
+import cn.binux.utils.FastDFSClientUtils;
+import cn.binux.utils.FastJsonConvert;
+import cn.binux.utils.StorageService;
 
 /**
  * 图片上传Controller
@@ -23,6 +26,9 @@ public class PictureController {
 
     @Value("${fastdfs.base.url}")
     private String FASTDFS_BASE_URL;
+    
+    @Autowired
+    private StorageService storageService;
 
     @RequestMapping("/pic/upload")
     @ResponseBody
@@ -36,7 +42,8 @@ public class PictureController {
             HashMap<String, Object> map = new HashMap<>();
 
             try {
-                String uploadUrl = FastDFSClientUtils.upload(uploadFile.getBytes(), extName);
+                // String uploadUrl = FastDFSClientUtils.upload(uploadFile.getBytes(), extName);
+            	String uploadUrl = storageService.upload(uploadFile.getBytes(), extName);
                 map.put("success", "上传成功");
                 map.put("url", FASTDFS_BASE_URL + uploadUrl);
 
@@ -53,7 +60,8 @@ public class PictureController {
             String extName = oName.substring(oName.indexOf(".") + 1);
 
             try {
-                String uploadUrl = FastDFSClientUtils.upload(wangEditorH5File.getBytes(), extName);
+                //String uploadUrl = FastDFSClientUtils.upload(wangEditorH5File.getBytes(), extName);
+            	String uploadUrl = storageService.upload(wangEditorH5File.getBytes(), extName);
                 String url = FASTDFS_BASE_URL + uploadUrl;
 
                 return url;
