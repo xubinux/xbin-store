@@ -43,4 +43,4 @@ redisKey:
 mobile_number_ceiling: 3
 
 server:
-  port: 8051
+  port: 8516

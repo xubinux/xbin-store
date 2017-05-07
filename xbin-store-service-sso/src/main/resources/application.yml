@@ -1,5 +1,3 @@
-
-
 #DUBBOX
 dubbox:
   application: 
@@ -93,4 +91,4 @@ login:
   # 登录成功页面
   success_url: http://localhost:8104/success
 server:
-  port: 8050
+  port: 8515

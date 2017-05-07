@@ -73,7 +73,7 @@ redisKey:
     # 首页广告
     index_ad: 'INDEX_AD'
 server:
-  port: 8052
+  port: 8510
   
 storage:
   type: fastdfs
