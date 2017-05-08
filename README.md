@@ -1,3 +1,7 @@
+> 关于 xbin-store 的一些声明! --包括起因、为什么开源、进度。
+>
+> http://binux.cn/2017/05/08/xbin-store/
+
 > 配置被覆盖问题:
 >
 > 复制一份`application.yml` 改名 `application-dev.yml` 
