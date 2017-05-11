@@ -2,11 +2,8 @@
 >
 > http://binux.cn/2017/05/08/xbin-store/
 
-> 配置被覆盖问题:
->
-> 复制一份`application.yml` 改名 `application-dev.yml` 
->
->启动时增加参数 `--spring.profiles.active=dev` 以后我会更新`application.yml`此文件会更新配置, Pull 代码后请查看变化。
+> 注:2017-05-11 增加 Docker plugin 如不使用 Docker 在进行 install 时请注释除 Common 和 Api 工程 pom 文件中的 docker-maven-plugin 
+
 
 ## xbin-store
 [![License](https://img.shields.io/badge/license-GPL-blue.svg)](LICENSE)
@@ -60,8 +57,10 @@
 
 期待您的 `Pull Request`.	
 
-## 运行教程
-[点我查看运行教程](https://github.com/xubinux/xbin-store/wiki/运行教程)
+## 运行教程  <----我是教程
+[点我查看运行教程(不使用Docker)](https://github.com/xubinux/xbin-store/wiki/运行教程(不使用Docker))
+
+[点我查看运行教程(使用Docker 暂无!)](https://github.com/xubinux/xbin-store/wiki/运行教程(不使用Docker))
 
 ## Tomcat地址(本机)
 |名称|IP|完成情况|
