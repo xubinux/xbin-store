@@ -90,6 +90,9 @@
     </pluginRepositories>
 
     <properties>
+        <!-- 私有 Docker Registry -->
+        <docker.repo>192.168.30.109:5000</docker.repo>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springboot.druid.version>0.0.1-SNAPSHOT</springboot.druid.version>
         <springboot.mybatis.version>1.2.0</springboot.mybatis.version>
@@ -485,6 +488,12 @@
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.13</version>
             </plugin>
         </plugins>
     </build>
