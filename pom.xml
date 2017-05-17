@@ -9,37 +9,37 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>../xbin-store-common</module>
-        <module>../xbin-store-common-mapper</module>
-        <module>../xbin-store-common-pojo</module>
-        <module>../xbin-store-common-config</module>
-        <module>../xbin-store-service-redis-api</module>
-        <module>../xbin-store-service-redis</module>
-        <module>../xbin-store-service-portal-api</module>
-        <module>../xbin-store-service-portal</module>
-        <module>../xbin-store-web-portal</module>
-        <module>../xbin-store-service-search-api</module>
-        <module>../xbin-store-service-search</module>
-        <module>../xbin-store-web-search</module>
-        <module>../xbin-store-service-item</module>
-        <module>../xbin-store-service-item-api</module>
-        <module>../xbin-store-web-item</module>
-        <module>../xbin-store-service-sso-api</module>
-        <module>../xbin-store-service-sso</module>
-        <module>../xbin-store-web-sso</module>
-        <module>../xbin-store-service-notify-api</module>
-        <module>../xbin-store-service-notify</module>
-        <module>../xbin-store-service-cart-api</module>
-        <module>../xbin-store-service-cart</module>
-        <module>../xbin-store-web-cart</module>
-        <module>../xbin-store-service-admin-api</module>
-        <module>../xbin-store-service-admin</module>
-        <module>../xbin-store-web-admin</module>
-        <module>../xbin-store-service-order-api</module>
-        <module>../xbin-store-service-order</module>
-        <module>../xbin-store-web-order</module>
-        <!--<module>../xbin-store-service-message-api</module>-->
-        <!--<module>../xbin-store-service-message</module>-->
+        <module>xbin-store-common</module>
+        <module>xbin-store-common-mapper</module>
+        <module>xbin-store-common-pojo</module>
+        <module>xbin-store-common-config</module>
+        <module>xbin-store-service-redis-api</module>
+        <module>xbin-store-service-redis</module>
+        <module>xbin-store-service-portal-api</module>
+        <module>xbin-store-service-portal</module>
+        <module>xbin-store-web-portal</module>
+        <module>xbin-store-service-search-api</module>
+        <module>xbin-store-service-search</module>
+        <module>xbin-store-web-search</module>
+        <module>xbin-store-service-item</module>
+        <module>xbin-store-service-item-api</module>
+        <module>xbin-store-web-item</module>
+        <module>xbin-store-service-sso-api</module>
+        <module>xbin-store-service-sso</module>
+        <module>xbin-store-web-sso</module>
+        <module>xbin-store-service-notify-api</module>
+        <module>xbin-store-service-notify</module>
+        <module>xbin-store-service-cart-api</module>
+        <module>xbin-store-service-cart</module>
+        <module>xbin-store-web-cart</module>
+        <module>xbin-store-service-admin-api</module>
+        <module>xbin-store-service-admin</module>
+        <module>xbin-store-web-admin</module>
+        <module>xbin-store-service-order-api</module>
+        <module>xbin-store-service-order</module>
+        <module>xbin-store-web-order</module>
+        <!--<module>xbin-store-service-message-api</module>-->
+        <!--<module>xbin-store-service-message</module>-->
     </modules>
     <name>xbin-store</name>
     <url>http://binux.cn</url>

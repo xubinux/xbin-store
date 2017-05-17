@@ -6,7 +6,7 @@
         <artifactId>xbin-store</artifactId>
         <groupId>cn.binux</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../xbin-store/pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
