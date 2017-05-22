@@ -1,8 +1,6 @@
-> 关于 xbin-store 的一些声明! --包括起因、为什么开源、进度。
+> 回应 OSChina 某喷 及 后续发展
 >
-> http://binux.cn/2017/05/08/xbin-store/
-
-> 注:2017-05-11 增加 Docker plugin 如不使用 Docker 在进行 install 时请注释除 Common 和 Api 工程 pom 文件中的 docker-maven-plugin 
+> http://binux.cn/2017/05/22/xbin-store-announcement/
 
 
 ## xbin-store
@@ -11,11 +9,17 @@
 
 模仿国内知名B2C网站,实现的一个分布式B2C商城
 
-进群参与开发或讨论 群 626068936 :u7a7a: 
+进群讨论 群 626068936 :u7a7a: 
+
+Dubbox 版本:
 
 * GitHub 地址 : https://github.com/xubinux/xbin-store
 * OSChina 地址 : http://git.oschina.net/binu/xbin-store
-* Coding 地址 : https://coding.net/u/xubinux/p/xbin-store/git
+
+Spring Cloud 版本:
+
+* GitHub 地址 : https://github.com/xubinux/xbin-store-cloud
+* OSChina 地址 : http://git.oschina.net/binu/xbin-store-cloud
 
 
 使用技术:
@@ -48,19 +52,9 @@ http://git.oschina.net/orangehs/xbin-mobile
 > 目前由 orange 开发,有兴趣可以联系
 
 ## Pull Request
-想要一起开发的可以 Fork 项目,发[邮件](Mailto:xu.binux@gmail.com?Subject=参与开发xbin-store)
+内容可以是优化、新功能、Bug修复等。
 
-内容:
-
-* 工作时间(有最好 可以给我提供建议)
-* 擅长方向、感兴趣模块( `tower` 分配模块 模块可参考项目开发进度图)
-* `GitHub` 或者 `OSChina` 或者 `Coding` 地址(主要用于快速了解您的水平 不强制)
-
-或者添加群查看群文件 参与开发.md 
-
-前端、后端都可以参与。 强烈欢迎**前端大牛**参与
-
-期待您的 `Pull Request`.	
+期待您的 `Pull Request`
 
 ## 运行教程  <----我是教程
 [点我查看运行教程(不使用Docker)](https://github.com/xubinux/xbin-store/wiki/Tutorial-(Not-Use-Docker))
