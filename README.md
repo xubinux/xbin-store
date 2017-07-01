@@ -1,12 +1,3 @@
-> 很多天没有更新 由于一些事
->
-> 自己也想明白了 嘴长在别人身上 做好自己就行
->
-> 6月20 继续完善项目
-
-
----
-
 ## xbin-store
 [![License](https://img.shields.io/badge/license-GPL-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/xubinux/xbin-store.svg?style=social&label=Stars)](https://github.com/xubinux/xbin-store)[![GitHub forks](https://img.shields.io/github/forks/xubinux/xbin-store.svg?style=social&label=Fork)](https://github.com/xubinux/xbin-store)
