@@ -150,6 +150,7 @@
         <fast.version>1.24</fast.version>
         <springfox.swagger2.version>2.6.1</springfox.swagger2.version>
         <lombok.version>1.16.16</lombok.version>
+        <apollo.version>0.8.0</apollo.version>
     </properties>
 
     <dependencyManagement>
@@ -462,6 +463,11 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
