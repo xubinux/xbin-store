@@ -25,6 +25,7 @@ Spring Cloud 版本:
 	* `Jenkins`作为持续集成
 	* 采用`Dubbox`作为RPC框架
 	* `kryo`序列化
+	* 使用 `Apollo` 配置中心
 	* 使用`Spring`+`Spring MVC`+`MyBatis`SSM框架
 	* 数据库连接池使用`druid`
 	* 数据库使用`MySQL`和`Redis`
