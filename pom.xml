@@ -65,28 +65,28 @@
     </distributionManagement>
 
     <repositories>
-        <repository>
-            <id>nexus</id>
-            <url>http://182.92.218.12:8077/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
+      <repository>
+        <id>nexus</id>
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        <releases>
+          <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>true</enabled>
+        </snapshots>
+      </repository>
     </repositories>
     <pluginRepositories>
-        <pluginRepository>
-            <id>nexus</id>
-            <url>http://182.92.218.12:8077/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </pluginRepository>
+      <pluginRepository>
+        <id>nexus</id>
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        <releases>
+          <enabled>true</enabled>
+        </releases>
+        <snapshots>
+          <enabled>true</enabled>
+        </snapshots>
+      </pluginRepository>
     </pluginRepositories>
 
     <properties>
@@ -464,11 +464,11 @@
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <dependency>
-                <groupId>com.ctrip.framework.apollo</groupId>
-                <artifactId>apollo-client</artifactId>
-                <version>${apollo.version}</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.ctrip.framework.apollo</groupId>-->
+                <!--<artifactId>apollo-client</artifactId>-->
+                <!--<version>${apollo.version}</version>-->
+            <!--</dependency>-->
         </dependencies>
     </dependencyManagement>
 
