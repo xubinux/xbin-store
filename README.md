@@ -156,4 +156,17 @@ http://git.oschina.net/orangehs/xbin-mobile
 3. 启动不了
 
 	90%是你的jar问题 
+	
+4. apollo依赖
+
+	```git clone https://git.oschina.net/lepdou/apollo.git
+	```git checkout v0.8.0
+	```mvn install -Dmaven.test.skip=true
+
+5. dubbox依赖
+
+	```git clone https://github.com/dangdangdotcom/dubbox.git
+	```git checkout dubbox-2.8.4
+	```mvn install -Dmaven.test.skip=true
+	
 
