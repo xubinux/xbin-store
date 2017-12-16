@@ -22,7 +22,6 @@ import cn.binux.mapper.TbCategoryImageMapper;
 import cn.binux.mapper.TbCategorySecondaryMapper;
 import cn.binux.pojo.TbCategoryImage;
 import cn.binux.pojo.TbCategorySecondary;
-import cn.binux.utils.FastDFSClientUtils;
 import cn.binux.utils.FastJsonConvert;
 import cn.binux.utils.StorageFactory;
 import cn.binux.utils.StorageService;

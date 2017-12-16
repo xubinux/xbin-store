@@ -464,11 +464,11 @@
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <!--<dependency>-->
-                <!--<groupId>com.ctrip.framework.apollo</groupId>-->
-                <!--<artifactId>apollo-client</artifactId>-->
-                <!--<version>${apollo.version}</version>-->
-            <!--</dependency>-->
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

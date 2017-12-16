@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import cn.binux.utils.FastDFSClientUtils;
 import cn.binux.utils.FastJsonConvert;
 import cn.binux.utils.StorageService;
 

@@ -111,7 +111,12 @@
 			<artifactId>pagehelper</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

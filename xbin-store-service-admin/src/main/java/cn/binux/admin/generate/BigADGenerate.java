@@ -20,7 +20,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 import cn.binux.mapper.TbIndexSlideAdMapper;
 import cn.binux.pojo.TbIndexSlideAd;
-import cn.binux.utils.FastDFSClientUtils;
 import cn.binux.utils.FastJsonConvert;
 import cn.binux.utils.StorageFactory;
 import cn.binux.utils.StorageService;
