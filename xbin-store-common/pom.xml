@@ -230,6 +230,11 @@
             <artifactId>spring-beans</artifactId>
             <version>4.3.6.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+        </dependency>
+
         <!-- apollo -->
         <!--<dependency>-->
             <!--<groupId>com.ctrip.framework.apollo</groupId>-->
