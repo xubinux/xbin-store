@@ -25,7 +25,7 @@ import java.io.IOException;
 
 @Controller
 public class AuthImagesController {
-
+    //ssss
     private static final Logger logger = LoggerFactory.getLogger(AuthImagesController.class);
 
     @Reference(version = Const.XBIN_STORE_REDIS_VERSION)
