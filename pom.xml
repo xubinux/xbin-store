@@ -98,7 +98,7 @@
         <springboot.mybatis.version>1.2.0</springboot.mybatis.version>
         <springboot.pagehelper.version>1.1.0</springboot.pagehelper.version>
         <springboot.dubbox.version>0.0.1-SNAPSHOT</springboot.dubbox.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <cglib.version>3.2.2</cglib.version>
         <mysql.version>5.1.32</mysql.version>
         <slf4j.version>1.7.16</slf4j.version>
