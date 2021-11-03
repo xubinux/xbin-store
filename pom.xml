@@ -125,7 +125,7 @@
         <tomcat.embed.version>8.5.13</tomcat.embed.version>
         <tomcat.embed.logging.version>8.5.2</tomcat.embed.logging.version>
         <javassist.version>3.15.0-GA</javassist.version>
-        <mina.version>1.1.7</mina.version>
+        <mina.version>2.1.5</mina.version>
         <servlet-api.version>2.5</servlet-api.version>
         <grizzly.version>2.1.4</grizzly.version>
         <xstream.version>1.4.1</xstream.version>
