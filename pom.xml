@@ -143,7 +143,7 @@
         <hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
         <jcache.version>0.4</jcache.version>
         <ws.version>2.0</ws.version>
-        <resteasy.version>3.0.7.Final</resteasy.version>
+        <resteasy.version>3.0.11.Final</resteasy.version>
         <kryo.version>2.24.0</kryo.version>
         <kryo-serializers.version>0.26</kryo-serializers.version>
         <fst.version>1.55</fst.version>
