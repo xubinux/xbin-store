@@ -140,7 +140,7 @@
         <hessian.version>4.0.7</hessian.version>
         <jetty.version>6.1.26</jetty.version>
         <validation.version>1.0.0.GA</validation.version>
-        <hibernate-validator.version>4.2.0.Final</hibernate-validator.version>
+        <hibernate-validator.version>4.3.2.Final</hibernate-validator.version>
         <jcache.version>0.4</jcache.version>
         <ws.version>2.0</ws.version>
         <resteasy.version>3.0.7.Final</resteasy.version>
